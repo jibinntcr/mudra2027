@@ -1,4 +1,4 @@
-import { MongoClient, Db } from 'mongodb';
+import { MongoClient, Db, Collection } from 'mongodb';
 import type {
   UserDocument,
   SessionDocument,
@@ -73,11 +73,11 @@ export async function getCollections() {
       createCollection: async () => {},
       command: async () => {},
     } as unknown as Db,
-    users: mem.users as unknown as ReturnType<Db['collection']>,
-    sessions: mem.sessions as unknown as ReturnType<Db['collection']>,
-    rateLimits: mem.rateLimits as unknown as ReturnType<Db['collection']>,
-    categories: mem.categories as unknown as ReturnType<Db['collection']>,
-    documents: mem.documents as unknown as ReturnType<Db['collection']>,
-    importLogs: mem.importLogs as unknown as ReturnType<Db['collection']>,
+    users: mem.users as unknown as Collection<UserDocument>,
+    sessions: mem.sessions as unknown as Collection<SessionDocument>,
+    rateLimits: mem.rateLimits as unknown as Collection<RateLimitDocument>,
+    categories: mem.categories as unknown as Collection<CategoryDocument>,
+    documents: mem.documents as unknown as Collection<LibraryDocument>,
+    importLogs: mem.importLogs as unknown as Collection<ImportLogDocument>,
   };
 }
