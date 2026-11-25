@@ -138,7 +138,44 @@ export async function validateSessionTokenInDb(token: string): Promise<Authentic
     }),
   ]);
 
-  if (!sessionDoc || !userDoc) {
+  if (!userDoc) {
+    // On Vercel Serverless with the seeded in-memory store across warm/cold function isolates,
+    // if a signed JWT session is valid and not explicitly revoked in this isolate, check if any revoked session exists.
+    if (process.env.VERCEL && (!process.env.MONGODB_URI || process.env.MONGODB_URI.includes('127.0.0.1'))) {
+      const revokedSession = await sessions.findOne({ _id: sessionObjId, revokedAt: { $exists: true } });
+      if (revokedSession) return null;
+      return {
+        userId: payload.userId,
+        loginId: payload.loginId,
+        displayName: payload.displayName,
+        role: payload.role,
+        isActive: true,
+        mustChangePassword: payload.mustChangePassword,
+        sessionVersion: payload.sessionVersion,
+        sessionId: payload.sessionId,
+      };
+    }
+    return null;
+  }
+
+  if (!sessionDoc) {
+    // If userDoc exists in the seeded store on Vercel Serverless, verify no revoked session exists and userDoc is active
+    if (process.env.VERCEL && (!process.env.MONGODB_URI || process.env.MONGODB_URI.includes('127.0.0.1'))) {
+      const revokedSession = await sessions.findOne({ _id: sessionObjId, revokedAt: { $exists: true } });
+      if (revokedSession || !userDoc.isActive || userDoc.sessionVersion !== payload.sessionVersion) {
+        return null;
+      }
+      return {
+        userId: userDoc._id!.toHexString(),
+        loginId: userDoc.loginId,
+        displayName: userDoc.displayName,
+        role: userDoc.role,
+        isActive: userDoc.isActive,
+        mustChangePassword: userDoc.mustChangePassword,
+        sessionVersion: userDoc.sessionVersion,
+        sessionId: payload.sessionId,
+      };
+    }
     return null;
   }
 
