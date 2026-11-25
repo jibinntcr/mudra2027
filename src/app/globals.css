@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-parchment-50 text-mudra-950 antialiased;
+    font-family: var(--font-inter), var(--font-malayalam), system-ui, -apple-system, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overscroll-behavior-y: none;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-merriweather), var(--font-malayalam), Georgia, serif;
+  }
+}
+
+/* Hide scrollbars on horizontal mobile chip bars while keeping smooth scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
