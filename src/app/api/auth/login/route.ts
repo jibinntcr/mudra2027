@@ -15,6 +15,81 @@ import {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
+    const isQuickLogin = Boolean(body?.quickLogin);
+
+    const ipAddress =
+      req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+      req.headers.get('x-real-ip') ||
+      '127.0.0.1';
+    const userAgent = req.headers.get('user-agent') || 'unknown';
+
+    // Quick One-Click Testing Login Mode (No password required)
+    if (isQuickLogin && typeof body?.loginId === 'string' && body.loginId.trim()) {
+      const quickLoginId = body.loginId.trim().toLowerCase();
+      const { users } = await getCollections();
+      const user = await users.findOne({ loginId: quickLoginId });
+
+      if (!user) {
+        return NextResponse.json(
+          { error: `Account "${quickLoginId}" not found.` },
+          { status: 404, headers: { 'Cache-Control': 'private, no-store' } }
+        );
+      }
+
+      if (!user.isActive) {
+        return NextResponse.json(
+          { error: 'This account has been deactivated by an administrator.' },
+          { status: 403, headers: { 'Cache-Control': 'private, no-store' } }
+        );
+      }
+
+      // For quick testing login, bypass password & first-login password change gate unless explicitly requested
+      const effectiveUser =
+        body.bypassPasswordChange !== false
+          ? { ...user, mustChangePassword: false }
+          : user;
+
+      await clearLoginRateLimit(quickLoginId, ipAddress);
+      const { token, expiresAt } = await createServerSession({
+        user: effectiveUser,
+        ipAddress,
+        userAgent,
+      });
+
+      const returnTo = typeof body.returnTo === 'string' ? body.returnTo : '';
+      const defaultTarget =
+        body.targetPath || (user.role === 'admin' ? '/library' : '/library');
+      const safeReturnTo =
+        returnTo && returnTo.startsWith('/') && !returnTo.startsWith('//')
+          ? returnTo
+          : defaultTarget;
+
+      const redirectUrl = effectiveUser.mustChangePassword
+        ? `/change-password?returnTo=${encodeURIComponent(safeReturnTo)}`
+        : safeReturnTo;
+
+      const response = NextResponse.json(
+        {
+          ok: true,
+          user: {
+            loginId: effectiveUser.loginId,
+            displayName: effectiveUser.displayName,
+            role: effectiveUser.role,
+            mustChangePassword: effectiveUser.mustChangePassword,
+          },
+          redirectUrl,
+        },
+        {
+          status: 200,
+          headers: { 'Cache-Control': 'private, no-store, no-cache, must-revalidate' },
+        }
+      );
+
+      attachSessionCookie(response, token, expiresAt);
+      return response;
+    }
+
+    // Standard ID + Password Login Flow
     const parsed = LoginSchema.safeParse(body);
     if (!parsed.success) {
       return NextResponse.json(
@@ -24,11 +99,6 @@ export async function POST(req: NextRequest) {
     }
 
     const { loginId, password, returnTo } = parsed.data;
-    const ipAddress =
-      req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-      req.headers.get('x-real-ip') ||
-      '127.0.0.1';
-    const userAgent = req.headers.get('user-agent') || 'unknown';
 
     // 1. Check rate limit
     const rateStatus = await checkLoginRateLimit(loginId, ipAddress);
@@ -87,8 +157,6 @@ export async function POST(req: NextRequest) {
     const safeReturnTo =
       returnTo && returnTo.startsWith('/') && !returnTo.startsWith('//')
         ? returnTo
-        : user.role === 'admin'
-        ? '/library'
         : '/library';
 
     const redirectUrl = user.mustChangePassword
