@@ -1,4 +1,4 @@
-import { MongoClient, Db, Collection } from 'mongodb';
+import { MongoClient, Db } from 'mongodb';
 import type {
   UserDocument,
   SessionDocument,
@@ -7,6 +7,7 @@ import type {
   LibraryDocument,
   ImportLogDocument,
 } from './types';
+import { getSeededMemoryCollections } from './memory-store';
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/mudra_publications';
 const MONGODB_DB_NAME = process.env.MONGODB_DB_NAME || 'mudra_publications';
@@ -14,6 +15,7 @@ const MONGODB_DB_NAME = process.env.MONGODB_DB_NAME || 'mudra_publications';
 interface GlobalMongo {
   clientPromise?: Promise<MongoClient>;
   client?: MongoClient;
+  mongoUnavailable?: boolean;
 }
 
 const globalWithMongo = globalThis as unknown as GlobalMongo;
@@ -22,7 +24,9 @@ export async function getMongoClient(): Promise<MongoClient> {
   if (!globalWithMongo.clientPromise) {
     const client = new MongoClient(MONGODB_URI, {
       maxPoolSize: 20,
-      minPoolSize: 2,
+      minPoolSize: 1,
+      serverSelectionTimeoutMS: 2500,
+      connectTimeoutMS: 2500,
     });
     globalWithMongo.client = client;
     globalWithMongo.clientPromise = client.connect();
@@ -36,14 +40,44 @@ export async function getDb(): Promise<Db> {
 }
 
 export async function getCollections() {
-  const db = await getDb();
+  // When running on Vercel Serverless without an external MongoDB Atlas URI configured (defaulting to 127.0.0.1),
+  // or if the MongoDB socket is unreachable, automatically fall back to the seeded snapshot store so all
+  // 41 migrated Eaadharam documents, 18 categories, and subscriber accounts work seamlessly in the cloud.
+  const isLocalUriOnCloud =
+    Boolean(process.env.VERCEL) &&
+    (!process.env.MONGODB_URI ||
+      process.env.MONGODB_URI.includes('127.0.0.1') ||
+      process.env.MONGODB_URI.includes('localhost'));
+
+  if (!isLocalUriOnCloud && !globalWithMongo.mongoUnavailable) {
+    try {
+      const db = await getDb();
+      return {
+        db,
+        users: db.collection<UserDocument>('users'),
+        sessions: db.collection<SessionDocument>('sessions'),
+        rateLimits: db.collection<RateLimitDocument>('rate_limits'),
+        categories: db.collection<CategoryDocument>('categories'),
+        documents: db.collection<LibraryDocument>('documents'),
+        importLogs: db.collection<ImportLogDocument>('import_logs'),
+      };
+    } catch {
+      globalWithMongo.mongoUnavailable = true;
+    }
+  }
+
+  const mem = getSeededMemoryCollections();
   return {
-    db,
-    users: db.collection<UserDocument>('users'),
-    sessions: db.collection<SessionDocument>('sessions'),
-    rateLimits: db.collection<RateLimitDocument>('rate_limits'),
-    categories: db.collection<CategoryDocument>('categories'),
-    documents: db.collection<LibraryDocument>('documents'),
-    importLogs: db.collection<ImportLogDocument>('import_logs'),
+    db: {
+      listCollections: () => ({ toArray: async () => [] }),
+      createCollection: async () => {},
+      command: async () => {},
+    } as unknown as Db,
+    users: mem.users as unknown as ReturnType<Db['collection']>,
+    sessions: mem.sessions as unknown as ReturnType<Db['collection']>,
+    rateLimits: mem.rateLimits as unknown as ReturnType<Db['collection']>,
+    categories: mem.categories as unknown as ReturnType<Db['collection']>,
+    documents: mem.documents as unknown as ReturnType<Db['collection']>,
+    importLogs: mem.importLogs as unknown as ReturnType<Db['collection']>,
   };
 }

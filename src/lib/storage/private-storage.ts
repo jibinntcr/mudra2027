@@ -13,10 +13,9 @@ import crypto from 'crypto';
  *   `documents/${docId}/v${version}/thumbnail.svg`
  */
 
-const PRIVATE_STORAGE_ROOT = path.resolve(
-  process.cwd(),
-  process.env.PRIVATE_STORAGE_ROOT || './private_storage'
-);
+const PRIVATE_STORAGE_ROOT = process.env.VERCEL
+  ? path.resolve('/tmp', 'mudra_private_storage')
+  : path.resolve(process.cwd(), process.env.PRIVATE_STORAGE_ROOT || './private_storage');
 
 // Hoist static logo read to module level (per Vercel React Best Practice `server-hoist-static-io`)
 let cachedLogoDataUri: string | null = null;
