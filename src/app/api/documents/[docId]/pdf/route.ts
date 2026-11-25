@@ -2,21 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import { requireApiUser } from '@/features/auth/session';
 import { getCollections } from '@/lib/db/client';
 import {
-  getPrivateObjectStat,
-  putPrivateObject,
   readPrivateObjectFull,
   readPrivateObjectSlice,
 } from '@/lib/storage/private-storage';
-import { buildValidPdfBuffer } from '../../../../../../scripts/import/migrate-eaadharam';
+import { ensureAuthenticPdfInPrivateStorage } from '@/lib/storage/pdf-hydration';
 
 /**
  * Authenticated Private PDF Delivery Route with HTTP Byte-Range (206 Partial Content) Support
- *
- * - Verifies session and role permissions on the server.
- * - Enforces publication status (`isPublished: true` for readers).
- * - Resolves storage key by immutable `docId` and `version`.
- * - Supports `Range: bytes=start-end` so large PDFs stream progressively in the Mudra PDF.js reader.
- * - Sets strict `Cache-Control: private, no-store, no-cache, must-revalidate` so responses are never cached publicly.
  */
 export async function GET(
   req: NextRequest,
@@ -60,20 +52,11 @@ export async function GET(
     );
   }
 
-  let stat = await getPrivateObjectStat(fileVersion.storageKey);
-  if (!stat) {
-    // On serverless ephemeral storage (/tmp), materialize the private PDF binary on demand inside private_storage
-    const generatedBuf = buildValidPdfBuffer({
-      documentNumber: doc.documentNumber,
-      titleEn: doc.titleEn,
-      summaryEn: `${doc.documentNumber} ${doc.titleEn} ${doc.summaryEn}`,
-      categoryLabel: doc.primaryCategorySlug,
-      includeTextLayer: doc.hasTextLayer,
-      pageCount: fileVersion.pageCount || 2,
-    });
-    await putPrivateObject(fileVersion.storageKey, generatedBuf);
-    stat = await getPrivateObjectStat(fileVersion.storageKey);
-  }
+  const stat = await ensureAuthenticPdfInPrivateStorage(
+    doc,
+    fileVersion.storageKey,
+    fileVersion.pageCount || 2
+  );
   if (!stat) {
     return NextResponse.json(
       { error: 'Private PDF object missing from storage' },

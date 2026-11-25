@@ -4,5 +4,3 @@ node_modules/
 private_storage/
 *.log
 .DS_Store
-.vercel
-.env*

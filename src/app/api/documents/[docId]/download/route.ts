@@ -1,12 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { requireApiUser } from '@/features/auth/session';
 import { getCollections } from '@/lib/db/client';
-import {
-  getPrivateObjectStat,
-  putPrivateObject,
-  readPrivateObjectFull,
-} from '@/lib/storage/private-storage';
-import { buildValidPdfBuffer } from '../../../../../../scripts/import/migrate-eaadharam';
+import { readPrivateObjectFull } from '@/lib/storage/private-storage';
+import { ensureAuthenticPdfInPrivateStorage } from '@/lib/storage/pdf-hydration';
 
 /**
  * Authenticated Private PDF Download Endpoint
@@ -48,18 +44,11 @@ export async function GET(
     return NextResponse.json({ error: 'File version not found' }, { status: 404 });
   }
 
-  const stat = await getPrivateObjectStat(fileVersion.storageKey);
-  if (!stat) {
-    const generatedBuf = buildValidPdfBuffer({
-      documentNumber: doc.documentNumber,
-      titleEn: doc.titleEn,
-      summaryEn: `${doc.documentNumber} ${doc.titleEn} ${doc.summaryEn}`,
-      categoryLabel: doc.primaryCategorySlug,
-      includeTextLayer: doc.hasTextLayer,
-      pageCount: fileVersion.pageCount || 2,
-    });
-    await putPrivateObject(fileVersion.storageKey, generatedBuf);
-  }
+  await ensureAuthenticPdfInPrivateStorage(
+    doc,
+    fileVersion.storageKey,
+    fileVersion.pageCount || 2
+  );
   const buffer = await readPrivateObjectFull(fileVersion.storageKey);
   const safeFilename = `${doc.documentNumber.replace(/[^a-zA-Z0-9_-]+/g, '_')}_${doc.docId}.pdf`;
 

@@ -6,14 +6,15 @@ const PUBLIC_PATHS = new Set(['/', '/about', '/contact', '/login']);
 export async function middleware(req: NextRequest) {
   const { pathname, search } = req.nextUrl;
 
-  // Skip Next.js static assets, brand logo, and PWA files
+  // Skip Next.js static assets, brand logo, PDF.js worker, and PWA files
   if (
     pathname.startsWith('/_next') ||
     pathname.startsWith('/favicon') ||
     pathname === '/robots.txt' ||
     pathname === '/manifest.json' ||
     pathname === '/sw.js' ||
-    pathname === '/mudrapublications_logo.jpeg'
+    pathname === '/mudrapublications_logo.jpeg' ||
+    pathname === '/pdf.worker.min.mjs'
   ) {
     return NextResponse.next();
   }
@@ -87,5 +88,7 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|favicon.ico|mudrapublications_logo.jpeg|manifest.json|sw.js).*)'],
+  matcher: [
+    '/((?!_next/static|_next/image|favicon.ico|mudrapublications_logo.jpeg|manifest.json|sw.js|pdf.worker.min.mjs).*)',
+  ],
 };

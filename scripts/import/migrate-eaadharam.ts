@@ -152,10 +152,6 @@ function parseEaadharamCellText(
         categorySpec.nameMl,
         docNumberCandidate,
         year ? String(year) : '',
-        'Kerala Registration',
-        'Stamp Duty',
-        'Mudra Publications',
-        'Eaadharam',
       ].filter(Boolean)
     )
   );

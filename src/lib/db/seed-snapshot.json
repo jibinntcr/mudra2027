@@ -434,8 +434,8 @@
           "version": 1,
           "storageKey": "documents/DOC-2023-0002/v1/document.pdf",
           "thumbnailKey": "documents/DOC-2023-0002/v1/thumbnail.svg",
-          "fileHash": "b59933ee3f4510e91371560f49af0ecfb71ccc2142b92d88141af6de6ff70dc9",
-          "fileSize": 1383,
+          "fileHash": "1d3f5c26bdb8e8a9145dc02ce9e87e2b12584652fb262c96fec216ed1319f9b3",
+          "fileSize": 136127,
           "mimeType": "application/pdf",
           "pageCount": 2,
           "hasTextLayer": false,
@@ -443,10 +443,10 @@
           "uploadedBy": "system.import"
         }
       ],
-      "sourceId": "eaadharam:fair-value-2023-gop45",
+      "sourceId": "gdrive:1s6uFJ6biYFMIY0XuAEV7XXtfvQZ1EejR",
       "sourceUrl": "https://docs.google.com/uc?export=download&id=1s6uFJ6biYFMIY0XuAEV7XXtfvQZ1EejR",
       "sourcePageUrl": "https://www.eaadharam.in/p/blog-page_5.html",
-      "latestFileHash": "b59933ee3f4510e91371560f49af0ecfb71ccc2142b92d88141af6de6ff70dc9",
+      "latestFileHash": "1d3f5c26bdb8e8a9145dc02ce9e87e2b12584652fb262c96fec216ed1319f9b3",
       "isPublished": true,
       "createdAt": "2026-11-25T07:02:11.904Z",
       "updatedAt": "2026-11-25T07:02:11.904Z"
@@ -466,11 +466,7 @@
         "Sale",
         "തീറാധാരം (Sale)",
         "LR/3322/2022-LR",
-        "2022",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2022"
       ],
       "categorySlugs": [
         "lrc-orders-sale",
@@ -523,11 +519,7 @@
         "Sale",
         "തീറാധാരം (Sale)",
         "IGR/6397/2022-RR2",
-        "2023",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2023"
       ],
       "categorySlugs": [
         "lrc-orders-sale",
@@ -579,11 +571,7 @@
         "Sale",
         "തീറാധാരം (Sale)",
         "RR.2-6164/2021",
-        "2022",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2022"
       ],
       "categorySlugs": [
         "lrc-orders-sale",
@@ -635,11 +623,7 @@
         "Sale",
         "തീറാധാരം (Sale)",
         "LR/8529/2021-LR",
-        "2021",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2021"
       ],
       "categorySlugs": [
         "lrc-orders-sale",
@@ -691,11 +675,7 @@
         "Sale",
         "തീറാധാരം (Sale)",
         "LRA.3-152/2021",
-        "2022",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2022"
       ],
       "categorySlugs": [
         "lrc-orders-sale",
@@ -747,11 +727,7 @@
         "Sale",
         "തീറാധാരം (Sale)",
         "LRA.3-492/2021",
-        "2022",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2022"
       ],
       "categorySlugs": [
         "lrc-orders-sale",
@@ -803,11 +779,7 @@
         "Sale",
         "തീറാധാരം (Sale)",
         "LRA.3-8529/2021",
-        "2022",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2022"
       ],
       "categorySlugs": [
         "lrc-orders-sale",
@@ -858,11 +830,7 @@
         "Settlement",
         "ധനനിശ്ചയാധാരം (Settlement)",
         "LR/6816/2023-LR",
-        "2023",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2023"
       ],
       "categorySlugs": [
         "lrc-orders-settlement",
@@ -913,11 +881,7 @@
         "Settlement",
         "ധനനിശ്ചയാധാരം (Settlement)",
         "LRC-ORDERS-SETTLEMENT-3",
-        "2021",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2021"
       ],
       "categorySlugs": [
         "lrc-orders-settlement",
@@ -968,11 +932,7 @@
         "Settlement",
         "ധനനിശ്ചയാധാരം (Settlement)",
         "LRA. 3- 3905/2021",
-        "2021",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2021"
       ],
       "categorySlugs": [
         "lrc-orders-settlement",
@@ -1024,11 +984,7 @@
         "Settlement",
         "ധനനിശ്ചയാധാരം (Settlement)",
         "J1/198/2019/TD",
-        "2021",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2021"
       ],
       "categorySlugs": [
         "lrc-orders-settlement",
@@ -1080,11 +1036,7 @@
         "Settlement",
         "ധനനിശ്ചയാധാരം (Settlement)",
         "R.2-5635/2020",
-        "2020",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2020"
       ],
       "categorySlugs": [
         "lrc-orders-settlement",
@@ -1136,11 +1088,7 @@
         "Settlement",
         "ധനനിശ്ചയാധാരം (Settlement)",
         "RR-2- 12050/2019",
-        "2020",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2020"
       ],
       "categorySlugs": [
         "lrc-orders-settlement",
@@ -1192,11 +1140,7 @@
         "Release",
         "ഒഴിമുറി (Release)",
         "G.O",
-        "2022",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2022"
       ],
       "categorySlugs": [
         "lrc-orders-release",
@@ -1247,11 +1191,7 @@
         "Release",
         "ഒഴിമുറി (Release)",
         "G.O",
-        "2022",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2022"
       ],
       "categorySlugs": [
         "lrc-orders-release",
@@ -1302,11 +1242,7 @@
         "Release",
         "ഒഴിമുറി (Release)",
         "G.O",
-        "2022",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2022"
       ],
       "categorySlugs": [
         "lrc-orders-release",
@@ -1358,11 +1294,7 @@
         "Partition",
         "ഭാഗപത്രം (Partition)",
         "LRA.3-8751/2023",
-        "2023",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2023"
       ],
       "categorySlugs": [
         "lrc-orders-partition",
@@ -1414,11 +1346,7 @@
         "Partition",
         "ഭാഗപത്രം (Partition)",
         "LRC-ORDERS-PARTITION-3",
-        "2023",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2023"
       ],
       "categorySlugs": [
         "lrc-orders-partition",
@@ -1469,11 +1397,7 @@
         "Partition",
         "ഭാഗപത്രം (Partition)",
         "LRA.3-6572/2022",
-        "2022",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2022"
       ],
       "categorySlugs": [
         "lrc-orders-partition",
@@ -1524,11 +1448,7 @@
         "Partition",
         "ഭാഗപത്രം (Partition)",
         "LRC-ORDERS-PARTITION-5",
-        "2022",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2022"
       ],
       "categorySlugs": [
         "lrc-orders-partition",
@@ -1579,11 +1499,7 @@
         "Gift",
         "ഇഷ്ടദാനം (Gift)",
         "LRC-ORDERS-GIFT-2",
-        "2011",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2011"
       ],
       "categorySlugs": [
         "lrc-orders-gift",
@@ -1634,11 +1550,7 @@
         "Gift",
         "ഇഷ്ടദാനം (Gift)",
         "LRA. 3- 57068/2017",
-        "2018",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2018"
       ],
       "categorySlugs": [
         "lrc-orders-gift",
@@ -1689,11 +1601,7 @@
         "Gift",
         "ഇഷ്ടദാനം (Gift)",
         "LRA3.40394 of 2016",
-        "2016",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2016"
       ],
       "categorySlugs": [
         "lrc-orders-gift",
@@ -1743,11 +1651,7 @@
       "keywords": [
         "Rectification",
         "പിഴതിരുത്തൽ ആധാരം (Rectification)",
-        "RECTIFICATION DEED - A STUDY",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "RECTIFICATION DEED - A STUDY"
       ],
       "categorySlugs": [
         "lrc-orders-rectification",
@@ -1798,11 +1702,7 @@
         "Rectification",
         "പിഴതിരുത്തൽ ആധാരം (Rectification)",
         "IGR/2128/2024/RR2",
-        "2026",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2026"
       ],
       "categorySlugs": [
         "lrc-orders-rectification",
@@ -1853,11 +1753,7 @@
         "Lease",
         "പാട്ടച്ചീട്ട് (Lease)",
         "IGR/189/2024-RR9",
-        "2024",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2024"
       ],
       "categorySlugs": [
         "lrc-orders-lease",
@@ -1909,11 +1805,7 @@
         "Miscellaneous",
         "മറ്റു ഉത്തരവുകൾ (Miscellaneous)",
         "No.160/2026",
-        "2026",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2026"
       ],
       "categorySlugs": [
         "lrc-orders-miscellaneous",
@@ -1964,11 +1856,7 @@
         "Miscellaneous",
         "മറ്റു ഉത്തരവുകൾ (Miscellaneous)",
         "LRC-ORDERS-MISCELLANEOUS-3",
-        "2026",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2026"
       ],
       "categorySlugs": [
         "lrc-orders-miscellaneous",
@@ -2019,11 +1907,7 @@
         "SD and Reg. Fee",
         "മുദ്രവിലയും രജിസ്ട്രേഷൻ ഫീസും (SD & Reg. Fee)",
         "STAMP DUTY EXEMPTION ORDERS KERALA STAMP ACT 1959",
-        "1959",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "1959"
       ],
       "categorySlugs": [
         "registration-stamp-duty",
@@ -2073,11 +1957,7 @@
       "keywords": [
         "SD and Reg. Fee",
         "മുദ്രവിലയും രജിസ്ട്രേഷൻ ഫീസും (SD & Reg. Fee)",
-        "REGI. FEE AMENDMENT ORDERS REGI. FEE RATES U/S 78",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "REGI. FEE AMENDMENT ORDERS REGI. FEE RATES U/S 78"
       ],
       "categorySlugs": [
         "registration-stamp-duty",
@@ -2128,11 +2008,7 @@
         "SD and Reg. Fee",
         "മുദ്രവിലയും രജിസ്ട്രേഷൻ ഫീസും (SD & Reg. Fee)",
         "കേരള മുദ്രപത്രനിയമം-1959",
-        "1959",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "1959"
       ],
       "categorySlugs": [
         "registration-stamp-duty",
@@ -2186,11 +2062,7 @@
         "UV / Fair Value",
         "ന്യായവില ഉത്തരവുകൾ (UV / Fair Value)",
         "THE KERALA STAMP ACT 1959",
-        "1959",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "1959"
       ],
       "categorySlugs": [
         "registration-fair-value",
@@ -2241,11 +2113,7 @@
         "Court Orders",
         "കോടതി ഉത്തരവുകൾ (Court Orders)",
         "SLP",
-        "2026",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2026"
       ],
       "categorySlugs": [
         "registration-court-orders",
@@ -2297,11 +2165,7 @@
         "Court Orders",
         "കോടതി ഉത്തരവുകൾ (Court Orders)",
         "WA NO. 203 OF 2022 & WA NO. 1354 OF 2022",
-        "2022",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2022"
       ],
       "categorySlugs": [
         "registration-court-orders",
@@ -2351,11 +2215,7 @@
       "keywords": [
         "GOs and Circulars",
         "സർക്കാർ ഉത്തരവുകളും സർക്കുലറുകളും",
-        "Things to do on SR Transfer",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "Things to do on SR Transfer"
       ],
       "categorySlugs": [
         "service-gos-circulars",
@@ -2405,11 +2265,7 @@
       "keywords": [
         "Pay Revision & DA",
         "ശമ്പള പരിഷ്കരണം & ഡി.എ ഉത്തരവുകൾ",
-        "➤ 7th PAY REVISION",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "➤ 7th PAY REVISION"
       ],
       "categorySlugs": [
         "service-pay-revision",
@@ -2459,11 +2315,7 @@
       "keywords": [
         "Pay Revision & DA",
         "ശമ്പള പരിഷ്കരണം & ഡി.എ ഉത്തരവുകൾ",
-        "➤ 6th PAY REVISION",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "➤ 6th PAY REVISION"
       ],
       "categorySlugs": [
         "service-pay-revision",
@@ -2482,8 +2334,8 @@
           "version": 1,
           "storageKey": "documents/DOC-2025-0039/v1/document.pdf",
           "thumbnailKey": "documents/DOC-2025-0039/v1/thumbnail.svg",
-          "fileHash": "927c36317cdcba71bda8c19df7b4e4fd072c29725f99dbd62d26963b4fd4b288",
-          "fileSize": 2499,
+          "fileHash": "d4f3c446c0424e2619ccb3e7d3c7dcdc68e9c152252c954021b45c1e53fdfee8",
+          "fileSize": 7223777,
           "mimeType": "application/pdf",
           "pageCount": 1,
           "hasTextLayer": false,
@@ -2494,7 +2346,7 @@
       "sourceId": "gdrive:1v-7IaIHpDB_13_a_H3HeY0DPui6D1d4j",
       "sourceUrl": "https://docs.google.com/uc?export=download&id=1v-7IaIHpDB_13_a_H3HeY0DPui6D1d4j",
       "sourcePageUrl": "https://www.eaadharam.in/p/pay-revision-g.html",
-      "latestFileHash": "927c36317cdcba71bda8c19df7b4e4fd072c29725f99dbd62d26963b4fd4b288",
+      "latestFileHash": "d4f3c446c0424e2619ccb3e7d3c7dcdc68e9c152252c954021b45c1e53fdfee8",
       "isPublished": true,
       "createdAt": "2026-11-25T07:03:48.446Z",
       "updatedAt": "2026-11-25T07:03:48.446Z"
@@ -2513,11 +2365,7 @@
       "keywords": [
         "Statutory Acts & Amendments",
         "നിയമ ഭേദഗതികളും ചട്ടങ്ങളും",
-        "CONSTITUTION OF INDIA",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "CONSTITUTION OF INDIA"
       ],
       "categorySlugs": [
         "acts-statutory-rules",
@@ -2536,8 +2384,8 @@
           "version": 1,
           "storageKey": "documents/DOC-2025-0040/v1/document.pdf",
           "thumbnailKey": "documents/DOC-2025-0040/v1/thumbnail.svg",
-          "fileHash": "3fa8ce3e152e9c68e424833fabf29857b483580137d67bc163e65a808bf2ed1e",
-          "fileSize": 2535,
+          "fileHash": "9bcf7d4abfc8194dcc680b656eae98064e94606a98b196cdaa9527b620c7d020",
+          "fileSize": 36635391,
           "mimeType": "application/pdf",
           "pageCount": 1,
           "hasTextLayer": false,
@@ -2548,7 +2396,7 @@
       "sourceId": "gdrive:1RKgPdUyzzlUTJQt4vHYNjzIxdKiLh8YW",
       "sourceUrl": "https://docs.google.com/uc?export=download&id=1RKgPdUyzzlUTJQt4vHYNjzIxdKiLh8YW",
       "sourcePageUrl": "https://www.eaadharam.in/p/act-and-rules-appartment-ownership-act.html",
-      "latestFileHash": "3fa8ce3e152e9c68e424833fabf29857b483580137d67bc163e65a808bf2ed1e",
+      "latestFileHash": "9bcf7d4abfc8194dcc680b656eae98064e94606a98b196cdaa9527b620c7d020",
       "isPublished": true,
       "createdAt": "2026-11-25T07:03:58.473Z",
       "updatedAt": "2026-11-25T07:03:58.473Z"
@@ -2568,11 +2416,7 @@
         "Statutory Acts & Amendments",
         "നിയമ ഭേദഗതികളും ചട്ടങ്ങളും",
         "SPECIAL RULES FOR THE KERALA REGISTRATION SERVICE - 2026",
-        "2026",
-        "Kerala Registration",
-        "Stamp Duty",
-        "Mudra Publications",
-        "Eaadharam"
+        "2026"
       ],
       "categorySlugs": [
         "acts-statutory-rules",
