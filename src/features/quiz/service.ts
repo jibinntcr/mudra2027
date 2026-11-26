@@ -125,9 +125,45 @@ export async function ensureFixedQuizVersion(
  * if no quizzes exist yet.
  */
 export async function ensureDefaultPublishedQuiz(): Promise<void> {
-  const { quizzes } = await getCollections();
+  const { quizzes, quizRooms } = await getCollections();
   const count = await quizzes.countDocuments();
-  if (count > 0) return;
+  if (count > 0) {
+    const existingMUD = await quizRooms.findOne({ roomCode: 'MUD207' });
+    if (!existingMUD) {
+      const q = await quizzes.findOne({ status: 'published' });
+      if (q) {
+        const qv = await ensureFixedQuizVersion(q);
+        const now = new Date();
+        await quizRooms
+          .insertOne({
+            roomId: 'ROOM-MUD207-DEMO',
+            roomCode: 'MUD207',
+            quizId: q.quizId,
+            versionId: qv.versionId,
+            version: qv.version,
+            mode: 'auto_live',
+            status: 'lobby',
+            hostUserId: 'system-admin',
+            hostLoginId: 'admin.mudra',
+            capacity: 100,
+            joinLocked: false,
+            revealDurationSeconds: 6,
+            scoringRules: { ...DEFAULT_SCORING_RULES },
+            currentQuestionIndex: -1,
+            questionOpenedAt: null,
+            questionDeadlineAt: null,
+            revealStartedAt: null,
+            revealEndsAt: null,
+            transitionVersion: 1,
+            createdAt: now,
+            updatedAt: now,
+            completedAt: null,
+          })
+          .catch(() => {});
+      }
+    }
+    return;
+  }
 
   const now = new Date();
   const initialQuestions: QuizQuestionItem[] = [
@@ -299,7 +335,35 @@ export async function ensureDefaultPublishedQuiz(): Promise<void> {
 
   try {
     await quizzes.insertOne(defaultQuiz);
-    await ensureFixedQuizVersion(defaultQuiz);
+    const qv = await ensureFixedQuizVersion(defaultQuiz);
+    const { quizRooms } = await getCollections();
+    const existingMUD = await quizRooms.findOne({ roomCode: 'MUD207' });
+    if (!existingMUD) {
+      await quizRooms.insertOne({
+        roomId: 'ROOM-MUD207-DEMO',
+        roomCode: 'MUD207',
+        quizId: defaultQuiz.quizId,
+        versionId: qv.versionId,
+        version: qv.version,
+        mode: 'auto_live',
+        status: 'lobby',
+        hostUserId: 'system-admin',
+        hostLoginId: 'admin.mudra',
+        capacity: 100,
+        joinLocked: false,
+        revealDurationSeconds: 6,
+        scoringRules: { ...DEFAULT_SCORING_RULES },
+        currentQuestionIndex: -1,
+        questionOpenedAt: null,
+        questionDeadlineAt: null,
+        revealStartedAt: null,
+        revealEndsAt: null,
+        transitionVersion: 1,
+        createdAt: now,
+        updatedAt: now,
+        completedAt: null,
+      });
+    }
   } catch {
     // ignore duplicate seed
   }

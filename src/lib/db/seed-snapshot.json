@@ -4124,5 +4124,71 @@
       ],
       "createdAt": "2026-11-26T20:02:26.900Z"
     }
+  ],
+  "quizRooms": [
+    {
+      "_id": "6b08c5dfdcc86993311b880a",
+      "roomId": "ROOM-LIVE01-DEMO",
+      "roomCode": "LIVE01",
+      "quizId": "QUIZ-2026-0001",
+      "versionId": "QUIZ-2026-0001-v1",
+      "version": 1,
+      "mode": "host_live",
+      "status": "lobby",
+      "hostUserId": "system-admin",
+      "hostLoginId": "admin.mudra",
+      "capacity": 100,
+      "joinLocked": false,
+      "revealDurationSeconds": 6,
+      "scoringRules": {
+        "basePoints": 1000,
+        "speedBonusMax": 500,
+        "speedBonusEnabled": true,
+        "streakBonusPoints": 100,
+        "streakThreshold": 3,
+        "streakBonusEnabled": true
+      },
+      "currentQuestionIndex": -1,
+      "questionOpenedAt": null,
+      "questionDeadlineAt": null,
+      "revealStartedAt": null,
+      "revealEndsAt": null,
+      "transitionVersion": 1,
+      "createdAt": "2026-11-26T23:50:55.225Z",
+      "updatedAt": "2026-11-26T23:50:55.225Z",
+      "completedAt": null
+    },
+    {
+      "_id": "6b08c5dfdcc86993311b8809",
+      "roomId": "ROOM-MUD207-DEMO",
+      "roomCode": "MUD207",
+      "quizId": "QUIZ-2026-0001",
+      "versionId": "QUIZ-2026-0001-v1",
+      "version": 1,
+      "mode": "auto_live",
+      "status": "lobby",
+      "hostUserId": "system-admin",
+      "hostLoginId": "admin.mudra",
+      "capacity": 100,
+      "joinLocked": false,
+      "revealDurationSeconds": 6,
+      "scoringRules": {
+        "basePoints": 1000,
+        "speedBonusMax": 500,
+        "speedBonusEnabled": true,
+        "streakBonusPoints": 100,
+        "streakThreshold": 3,
+        "streakBonusEnabled": true
+      },
+      "currentQuestionIndex": -1,
+      "questionOpenedAt": null,
+      "questionDeadlineAt": null,
+      "revealStartedAt": null,
+      "revealEndsAt": null,
+      "transitionVersion": 1,
+      "createdAt": "2026-11-26T23:50:55.225Z",
+      "updatedAt": "2026-11-26T23:50:55.225Z",
+      "completedAt": null
+    }
   ]
 }

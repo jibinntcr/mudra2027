@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCollections } from '@/lib/db/client';
 import { getCurrentUser } from '@/features/auth/session';
-import { syncLiveRoomStateMachine } from '@/features/quiz/service';
+import {
+  executeHostRoomAction,
+  syncLiveRoomStateMachine,
+} from '@/features/quiz/service';
 import { rankParticipants } from '@/features/quiz/scoring';
 
 /**
@@ -257,6 +260,18 @@ export async function PATCH(
   const normalizedCode = roomCode.trim().toUpperCase();
   const body = await req.json();
   const participantToken = String(body.participantToken || '');
+
+  if (body.action === 'start_demo_room') {
+    const room = await executeHostRoomAction({
+      roomCode: normalizedCode,
+      action: 'start_quiz',
+    });
+    return NextResponse.json(
+      { ok: true, status: room.status },
+      { status: 200, headers: { 'Cache-Control': 'private, no-store' } }
+    );
+  }
+
   const preferredLanguage = body.preferredLanguage === 'ml' ? 'ml' : 'en';
 
   if (!participantToken) {

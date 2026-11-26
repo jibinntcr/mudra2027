@@ -423,8 +423,33 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
               {lang === 'ml' ? quiz.titleMl || quiz.titleEn : quiz.titleEn || quiz.titleMl}
             </h1>
             <p className="mt-1 text-xs text-mudra-600">
-              Waiting for the host to start Question 1…
+              {room.mode === 'auto_live'
+                ? 'Automatic Live Room — Anyone in the room can click Start below, or the Host can start it from the Host Console.'
+                : 'Waiting for the Host to start Question 1 (or click Start Now below for instant demo testing)…'}
             </p>
+          </div>
+
+          <div>
+            <button
+              type="button"
+              onClick={async () => {
+                await fetch(
+                  `/api/quiz/rooms/${encodeURIComponent(normalizedCode)}/state`,
+                  {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                      participantToken,
+                      action: 'start_demo_room',
+                    }),
+                  }
+                );
+                await pollRoomState();
+              }}
+              className="inline-flex items-center gap-2 rounded-2xl bg-amber-400 px-6 py-3 text-sm font-black text-[#0b192c] hover:bg-amber-300 shadow-lg transition active:scale-95"
+            >
+              <span>▶ Start Live Quiz Now (Q1)</span>
+            </button>
           </div>
 
           {/* Active Scoring Rules Shown Before Play */}

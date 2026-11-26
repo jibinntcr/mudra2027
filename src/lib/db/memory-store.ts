@@ -407,7 +407,7 @@ export function getSeededMemoryCollections() {
       importLogs: new InMemoryCollection(snap.importLogs || [], [['runId']]),
       quizzes: new InMemoryCollection(snap.quizzes || [], [['quizId'], ['slug']]),
       quizVersions: new InMemoryCollection(snap.quizVersions || [], [['versionId']]),
-      quizRooms: new InMemoryCollection([], [['roomCode']]),
+      quizRooms: new InMemoryCollection(snap.quizRooms || [], [['roomCode']]),
       quizParticipants: new InMemoryCollection([], [['participantId']]),
       quizSubmissions: new InMemoryCollection([], [['roomCode', 'participantId', 'questionIndex']]),
       quizAttempts: new InMemoryCollection([], [['attemptId']]),
