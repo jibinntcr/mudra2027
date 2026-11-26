@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { getCurrentUser } from '@/features/auth/session';
 import { MudraBrandLogo } from '@/components/brand/MudraBrandLogo';
 import { MobileBottomNav } from '@/components/navigation/MobileBottomNav';
-import { BookOpen, Lock, Shield, LogIn } from 'lucide-react';
+import { BookOpen, Lock, Shield, LogIn, Trophy } from 'lucide-react';
 
 export default async function PublicLayout({
   children,
@@ -24,9 +24,16 @@ export default async function PublicLayout({
             />
           </Link>
 
-          <nav className="flex items-center gap-4 sm:gap-6 text-sm font-medium text-mudra-800">
+          <nav className="flex items-center gap-3 sm:gap-5 text-sm font-medium text-mudra-800">
             <Link href="/" className="hidden md:inline-block hover:text-mudra-600 transition">
               Home
+            </Link>
+            <Link
+              href="/quiz"
+              className="inline-flex items-center gap-1.5 rounded-xl bg-amber-400/20 border border-amber-500/40 px-3 py-1.5 text-xs font-bold text-mudra-950 hover:bg-amber-400/30 transition"
+            >
+              <Trophy className="h-3.5 w-3.5 text-amber-600" />
+              <span>Mudra Quiz</span>
             </Link>
             <Link href="/about" className="hidden md:inline-block hover:text-mudra-600 transition">
               About

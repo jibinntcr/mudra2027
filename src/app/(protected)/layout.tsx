@@ -3,7 +3,7 @@ import { requireServerUser } from '@/features/auth/session';
 import LogoutButton from '@/features/auth/LogoutButton';
 import { MudraBrandLogo } from '@/components/brand/MudraBrandLogo';
 import { MobileBottomNav } from '@/components/navigation/MobileBottomNav';
-import { BookOpen, Search, Shield, UserCheck, FolderTree } from 'lucide-react';
+import { BookOpen, Search, Shield, UserCheck, FolderTree, Trophy, History } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
 
@@ -51,6 +51,20 @@ export default async function ProtectedLayout({
                 >
                   <Search className="h-3.5 w-3.5 text-amber-400" />
                   <span>Bilingual Search</span>
+                </Link>
+                <Link
+                  href="/quiz"
+                  className="inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-amber-300 hover:bg-white/10 transition font-semibold"
+                >
+                  <Trophy className="h-3.5 w-3.5 text-amber-400" />
+                  <span>Mudra Quiz</span>
+                </Link>
+                <Link
+                  href="/quiz/history"
+                  className="inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-parchment-200 hover:bg-white/10 hover:text-white transition"
+                >
+                  <History className="h-3.5 w-3.5 text-amber-400" />
+                  <span>My Quiz History</span>
                 </Link>
                 {user.role === 'admin' && (
                   <Link

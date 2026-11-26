@@ -6,6 +6,12 @@ import type {
   CategoryDocument,
   LibraryDocument,
   ImportLogDocument,
+  QuizDocument,
+  QuizVersionDocument,
+  QuizRoomDocument,
+  QuizParticipantDocument,
+  QuizSubmissionDocument,
+  QuizAttemptDocument,
 } from './types';
 import { getSeededMemoryCollections } from './memory-store';
 
@@ -23,8 +29,8 @@ const globalWithMongo = globalThis as unknown as GlobalMongo;
 export async function getMongoClient(): Promise<MongoClient> {
   if (!globalWithMongo.clientPromise) {
     const client = new MongoClient(MONGODB_URI, {
-      maxPoolSize: 20,
-      minPoolSize: 1,
+      maxPoolSize: 40,
+      minPoolSize: 2,
       serverSelectionTimeoutMS: 2500,
       connectTimeoutMS: 2500,
     });
@@ -40,9 +46,6 @@ export async function getDb(): Promise<Db> {
 }
 
 export async function getCollections() {
-  // When running on Vercel Serverless without an external MongoDB Atlas URI configured (defaulting to 127.0.0.1),
-  // or if the MongoDB socket is unreachable, automatically fall back to the seeded snapshot store so all
-  // 41 migrated Eaadharam documents, 18 categories, and subscriber accounts work seamlessly in the cloud.
   const isLocalUriOnCloud =
     Boolean(process.env.VERCEL) &&
     (!process.env.MONGODB_URI ||
@@ -60,6 +63,12 @@ export async function getCollections() {
         categories: db.collection<CategoryDocument>('categories'),
         documents: db.collection<LibraryDocument>('documents'),
         importLogs: db.collection<ImportLogDocument>('import_logs'),
+        quizzes: db.collection<QuizDocument>('quizzes'),
+        quizVersions: db.collection<QuizVersionDocument>('quiz_versions'),
+        quizRooms: db.collection<QuizRoomDocument>('quiz_rooms'),
+        quizParticipants: db.collection<QuizParticipantDocument>('quiz_participants'),
+        quizSubmissions: db.collection<QuizSubmissionDocument>('quiz_submissions'),
+        quizAttempts: db.collection<QuizAttemptDocument>('quiz_attempts'),
       };
     } catch {
       globalWithMongo.mongoUnavailable = true;
@@ -79,5 +88,11 @@ export async function getCollections() {
     categories: mem.categories as unknown as Collection<CategoryDocument>,
     documents: mem.documents as unknown as Collection<LibraryDocument>,
     importLogs: mem.importLogs as unknown as Collection<ImportLogDocument>,
+    quizzes: mem.quizzes as unknown as Collection<QuizDocument>,
+    quizVersions: mem.quizVersions as unknown as Collection<QuizVersionDocument>,
+    quizRooms: mem.quizRooms as unknown as Collection<QuizRoomDocument>,
+    quizParticipants: mem.quizParticipants as unknown as Collection<QuizParticipantDocument>,
+    quizSubmissions: mem.quizSubmissions as unknown as Collection<QuizSubmissionDocument>,
+    quizAttempts: mem.quizAttempts as unknown as Collection<QuizAttemptDocument>,
   };
 }

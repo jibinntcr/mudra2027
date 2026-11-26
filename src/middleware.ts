@@ -3,6 +3,28 @@ import { SESSION_COOKIE_NAME, verifySessionJwt } from '@/features/auth/jwt';
 
 const PUBLIC_PATHS = new Set(['/', '/about', '/contact', '/login']);
 
+function isPublicQuizPath(pathname: string): boolean {
+  // Public Quiz entry & join/play pages must let guests reach the join screen and play without signing in,
+  // except `/quiz/history` which is "My Quiz History" for signed-in readers.
+  if (pathname === '/quiz/history') {
+    return false;
+  }
+  if (pathname === '/quiz' || pathname.startsWith('/quiz/')) {
+    return true;
+  }
+  return false;
+}
+
+function isPublicQuizApiPath(pathname: string): boolean {
+  if (pathname === '/api/quiz/history') {
+    return false;
+  }
+  if (pathname === '/api/quiz' || pathname.startsWith('/api/quiz/')) {
+    return true;
+  }
+  return false;
+}
+
 export async function middleware(req: NextRequest) {
   const { pathname, search } = req.nextUrl;
 
@@ -24,15 +46,22 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  // Check if path is public
-  if (PUBLIC_PATHS.has(pathname)) {
+  // Public pages (Homepage, About, Contact, Login, and Public Quiz join/play pages)
+  if (PUBLIC_PATHS.has(pathname) || isPublicQuizPath(pathname)) {
     return NextResponse.next();
+  }
+
+  // Public Quiz APIs (joining rooms, polling room state, submitting answers, self-paced attempts)
+  if (isPublicQuizApiPath(pathname)) {
+    const res = NextResponse.next();
+    res.headers.set('Cache-Control', 'private, no-store, no-cache, must-revalidate');
+    return res;
   }
 
   const token = req.cookies.get(SESSION_COOKIE_NAME)?.value;
   const payload = token ? await verifySessionJwt(token) : null;
 
-  // Protected API routes
+  // Protected API routes (/api/search, /api/documents/*, /api/admin/*, /api/quiz/history)
   if (pathname.startsWith('/api/')) {
     if (!payload) {
       return NextResponse.json(
@@ -59,7 +88,7 @@ export async function middleware(req: NextRequest) {
     return res;
   }
 
-  // Protected Page routes (/library, /categories, /search, /admin, /change-password)
+  // Protected Page routes (/library, /categories, /search, /admin, /change-password, /quiz/history)
   if (!payload) {
     const returnTo = `${pathname}${search}`;
     const loginUrl = new URL('/login', req.url);

@@ -12,7 +12,7 @@
       "createdAt": "2026-11-25T06:24:27.791Z",
       "updatedAt": "2026-11-25T06:24:27.791Z",
       "createdBy": "system",
-      "lastLoginAt": "2026-11-25T09:10:50.769Z"
+      "lastLoginAt": "2026-11-26T20:01:35.241Z"
     },
     {
       "_id": "6b067f1c0271a854064cd368",
@@ -39,7 +39,7 @@
       "createdAt": "2026-11-25T06:24:27.791Z",
       "updatedAt": "2026-11-25T06:24:27.791Z",
       "createdBy": "admin.mudra",
-      "lastLoginAt": "2026-11-25T09:10:50.422Z"
+      "lastLoginAt": "2026-11-26T20:01:34.916Z"
     }
   ],
   "categories": [
@@ -56,7 +56,7 @@
       "parentSlug": null,
       "pathLabel": "LRC Orders",
       "sourceUrl": "https://www.eaadharam.in/2020/07/home-eaadharam_5.html",
-      "updatedAt": "2026-11-25T09:10:51.737Z"
+      "updatedAt": "2026-11-26T20:01:36.241Z"
     },
     {
       "_id": "6b067f1c3cbd639108b24412",
@@ -73,7 +73,7 @@
       "parentSlug": "lrc-orders",
       "pathLabel": "LRC Orders → Sale",
       "sourceUrl": "https://www.eaadharam.in/p/lrc-orders-sale-order-no-and-date-lra3.html",
-      "updatedAt": "2026-11-25T09:10:51.738Z"
+      "updatedAt": "2026-11-26T20:01:36.242Z"
     },
     {
       "_id": "6b067f1c3cbd639108b24414",
@@ -90,7 +90,7 @@
       "parentSlug": "lrc-orders",
       "pathLabel": "LRC Orders → Settlement",
       "sourceUrl": "https://www.eaadharam.in/p/lrc-orders-settlement-rr.html",
-      "updatedAt": "2026-11-25T09:10:51.738Z"
+      "updatedAt": "2026-11-26T20:01:36.243Z"
     },
     {
       "_id": "6b067f1c3cbd639108b24416",
@@ -107,7 +107,7 @@
       "parentSlug": "lrc-orders",
       "pathLabel": "LRC Orders → Release",
       "sourceUrl": "https://www.eaadharam.in/p/lrc-orders-release-lra3.html",
-      "updatedAt": "2026-11-25T09:10:51.739Z"
+      "updatedAt": "2026-11-26T20:01:36.244Z"
     },
     {
       "_id": "6b067f1c3cbd639108b24418",
@@ -124,7 +124,7 @@
       "parentSlug": "lrc-orders",
       "pathLabel": "LRC Orders → Partition",
       "sourceUrl": "https://www.eaadharam.in/p/lrc-orders-sale-lra3.html",
-      "updatedAt": "2026-11-25T09:10:51.739Z"
+      "updatedAt": "2026-11-26T20:01:36.245Z"
     },
     {
       "_id": "6b067f1c3cbd639108b2441a",
@@ -141,7 +141,7 @@
       "parentSlug": "lrc-orders",
       "pathLabel": "LRC Orders → Gift",
       "sourceUrl": "https://www.eaadharam.in/p/lrcorders-gift-lra3.html",
-      "updatedAt": "2026-11-25T09:10:51.740Z"
+      "updatedAt": "2026-11-26T20:01:36.246Z"
     },
     {
       "_id": "6b067f1c3cbd639108b2441c",
@@ -158,7 +158,7 @@
       "parentSlug": "lrc-orders",
       "pathLabel": "LRC Orders → Rectification",
       "sourceUrl": "https://www.eaadharam.in/p/lrc-orders-rectification-lra3.html",
-      "updatedAt": "2026-11-25T09:10:51.740Z"
+      "updatedAt": "2026-11-26T20:01:36.246Z"
     },
     {
       "_id": "6b067f1c3cbd639108b2441e",
@@ -175,7 +175,7 @@
       "parentSlug": "lrc-orders",
       "pathLabel": "LRC Orders → Lease",
       "sourceUrl": "https://www.eaadharam.in/p/lrc-orders-lease-lra3.html",
-      "updatedAt": "2026-11-25T09:10:51.741Z"
+      "updatedAt": "2026-11-26T20:01:36.247Z"
     },
     {
       "_id": "6b067f1c3cbd639108b24420",
@@ -192,7 +192,7 @@
       "parentSlug": "lrc-orders",
       "pathLabel": "LRC Orders → Miscellaneous",
       "sourceUrl": "https://www.eaadharam.in/p/lrc-orders-miscellaneous-m.html",
-      "updatedAt": "2026-11-25T09:10:51.741Z"
+      "updatedAt": "2026-11-26T20:01:36.247Z"
     },
     {
       "_id": "6b067f1c3cbd639108b24422",
@@ -207,7 +207,7 @@
       "parentSlug": null,
       "pathLabel": "Registration",
       "sourceUrl": null,
-      "updatedAt": "2026-11-25T09:10:51.741Z"
+      "updatedAt": "2026-11-26T20:01:36.248Z"
     },
     {
       "_id": "6b067f1c3cbd639108b24424",
@@ -224,7 +224,7 @@
       "parentSlug": "registration",
       "pathLabel": "Registration → SD and Reg. Fee",
       "sourceUrl": "https://www.eaadharam.in/p/kerala-stamp-act-1959-kerala-stamp-act.html",
-      "updatedAt": "2026-11-25T09:10:51.742Z"
+      "updatedAt": "2026-11-26T20:01:36.248Z"
     },
     {
       "_id": "6b067f1c3cbd639108b24426",
@@ -241,7 +241,7 @@
       "parentSlug": "registration",
       "pathLabel": "Registration → UV / Fair Value",
       "sourceUrl": "https://www.eaadharam.in/p/blog-page_5.html",
-      "updatedAt": "2026-11-25T09:10:51.742Z"
+      "updatedAt": "2026-11-26T20:01:36.249Z"
     },
     {
       "_id": "6b067f1c3cbd639108b24428",
@@ -258,7 +258,7 @@
       "parentSlug": "registration",
       "pathLabel": "Registration → Court Orders",
       "sourceUrl": "https://www.eaadharam.in/p/blog-page_1.html",
-      "updatedAt": "2026-11-25T09:10:51.743Z"
+      "updatedAt": "2026-11-26T20:01:36.250Z"
     },
     {
       "_id": "6b067f1c3cbd639108b2442a",
@@ -273,7 +273,7 @@
       "parentSlug": null,
       "pathLabel": "Service Matters",
       "sourceUrl": null,
-      "updatedAt": "2026-11-25T09:10:51.743Z"
+      "updatedAt": "2026-11-26T20:01:36.250Z"
     },
     {
       "_id": "6b067f1c3cbd639108b2442c",
@@ -290,7 +290,7 @@
       "parentSlug": "service-matters",
       "pathLabel": "Service Matters → GOs and Circulars",
       "sourceUrl": "https://www.eaadharam.in/p/blog-page_13.html",
-      "updatedAt": "2026-11-25T09:10:51.743Z"
+      "updatedAt": "2026-11-26T20:01:36.251Z"
     },
     {
       "_id": "6b067f1c3cbd639108b2442e",
@@ -307,7 +307,7 @@
       "parentSlug": "service-matters",
       "pathLabel": "Service Matters → Pay Revision & DA",
       "sourceUrl": "https://www.eaadharam.in/p/pay-revision-g.html",
-      "updatedAt": "2026-11-25T09:10:51.744Z"
+      "updatedAt": "2026-11-26T20:01:36.251Z"
     },
     {
       "_id": "6b067f1c3cbd639108b24430",
@@ -322,7 +322,7 @@
       "parentSlug": null,
       "pathLabel": "Acts & Rules",
       "sourceUrl": null,
-      "updatedAt": "2026-11-25T09:10:51.744Z"
+      "updatedAt": "2026-11-26T20:01:36.252Z"
     },
     {
       "_id": "6b067f1c3cbd639108b24432",
@@ -339,7 +339,7 @@
       "parentSlug": "acts-and-rules",
       "pathLabel": "Acts & Rules → Statutory Acts & Amendments",
       "sourceUrl": "https://www.eaadharam.in/p/act-and-rules-appartment-ownership-act.html",
-      "updatedAt": "2026-11-25T09:10:51.745Z"
+      "updatedAt": "2026-11-26T20:01:36.252Z"
     }
   ],
   "documents": [
@@ -396,7 +396,7 @@
       "latestFileHash": "3b69bd630f1a12c13fafa9d3a7025f219e2272f7998dbf88148c953ae66e20e7",
       "isPublished": true,
       "createdAt": "2026-11-25T07:02:11.883Z",
-      "updatedAt": "2026-11-25T09:10:51.717Z"
+      "updatedAt": "2026-11-26T20:01:36.220Z"
     },
     {
       "_id": "6b0687f380130a383e105078",
@@ -3757,6 +3757,372 @@
           "fileHash": "affaf1e0b5872ffd0d1efa517f7cc13109d2fb29be8207587db55d15d9e522b2"
         }
       ]
+    }
+  ],
+  "quizzes": [
+    {
+      "_id": "6b08905229b3f2d5f54747d8",
+      "quizId": "QUIZ-2026-0001",
+      "slug": "kerala-registration-stamp-act-mastery-quiz",
+      "titleEn": "Kerala Registration & Stamp Act Mastery Quiz",
+      "titleMl": "കേരള രജിസ്ട്രേഷൻ & മുദ്രപത്ര നിയമം ക്വിസ്",
+      "descriptionEn": "Test your mastery of Land Revenue Commissioner (LRC) orders, IGR rulings, Section 25 mortgage stamp duty, Nilam/Purayidam classification, and Fair Value rules.",
+      "descriptionMl": "എൽ.ആർ.സി ഉത്തരവുകൾ, രജിസ്ട്രേഷൻ ഐ.ജി സർക്കുലറുകൾ, മുദ്രവില നിർണ്ണയം, ന്യായവില ചട്ടങ്ങൾ എന്നിവയെ ആസ്പദമാക്കിയുള്ള ദ്വിഭാഷാ ക്വിസ്.",
+      "status": "published",
+      "defaultTimeSeconds": 20,
+      "defaultRevealSeconds": 6,
+      "scoringRules": {
+        "basePoints": 1000,
+        "speedBonusMax": 500,
+        "speedBonusEnabled": true,
+        "streakBonusPoints": 100,
+        "streakThreshold": 3,
+        "streakBonusEnabled": true
+      },
+      "enabledModes": [
+        "auto_live",
+        "host_live",
+        "self_paced"
+      ],
+      "questions": [
+        {
+          "questionId": "Q-STAMP-25",
+          "order": 1,
+          "type": "single_choice",
+          "promptEn": "Under Section 25 of the Kerala Stamp Act (Order IGR/5897/2024-RR2), when a property is sold subject to a mortgage, which amounts are added to the sale consideration for stamp duty calculation?",
+          "promptMl": "കൈമാറ്റ ആധാരങ്ങളിൽ പണയ ബാദ്ധ്യത സംബന്ധിച്ച വിവരം ചേർത്തിട്ടുള്ള സാഹചര്യത്തിൽ (IGR/5897/2024-RR2), സ്റ്റാമ്പ് ഡ്യൂട്ടി നിർണ്ണയത്തിനായി വകുപ്പ് 25 പ്രകാരം പ്രതിഫലത്തിനൊപ്പം ചേർക്കേണ്ട തുകകൾ ഏവ?",
+          "options": [
+            {
+              "optionId": "A",
+              "textEn": "Only unpaid mortgage money and unpaid interest",
+              "textMl": "Unpaid mortgage money, unpaid interest എന്നീ തുകകൾ മാത്രം"
+            },
+            {
+              "optionId": "B",
+              "textEn": "Entire original sanctioned loan amount regardless of repayment",
+              "textMl": "തിരിച്ചടവ് പരിഗണിക്കാതെ മൊത്തം പണയ വായ്പാ തുക മുഴുവൻ"
+            },
+            {
+              "optionId": "C",
+              "textEn": "Future interest for the remaining tenure of the loan",
+              "textMl": "വായ്പയുടെ വരാനിരിക്കുന്ന കാലയളവിലെ മുഴുവൻ പലിശയും"
+            },
+            {
+              "optionId": "D",
+              "textEn": "No mortgage liability is ever considered under Section 25",
+              "textMl": "വകുപ്പ് 25 പ്രകാരം പണയ ബാദ്ധ്യത ഒരിക്കലും കണക്കാക്കേണ്ടതില്ല"
+            }
+          ],
+          "correctOptionId": "A",
+          "explanationEn": "Order IGR/5897/2024-RR2 dated 24/02/2025 clarifies that only unpaid mortgage principal and unpaid interest as on the date of execution shall be added to consideration under Section 25 of the Kerala Stamp Act.",
+          "explanationMl": "IGR/5897/2024-RR2 (തീയതി 24/02/2025) ഉത്തരവ് പ്രകാരം കൈമാറ്റ ആധാരങ്ങളിൽ പണയ ബാദ്ധ്യത ചേർത്തിട്ടുള്ളപ്പോൾ Unpaid mortgage money, unpaid interest എന്നീ തുകകൾ മാത്രമേ വകുപ്പ് 25 പ്രകാരം പ്രതിഫലത്തിനൊപ്പം ചേർക്കേണ്ടതുള്ളൂ.",
+          "timeLimitSeconds": 25,
+          "linkedDocId": "DOC-2025-0001",
+          "linkedDocSnapshot": {
+            "docId": "DOC-2025-0001",
+            "slug": "igr-5897-2024-rr2-2025",
+            "documentNumber": "IGR/5897/2024-RR2",
+            "titleEn": "LRC Orders → Sale: Stamp Duty Determination on Sale Deeds with Unpaid Mortgage Liability (Section 25)",
+            "titleMl": "കൈമാറ്റ ആധാരങ്ങളിൽ പണയ ബാദ്ധ്യത സംബന്ധിച്ച വിവരം ചേർത്തിട്ടുള്ള സാഹചര്യത്തിൽ സ്റ്റാമ്പ് ഡ്യൂട്ടി നിർണ്ണയം"
+          }
+        },
+        {
+          "questionId": "Q-NILAM-PURAYIDAM",
+          "order": 2,
+          "type": "true_false",
+          "promptEn": "If a property was described as \"Nilam\" in the prior title deed and is now recorded as \"Purayidam\", excess stamp duty must be levied at registration (Order LR/3322/2022-LR(A3)).",
+          "promptMl": "രജിസ്ട്രേഷനായി ഹാജരാക്കിയ ആധാരത്തിന്റെ മുന്നാധാരത്തിൽ വസ്തുവിന്റെ തരം \"നിലം\" എന്നും ഇപ്പോൾ \"പുരയിടം\" എന്നും രേഖപ്പെടുത്തിയിട്ടുണ്ടെങ്കിൽ അധിക മുദ്രവില ഈടാക്കേണ്ടതാണ് (LR/3322/2022-LR(A3)).",
+          "options": [
+            {
+              "optionId": "TRUE",
+              "textEn": "True (Excess stamp duty is mandatory)",
+              "textMl": "ശരി (അധിക മുദ്രവില നിർബന്ധമാണ്)"
+            },
+            {
+              "optionId": "FALSE",
+              "textEn": "False (No excess stamp duty is required)",
+              "textMl": "തെറ്റ് (അധിക മുദ്രവില ആവശ്യമില്ല)"
+            }
+          ],
+          "correctOptionId": "FALSE",
+          "explanationEn": "Land Revenue Commissioner Order LR/3322/2022-LR(A3) dated 21/08/2025 rules that no excess stamp duty is required when a deed presents property currently classified as Purayidam that was earlier recorded as Nilam in the prior deed.",
+          "explanationMl": "LR/3322/2022-LR(A3) (21/08/2025) ഉത്തരവ് പ്രകാരം മുന്നാധാരത്തിൽ വസ്തുവിന്റെ തരം \"നിലം\" എന്ന് രേഖപ്പെടുത്തിയിരുന്നതും ഇപ്പോൾ \"പുരയിടം\" എന്ന് രേഖപ്പെടുത്തിയിട്ടുള്ളതുമായ ആധാരത്തിന് അധിക മുദ്രവില ആവശ്യമില്ല.",
+          "timeLimitSeconds": 20,
+          "linkedDocId": "DOC-2022-0003",
+          "linkedDocSnapshot": {
+            "docId": "DOC-2022-0003",
+            "slug": "lr-3322-2022-lr-2022",
+            "documentNumber": "LR/3322/2022-LR",
+            "titleEn": "LRC Orders → Sale: Order LR/3322/2022-LR",
+            "titleMl": "A3) Dated 21/08/2025 (രജിസ്ട്രേഷനായി ഹാജരാക്കിയ ആധാരത്തിന്റെ മുന്നാധാരത്തിൽ വസ്തുവിന്റെ തരം “നിലം” എന്ന് രേഖപ്പെടുത്തിയിരുന്നതും ഇ"
+          }
+        },
+        {
+          "questionId": "Q-FAIR-VALUE-28A",
+          "order": 3,
+          "type": "single_choice",
+          "promptEn": "Under which section of the Kerala Stamp Act 1959 is the Fair Value of land notified and revised by the Government?",
+          "promptMl": "കേരള മുദ്രപത്ര നിയമം 1959-ലെ ഏത് വകുപ്പ് പ്രകാരമാണ് ഭൂമിയുടെ ന്യായവില (Fair Value) നിശ്ചയിക്കുകയും പുതുക്കുകയും ചെയ്യുന്നത്?",
+          "options": [
+            {
+              "optionId": "A",
+              "textEn": "Section 28A",
+              "textMl": "വകുപ്പ് 28A (Section 28A)"
+            },
+            {
+              "optionId": "B",
+              "textEn": "Section 45B",
+              "textMl": "വകുപ്പ് 45B (Section 45B)"
+            },
+            {
+              "optionId": "C",
+              "textEn": "Section 17",
+              "textMl": "വകുപ്പ് 17 (Section 17)"
+            },
+            {
+              "optionId": "D",
+              "textEn": "Section 78",
+              "textMl": "വകുപ്പ് 78 (Section 78)"
+            }
+          ],
+          "correctOptionId": "A",
+          "explanationEn": "Section 28A of the Kerala Stamp Act 1959 empowers the fixing and revision of Fair Value of land across Kerala (see Fair Value Revision Gazette Order GO(P)No.45/2023/TD).",
+          "explanationMl": "കേരള സ്റ്റാമ്പ് ആക്ട് വകുപ്പ് 28A പ്രകാരമാണ് ഭൂമിയുടെ ന്യായവില (Fair Value) നിശ്ചയിക്കുകയും പുതുക്കുകയും ചെയ്യുന്നത് (GO(P)No.45/2023/TD).",
+          "timeLimitSeconds": 20,
+          "linkedDocId": "DOC-2023-0002",
+          "linkedDocSnapshot": {
+            "docId": "DOC-2023-0002",
+            "slug": "go-p-no-45-2023-td-2023",
+            "documentNumber": "GO(P)No.45/2023/TD",
+            "titleEn": "Registration → UV / Fair Value: Kerala Fair Value Revision Gazette Order GO(P)No.45/2023/TD",
+            "titleMl": "ഭൂമിയുടെ ന്യായവില പുതുക്കി നിശ്ചയിച്ചുകൊണ്ടുള്ള സർക്കാർ ഉത്തരവ് (Fair Value Revision)"
+          }
+        },
+        {
+          "questionId": "Q-SETTLEMENT-51A",
+          "order": 4,
+          "type": "single_choice",
+          "promptEn": "Which Article of the Kerala Stamp Act Schedule governs concessional stamp duty for a Settlement Deed executed in favour of family members?",
+          "promptMl": "കുടുംബാംഗങ്ങൾക്ക് എഴുതിക്കൊടുക്കുന്ന ധനനിശ്ചയാധാരത്തിന് (Settlement Deed) ഇളവുള്ള മുദ്രവില നിശ്ചയിക്കുന്ന കേരള മുദ്രപത്ര നിയമത്തിലെ ആർട്ടിക്കിൾ ഏതാണ്?",
+          "options": [
+            {
+              "optionId": "A",
+              "textEn": "Article 51(a)(i)",
+              "textMl": "ആർട്ടിക്കിൾ 51(എ)(1)"
+            },
+            {
+              "optionId": "B",
+              "textEn": "Article 21(1)",
+              "textMl": "ആർട്ടിക്കിൾ 21(1)"
+            },
+            {
+              "optionId": "C",
+              "textEn": "Article 42(i)",
+              "textMl": "ആർട്ടിക്കിൾ 42(1)"
+            },
+            {
+              "optionId": "D",
+              "textEn": "Article 15",
+              "textMl": "ആർട്ടിക്കിൾ 15"
+            }
+          ],
+          "correctOptionId": "A",
+          "explanationEn": "As confirmed in Order R.2-5635/2020, a settlement deed of co-owned property in favour of a person falling within the statutory definition of \"family\" is chargeable under Article 51(a)(i) of the Kerala Stamp Act.",
+          "explanationMl": "R.2-5635/2020 ഉത്തരവ് പ്രകാരം കുടുംബം എന്ന നിർവ്വചനത്തിൽ ഉൾപ്പെട്ടുവരുന്നയാൾക്ക് എഴുതിക്കൊടുക്കുന്ന ധനനിശ്ചയാധാരത്തിന് മുദ്രപത്രനിയമം ആർട്ടിക്കിൾ 51(എ)(1) പ്രകാരം മുദ്രവില മതിയാകുന്നതാണ്.",
+          "timeLimitSeconds": 20,
+          "linkedDocId": "DOC-2020-0014",
+          "linkedDocSnapshot": {
+            "docId": "DOC-2020-0014",
+            "slug": "r-2-5635-2020-2020",
+            "documentNumber": "R.2-5635/2020",
+            "titleEn": "LRC Orders → Settlement: Order R.2-5635/2020 dated 24.11.2020",
+            "titleMl": "കൂട്ടാവകാശപ്പെട്ട വസ്തുക്കൾ; കുടുംബം എന്ന നിർവ്വചനത്തിൽ ഉൾപ്പെട്ടുവരുന്നയാൾക്ക് എഴുതി കൊടുക്കുന്ന ആധാരത്തിന് മുദ്രപത്രനിയമം ആർട്ടി"
+          }
+        }
+      ],
+      "currentVersion": 1,
+      "createdBy": "admin.mudra",
+      "createdAt": "2026-11-26T20:02:26.893Z",
+      "updatedAt": "2026-11-26T20:02:26.893Z"
+    }
+  ],
+  "quizVersions": [
+    {
+      "_id": "6b08905229b3f2d5f54747d9",
+      "versionId": "QUIZ-2026-0001-v1",
+      "quizId": "QUIZ-2026-0001",
+      "version": 1,
+      "titleEn": "Kerala Registration & Stamp Act Mastery Quiz",
+      "titleMl": "കേരള രജിസ്ട്രേഷൻ & മുദ്രപത്ര നിയമം ക്വിസ്",
+      "descriptionEn": "Test your mastery of Land Revenue Commissioner (LRC) orders, IGR rulings, Section 25 mortgage stamp duty, Nilam/Purayidam classification, and Fair Value rules.",
+      "descriptionMl": "എൽ.ആർ.സി ഉത്തരവുകൾ, രജിസ്ട്രേഷൻ ഐ.ജി സർക്കുലറുകൾ, മുദ്രവില നിർണ്ണയം, ന്യായവില ചട്ടങ്ങൾ എന്നിവയെ ആസ്പദമാക്കിയുള്ള ദ്വിഭാഷാ ക്വിസ്.",
+      "defaultTimeSeconds": 20,
+      "defaultRevealSeconds": 6,
+      "scoringRules": {
+        "basePoints": 1000,
+        "speedBonusMax": 500,
+        "speedBonusEnabled": true,
+        "streakBonusPoints": 100,
+        "streakThreshold": 3,
+        "streakBonusEnabled": true
+      },
+      "questions": [
+        {
+          "questionId": "Q-STAMP-25",
+          "order": 1,
+          "type": "single_choice",
+          "promptEn": "Under Section 25 of the Kerala Stamp Act (Order IGR/5897/2024-RR2), when a property is sold subject to a mortgage, which amounts are added to the sale consideration for stamp duty calculation?",
+          "promptMl": "കൈമാറ്റ ആധാരങ്ങളിൽ പണയ ബാദ്ധ്യത സംബന്ധിച്ച വിവരം ചേർത്തിട്ടുള്ള സാഹചര്യത്തിൽ (IGR/5897/2024-RR2), സ്റ്റാമ്പ് ഡ്യൂട്ടി നിർണ്ണയത്തിനായി വകുപ്പ് 25 പ്രകാരം പ്രതിഫലത്തിനൊപ്പം ചേർക്കേണ്ട തുകകൾ ഏവ?",
+          "options": [
+            {
+              "optionId": "A",
+              "textEn": "Only unpaid mortgage money and unpaid interest",
+              "textMl": "Unpaid mortgage money, unpaid interest എന്നീ തുകകൾ മാത്രം"
+            },
+            {
+              "optionId": "B",
+              "textEn": "Entire original sanctioned loan amount regardless of repayment",
+              "textMl": "തിരിച്ചടവ് പരിഗണിക്കാതെ മൊത്തം പണയ വായ്പാ തുക മുഴുവൻ"
+            },
+            {
+              "optionId": "C",
+              "textEn": "Future interest for the remaining tenure of the loan",
+              "textMl": "വായ്പയുടെ വരാനിരിക്കുന്ന കാലയളവിലെ മുഴുവൻ പലിശയും"
+            },
+            {
+              "optionId": "D",
+              "textEn": "No mortgage liability is ever considered under Section 25",
+              "textMl": "വകുപ്പ് 25 പ്രകാരം പണയ ബാദ്ധ്യത ഒരിക്കലും കണക്കാക്കേണ്ടതില്ല"
+            }
+          ],
+          "correctOptionId": "A",
+          "explanationEn": "Order IGR/5897/2024-RR2 dated 24/02/2025 clarifies that only unpaid mortgage principal and unpaid interest as on the date of execution shall be added to consideration under Section 25 of the Kerala Stamp Act.",
+          "explanationMl": "IGR/5897/2024-RR2 (തീയതി 24/02/2025) ഉത്തരവ് പ്രകാരം കൈമാറ്റ ആധാരങ്ങളിൽ പണയ ബാദ്ധ്യത ചേർത്തിട്ടുള്ളപ്പോൾ Unpaid mortgage money, unpaid interest എന്നീ തുകകൾ മാത്രമേ വകുപ്പ് 25 പ്രകാരം പ്രതിഫലത്തിനൊപ്പം ചേർക്കേണ്ടതുള്ളൂ.",
+          "timeLimitSeconds": 25,
+          "linkedDocId": "DOC-2025-0001",
+          "linkedDocSnapshot": {
+            "docId": "DOC-2025-0001",
+            "slug": "igr-5897-2024-rr2-2025",
+            "documentNumber": "IGR/5897/2024-RR2",
+            "titleEn": "LRC Orders → Sale: Stamp Duty Determination on Sale Deeds with Unpaid Mortgage Liability (Section 25)",
+            "titleMl": "കൈമാറ്റ ആധാരങ്ങളിൽ പണയ ബാദ്ധ്യത സംബന്ധിച്ച വിവരം ചേർത്തിട്ടുള്ള സാഹചര്യത്തിൽ സ്റ്റാമ്പ് ഡ്യൂട്ടി നിർണ്ണയം"
+          }
+        },
+        {
+          "questionId": "Q-NILAM-PURAYIDAM",
+          "order": 2,
+          "type": "true_false",
+          "promptEn": "If a property was described as \"Nilam\" in the prior title deed and is now recorded as \"Purayidam\", excess stamp duty must be levied at registration (Order LR/3322/2022-LR(A3)).",
+          "promptMl": "രജിസ്ട്രേഷനായി ഹാജരാക്കിയ ആധാരത്തിന്റെ മുന്നാധാരത്തിൽ വസ്തുവിന്റെ തരം \"നിലം\" എന്നും ഇപ്പോൾ \"പുരയിടം\" എന്നും രേഖപ്പെടുത്തിയിട്ടുണ്ടെങ്കിൽ അധിക മുദ്രവില ഈടാക്കേണ്ടതാണ് (LR/3322/2022-LR(A3)).",
+          "options": [
+            {
+              "optionId": "TRUE",
+              "textEn": "True (Excess stamp duty is mandatory)",
+              "textMl": "ശരി (അധിക മുദ്രവില നിർബന്ധമാണ്)"
+            },
+            {
+              "optionId": "FALSE",
+              "textEn": "False (No excess stamp duty is required)",
+              "textMl": "തെറ്റ് (അധിക മുദ്രവില ആവശ്യമില്ല)"
+            }
+          ],
+          "correctOptionId": "FALSE",
+          "explanationEn": "Land Revenue Commissioner Order LR/3322/2022-LR(A3) dated 21/08/2025 rules that no excess stamp duty is required when a deed presents property currently classified as Purayidam that was earlier recorded as Nilam in the prior deed.",
+          "explanationMl": "LR/3322/2022-LR(A3) (21/08/2025) ഉത്തരവ് പ്രകാരം മുന്നാധാരത്തിൽ വസ്തുവിന്റെ തരം \"നിലം\" എന്ന് രേഖപ്പെടുത്തിയിരുന്നതും ഇപ്പോൾ \"പുരയിടം\" എന്ന് രേഖപ്പെടുത്തിയിട്ടുള്ളതുമായ ആധാരത്തിന് അധിക മുദ്രവില ആവശ്യമില്ല.",
+          "timeLimitSeconds": 20,
+          "linkedDocId": "DOC-2022-0003",
+          "linkedDocSnapshot": {
+            "docId": "DOC-2022-0003",
+            "slug": "lr-3322-2022-lr-2022",
+            "documentNumber": "LR/3322/2022-LR",
+            "titleEn": "LRC Orders → Sale: Order LR/3322/2022-LR",
+            "titleMl": "A3) Dated 21/08/2025 (രജിസ്ട്രേഷനായി ഹാജരാക്കിയ ആധാരത്തിന്റെ മുന്നാധാരത്തിൽ വസ്തുവിന്റെ തരം “നിലം” എന്ന് രേഖപ്പെടുത്തിയിരുന്നതും ഇ"
+          }
+        },
+        {
+          "questionId": "Q-FAIR-VALUE-28A",
+          "order": 3,
+          "type": "single_choice",
+          "promptEn": "Under which section of the Kerala Stamp Act 1959 is the Fair Value of land notified and revised by the Government?",
+          "promptMl": "കേരള മുദ്രപത്ര നിയമം 1959-ലെ ഏത് വകുപ്പ് പ്രകാരമാണ് ഭൂമിയുടെ ന്യായവില (Fair Value) നിശ്ചയിക്കുകയും പുതുക്കുകയും ചെയ്യുന്നത്?",
+          "options": [
+            {
+              "optionId": "A",
+              "textEn": "Section 28A",
+              "textMl": "വകുപ്പ് 28A (Section 28A)"
+            },
+            {
+              "optionId": "B",
+              "textEn": "Section 45B",
+              "textMl": "വകുപ്പ് 45B (Section 45B)"
+            },
+            {
+              "optionId": "C",
+              "textEn": "Section 17",
+              "textMl": "വകുപ്പ് 17 (Section 17)"
+            },
+            {
+              "optionId": "D",
+              "textEn": "Section 78",
+              "textMl": "വകുപ്പ് 78 (Section 78)"
+            }
+          ],
+          "correctOptionId": "A",
+          "explanationEn": "Section 28A of the Kerala Stamp Act 1959 empowers the fixing and revision of Fair Value of land across Kerala (see Fair Value Revision Gazette Order GO(P)No.45/2023/TD).",
+          "explanationMl": "കേരള സ്റ്റാമ്പ് ആക്ട് വകുപ്പ് 28A പ്രകാരമാണ് ഭൂമിയുടെ ന്യായവില (Fair Value) നിശ്ചയിക്കുകയും പുതുക്കുകയും ചെയ്യുന്നത് (GO(P)No.45/2023/TD).",
+          "timeLimitSeconds": 20,
+          "linkedDocId": "DOC-2023-0002",
+          "linkedDocSnapshot": {
+            "docId": "DOC-2023-0002",
+            "slug": "go-p-no-45-2023-td-2023",
+            "documentNumber": "GO(P)No.45/2023/TD",
+            "titleEn": "Registration → UV / Fair Value: Kerala Fair Value Revision Gazette Order GO(P)No.45/2023/TD",
+            "titleMl": "ഭൂമിയുടെ ന്യായവില പുതുക്കി നിശ്ചയിച്ചുകൊണ്ടുള്ള സർക്കാർ ഉത്തരവ് (Fair Value Revision)"
+          }
+        },
+        {
+          "questionId": "Q-SETTLEMENT-51A",
+          "order": 4,
+          "type": "single_choice",
+          "promptEn": "Which Article of the Kerala Stamp Act Schedule governs concessional stamp duty for a Settlement Deed executed in favour of family members?",
+          "promptMl": "കുടുംബാംഗങ്ങൾക്ക് എഴുതിക്കൊടുക്കുന്ന ധനനിശ്ചയാധാരത്തിന് (Settlement Deed) ഇളവുള്ള മുദ്രവില നിശ്ചയിക്കുന്ന കേരള മുദ്രപത്ര നിയമത്തിലെ ആർട്ടിക്കിൾ ഏതാണ്?",
+          "options": [
+            {
+              "optionId": "A",
+              "textEn": "Article 51(a)(i)",
+              "textMl": "ആർട്ടിക്കിൾ 51(എ)(1)"
+            },
+            {
+              "optionId": "B",
+              "textEn": "Article 21(1)",
+              "textMl": "ആർട്ടിക്കിൾ 21(1)"
+            },
+            {
+              "optionId": "C",
+              "textEn": "Article 42(i)",
+              "textMl": "ആർട്ടിക്കിൾ 42(1)"
+            },
+            {
+              "optionId": "D",
+              "textEn": "Article 15",
+              "textMl": "ആർട്ടിക്കിൾ 15"
+            }
+          ],
+          "correctOptionId": "A",
+          "explanationEn": "As confirmed in Order R.2-5635/2020, a settlement deed of co-owned property in favour of a person falling within the statutory definition of \"family\" is chargeable under Article 51(a)(i) of the Kerala Stamp Act.",
+          "explanationMl": "R.2-5635/2020 ഉത്തരവ് പ്രകാരം കുടുംബം എന്ന നിർവ്വചനത്തിൽ ഉൾപ്പെട്ടുവരുന്നയാൾക്ക് എഴുതിക്കൊടുക്കുന്ന ധനനിശ്ചയാധാരത്തിന് മുദ്രപത്രനിയമം ആർട്ടിക്കിൾ 51(എ)(1) പ്രകാരം മുദ്രവില മതിയാകുന്നതാണ്.",
+          "timeLimitSeconds": 20,
+          "linkedDocId": "DOC-2020-0014",
+          "linkedDocSnapshot": {
+            "docId": "DOC-2020-0014",
+            "slug": "r-2-5635-2020-2020",
+            "documentNumber": "R.2-5635/2020",
+            "titleEn": "LRC Orders → Settlement: Order R.2-5635/2020 dated 24.11.2020",
+            "titleMl": "കൂട്ടാവകാശപ്പെട്ട വസ്തുക്കൾ; കുടുംബം എന്ന നിർവ്വചനത്തിൽ ഉൾപ്പെട്ടുവരുന്നയാൾക്ക് എഴുതി കൊടുക്കുന്ന ആധാരത്തിന് മുദ്രപത്രനിയമം ആർട്ടി"
+          }
+        }
+      ],
+      "createdAt": "2026-11-26T20:02:26.900Z"
     }
   ]
 }

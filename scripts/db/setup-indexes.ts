@@ -5,8 +5,21 @@ import { getCollections } from '../../src/lib/db/client';
  * Run with: `npm run db:setup`
  */
 export async function setupDatabaseIndexes() {
-  const { db, users, sessions, rateLimits, categories, documents, importLogs } =
-    await getCollections();
+  const {
+    db,
+    users,
+    sessions,
+    rateLimits,
+    categories,
+    documents,
+    importLogs,
+    quizzes,
+    quizVersions,
+    quizRooms,
+    quizParticipants,
+    quizSubmissions,
+    quizAttempts,
+  } = await getCollections();
 
   console.log('--- Mudra Publications: Setting up MongoDB Indexes ---');
 
@@ -97,9 +110,7 @@ export async function setupDatabaseIndexes() {
       default_language: 'none',
     },
   ]);
-  console.log(
-    '✓ Documents access-pattern indexes verified (unique docId/slug, normalizedDocNumber, category+year+date listings, sourceId/fileHash deduplication, multilingual full-text)'
-  );
+  console.log('✓ Documents access-pattern indexes verified');
 
   // 6. Import logs indexes
   await importLogs.createIndexes([
@@ -107,7 +118,56 @@ export async function setupDatabaseIndexes() {
     { key: { startedAt: -1 }, name: 'idx_import_logs_startedAt' },
   ]);
 
-  // 7. Declarative MongoDB Atlas Search index definition (mudra_documents_search)
+  // 7. Mudra Quiz module indexes
+  await quizzes.createIndexes([
+    { key: { quizId: 1 }, name: 'idx_quizzes_quizId_unique', unique: true },
+    { key: { slug: 1 }, name: 'idx_quizzes_slug_unique', unique: true },
+    { key: { status: 1, updatedAt: -1 }, name: 'idx_quizzes_status_updatedAt' },
+  ]);
+  await quizVersions.createIndexes([
+    { key: { versionId: 1 }, name: 'idx_quiz_versions_versionId_unique', unique: true },
+    { key: { quizId: 1, version: -1 }, name: 'idx_quiz_versions_quizId_version', unique: true },
+  ]);
+  await quizRooms.createIndexes([
+    { key: { roomCode: 1 }, name: 'idx_quiz_rooms_roomCode_unique', unique: true },
+    { key: { quizId: 1, createdAt: -1 }, name: 'idx_quiz_rooms_quizId_createdAt' },
+    { key: { status: 1, updatedAt: -1 }, name: 'idx_quiz_rooms_status_updatedAt' },
+  ]);
+  await quizParticipants.createIndexes([
+    { key: { participantId: 1 }, name: 'idx_quiz_participants_participantId_unique', unique: true },
+    { key: { participantToken: 1 }, name: 'idx_quiz_participants_token_unique', unique: true },
+    {
+      key: {
+        roomCode: 1,
+        removed: 1,
+        totalPoints: -1,
+        correctCount: -1,
+        cumulativeCorrectTimeMs: 1,
+      },
+      name: 'idx_quiz_participants_leaderboard',
+    },
+    { key: { roomCode: 1, userId: 1 }, name: 'idx_quiz_participants_room_user' },
+  ]);
+  await quizSubmissions.createIndexes([
+    {
+      key: { roomCode: 1, participantId: 1, questionIndex: 1 },
+      name: 'idx_quiz_submissions_unique_answer',
+      unique: true,
+    },
+    {
+      key: { roomCode: 1, questionIndex: 1 },
+      name: 'idx_quiz_submissions_room_question',
+    },
+  ]);
+  await quizAttempts.createIndexes([
+    { key: { attemptId: 1 }, name: 'idx_quiz_attempts_attemptId_unique', unique: true },
+    { key: { attemptToken: 1 }, name: 'idx_quiz_attempts_token' },
+    { key: { userId: 1, startedAt: -1 }, name: 'idx_quiz_attempts_user_history' },
+    { key: { roomCode: 1, participantId: 1 }, name: 'idx_quiz_attempts_room_participant' },
+  ]);
+  console.log('✓ Mudra Quiz indexes verified (quizzes, versions, rooms, participants, submissions, attempts)');
+
+  // 8. Declarative MongoDB Atlas Search index definition (mudra_documents_search)
   const atlasSearchIndexDef = {
     name: 'mudra_documents_search',
     definition: {
@@ -140,7 +200,7 @@ export async function setupDatabaseIndexes() {
     console.log('✓ MongoDB Atlas Search index `mudra_documents_search` created on cluster');
   } catch {
     console.log(
-      'ℹ Atlas Search `$search` index definition (`mudra_documents_search`) registered in version control (local MongoDB Community uses `idx_documents_fulltext_multilingual` + `idx_documents_normalizedDocNumber_published` automatically).'
+      'ℹ Atlas Search `$search` index definition (`mudra_documents_search`) registered in version control.'
     );
   }
 }

@@ -5,18 +5,39 @@ import seedSnapshot from './seed-snapshot.json';
 type FilterDoc = Record<string, any>;
 
 function matchesCondition(fieldVal: any, cond: any): boolean {
-  if (cond && typeof cond === 'object' && !Array.isArray(cond) && !(cond instanceof Date) && !(cond instanceof ObjectId)) {
+  if (
+    cond &&
+    typeof cond === 'object' &&
+    !Array.isArray(cond) &&
+    !(cond instanceof Date) &&
+    !(cond instanceof ObjectId)
+  ) {
     if ('$in' in cond && Array.isArray(cond.$in)) {
       if (Array.isArray(fieldVal)) {
         return fieldVal.some((v) => cond.$in.some((c: any) => String(v) === String(c)));
       }
       return cond.$in.some((c: any) => String(fieldVal) === String(c));
     }
+    if ('$nin' in cond && Array.isArray(cond.$nin)) {
+      if (Array.isArray(fieldVal)) {
+        return !fieldVal.some((v) => cond.$nin.some((c: any) => String(v) === String(c)));
+      }
+      return !cond.$nin.some((c: any) => String(fieldVal) === String(c));
+    }
     if ('$ne' in cond) {
       return String(fieldVal) !== String(cond.$ne);
     }
     if ('$gt' in cond) {
       return new Date(fieldVal).getTime() > new Date(cond.$gt).getTime();
+    }
+    if ('$gte' in cond) {
+      return new Date(fieldVal).getTime() >= new Date(cond.$gte).getTime();
+    }
+    if ('$lt' in cond) {
+      return new Date(fieldVal).getTime() < new Date(cond.$lt).getTime();
+    }
+    if ('$lte' in cond) {
+      return new Date(fieldVal).getTime() <= new Date(cond.$lte).getTime();
     }
     if ('$exists' in cond) {
       const exists = fieldVal !== undefined && fieldVal !== null;
@@ -82,7 +103,10 @@ function evaluateExpr(doc: FilterDoc, expr: any): any {
     return test ? evaluateExpr(doc, expr.$cond[1]) : evaluateExpr(doc, expr.$cond[2]);
   }
   if ('$add' in expr && Array.isArray(expr.$add)) {
-    return expr.$add.reduce((sum: number, item: any) => sum + Number(evaluateExpr(doc, item) || 0), 0);
+    return expr.$add.reduce(
+      (sum: number, item: any) => sum + Number(evaluateExpr(doc, item) || 0),
+      0
+    );
   }
   return expr;
 }
@@ -95,8 +119,8 @@ class InMemoryCursor<T> {
   sort(sortSpec: Record<string, 1 | -1>): this {
     this.items.sort((a: any, b: any) => {
       for (const [field, dir] of Object.entries(sortSpec)) {
-        const av = a[field];
-        const bv = b[field];
+        const av = a[field] instanceof Date ? a[field].getTime() : a[field];
+        const bv = b[field] instanceof Date ? b[field].getTime() : b[field];
         if (av === bv) continue;
         if (av === undefined || av === null) return 1;
         if (bv === undefined || bv === null) return -1;
@@ -121,11 +145,15 @@ class InMemoryCursor<T> {
 
 export class InMemoryCollection<T extends FilterDoc> {
   private rows: T[];
-  constructor(initialRows: any[] = []) {
+  private uniqueKeys: string[][];
+  constructor(initialRows: any[] = [], uniqueKeys: string[][] = []) {
+    this.uniqueKeys = uniqueKeys;
     this.rows = initialRows.map((r) => ({
       ...r,
       _id: r._id ? new ObjectId(String(r._id)) : new ObjectId(),
-      ...(r.userId ? { userId: new ObjectId(String(r.userId)) } : {}),
+      ...(r.userId && ObjectId.isValid(String(r.userId))
+        ? { userId: String(r.userId) }
+        : {}),
       ...(r.createdAt ? { createdAt: new Date(r.createdAt) } : {}),
       ...(r.updatedAt ? { updatedAt: new Date(r.updatedAt) } : {}),
       ...(r.expiresAt ? { expiresAt: new Date(r.expiresAt) } : {}),
@@ -136,20 +164,25 @@ export class InMemoryCollection<T extends FilterDoc> {
   async createIndexes(): Promise<void> {}
 
   find(filter: FilterDoc = {}, options?: { projection?: Record<string, number> }): InMemoryCursor<T> {
-    const matched = this.rows.filter((r) => matchesFilter(r, filter)).map((r) => {
-      if (options?.projection) {
-        const copy: any = { ...r };
-        for (const [k, v] of Object.entries(options.projection)) {
-          if (v === 0) delete copy[k];
+    const matched = this.rows
+      .filter((r) => matchesFilter(r, filter))
+      .map((r) => {
+        if (options?.projection) {
+          const copy: any = { ...r };
+          for (const [k, v] of Object.entries(options.projection)) {
+            if (v === 0) delete copy[k];
+          }
+          return copy as T;
         }
-        return copy as T;
-      }
-      return { ...r };
-    });
+        return { ...r };
+      });
     return new InMemoryCursor<T>(matched);
   }
 
-  async findOne(filter: FilterDoc = {}, options?: { projection?: Record<string, number> }): Promise<T | null> {
+  async findOne(
+    filter: FilterDoc = {},
+    options?: { projection?: Record<string, number> }
+  ): Promise<T | null> {
     const arr = await this.find(filter, options).limit(1).toArray();
     return arr[0] || null;
   }
@@ -159,19 +192,45 @@ export class InMemoryCollection<T extends FilterDoc> {
   }
 
   async insertOne(doc: any): Promise<{ insertedId: ObjectId }> {
+    for (const keySet of this.uniqueKeys) {
+      const conflict = this.rows.some((r) =>
+        keySet.every((k) => r[k] !== undefined && r[k] === doc[k])
+      );
+      if (conflict) {
+        const err: any = new Error(`E11000 duplicate key error on ${keySet.join(',')}`);
+        err.code = 11000;
+        throw err;
+      }
+    }
     const _id = doc._id instanceof ObjectId ? doc._id : new ObjectId();
     this.rows.push({ ...doc, _id });
     return { insertedId: _id };
   }
 
-  async updateOne(filter: FilterDoc, update: FilterDoc, options?: { upsert?: boolean }): Promise<void> {
+  async updateOne(
+    filter: FilterDoc,
+    update: FilterDoc,
+    options?: { upsert?: boolean }
+  ): Promise<{ matchedCount: number; modifiedCount: number; upsertedId?: ObjectId }> {
     const idx = this.rows.findIndex((r) => matchesFilter(r, filter));
     if (idx === -1) {
       if (options?.upsert) {
-        const newDoc: any = { _id: new ObjectId(), ...filter, ...(update.$setOnInsert || {}), ...(update.$set || {}) };
+        const _id = new ObjectId();
+        const newDoc: any = {
+          _id,
+          ...filter,
+          ...(update.$setOnInsert || {}),
+          ...(update.$set || {}),
+        };
+        if (update.$inc) {
+          for (const [k, v] of Object.entries(update.$inc)) {
+            newDoc[k] = (Number(newDoc[k]) || 0) + Number(v);
+          }
+        }
         this.rows.push(newDoc);
+        return { matchedCount: 0, modifiedCount: 0, upsertedId: _id };
       }
-      return;
+      return { matchedCount: 0, modifiedCount: 0 };
     }
     const target: any = { ...this.rows[idx] };
     if (update.$set) Object.assign(target, update.$set);
@@ -185,12 +244,43 @@ export class InMemoryCollection<T extends FilterDoc> {
         delete target[k];
       }
     }
+    if (update.$push) {
+      for (const [k, v] of Object.entries(update.$push)) {
+        const arr = Array.isArray(target[k]) ? [...target[k]] : [];
+        arr.push(v);
+        target[k] = arr;
+      }
+    }
     this.rows[idx] = target;
+    return { matchedCount: 1, modifiedCount: 1 };
   }
 
-  async updateMany(filter: FilterDoc, update: FilterDoc): Promise<void> {
+  async findOneAndUpdate(
+    filter: FilterDoc,
+    update: FilterDoc,
+    options?: { returnDocument?: 'before' | 'after'; upsert?: boolean }
+  ): Promise<T | null> {
+    const idx = this.rows.findIndex((r) => matchesFilter(r, filter));
+    if (idx === -1) {
+      if (options?.upsert) {
+        await this.updateOne(filter, update, { upsert: true });
+        return this.rows[this.rows.length - 1];
+      }
+      return null;
+    }
+    const before = { ...this.rows[idx] };
+    await this.updateOne(filter, update);
+    return options?.returnDocument === 'before' ? before : { ...this.rows[idx] };
+  }
+
+  async updateMany(
+    filter: FilterDoc,
+    update: FilterDoc
+  ): Promise<{ matchedCount: number; modifiedCount: number }> {
+    let count = 0;
     for (let i = 0; i < this.rows.length; i++) {
       if (matchesFilter(this.rows[i], filter)) {
+        count++;
         const target: any = { ...this.rows[i] };
         if (update.$set) Object.assign(target, update.$set);
         if (update.$inc) {
@@ -201,10 +291,20 @@ export class InMemoryCollection<T extends FilterDoc> {
         this.rows[i] = target;
       }
     }
+    return { matchedCount: count, modifiedCount: count };
   }
 
-  async deleteMany(filter: FilterDoc = {}): Promise<void> {
+  async deleteOne(filter: FilterDoc = {}): Promise<{ deletedCount: number }> {
+    const idx = this.rows.findIndex((r) => matchesFilter(r, filter));
+    if (idx === -1) return { deletedCount: 0 };
+    this.rows.splice(idx, 1);
+    return { deletedCount: 1 };
+  }
+
+  async deleteMany(filter: FilterDoc = {}): Promise<{ deletedCount: number }> {
+    const before = this.rows.length;
     this.rows = this.rows.filter((r) => !matchesFilter(r, filter));
+    return { deletedCount: before - this.rows.length };
   }
 
   aggregate<R = any>(pipeline: FilterDoc[]): { toArray: () => Promise<R[]> } {
@@ -231,7 +331,10 @@ export class InMemoryCollection<T extends FilterDoc> {
             const idExpr = stage.$group._id;
             const groups = new Map<any, any>();
             for (const row of current) {
-              const key = typeof idExpr === 'string' && idExpr.startsWith('$') ? row[idExpr.slice(1)] : idExpr;
+              const key =
+                typeof idExpr === 'string' && idExpr.startsWith('$')
+                  ? row[idExpr.slice(1)]
+                  : idExpr;
               if (!groups.has(key)) {
                 groups.set(key, { _id: key, count: 0 });
               }
@@ -258,7 +361,9 @@ export class InMemoryCollection<T extends FilterDoc> {
             current = [{ [stage.$count]: current.length }];
           } else if ('$facet' in stage) {
             const facetOut: Record<string, any> = {};
-            for (const [facetName, subPipeline] of Object.entries(stage.$facet as Record<string, FilterDoc[]>)) {
+            for (const [facetName, subPipeline] of Object.entries(
+              stage.$facet as Record<string, FilterDoc[]>
+            )) {
               const tempCol = new InMemoryCollection(current);
               facetOut[facetName] = await tempCol.aggregate(subPipeline).toArray();
             }
@@ -279,6 +384,12 @@ interface GlobalMemoryStore {
     categories: InMemoryCollection<any>;
     documents: InMemoryCollection<any>;
     importLogs: InMemoryCollection<any>;
+    quizzes: InMemoryCollection<any>;
+    quizVersions: InMemoryCollection<any>;
+    quizRooms: InMemoryCollection<any>;
+    quizParticipants: InMemoryCollection<any>;
+    quizSubmissions: InMemoryCollection<any>;
+    quizAttempts: InMemoryCollection<any>;
   };
 }
 
@@ -288,12 +399,18 @@ export function getSeededMemoryCollections() {
   if (!g.memoryCols) {
     const snap = seedSnapshot as any;
     g.memoryCols = {
-      users: new InMemoryCollection(snap.users || []),
-      sessions: new InMemoryCollection([]),
-      rateLimits: new InMemoryCollection([]),
-      categories: new InMemoryCollection(snap.categories || []),
-      documents: new InMemoryCollection(snap.documents || []),
-      importLogs: new InMemoryCollection(snap.importLogs || []),
+      users: new InMemoryCollection(snap.users || [], [['loginId']]),
+      sessions: new InMemoryCollection([], [['tokenHash']]),
+      rateLimits: new InMemoryCollection([], [['key']]),
+      categories: new InMemoryCollection(snap.categories || [], [['slug']]),
+      documents: new InMemoryCollection(snap.documents || [], [['docId'], ['slug']]),
+      importLogs: new InMemoryCollection(snap.importLogs || [], [['runId']]),
+      quizzes: new InMemoryCollection(snap.quizzes || [], [['quizId'], ['slug']]),
+      quizVersions: new InMemoryCollection(snap.quizVersions || [], [['versionId']]),
+      quizRooms: new InMemoryCollection([], [['roomCode']]),
+      quizParticipants: new InMemoryCollection([], [['participantId']]),
+      quizSubmissions: new InMemoryCollection([], [['roomCode', 'participantId', 'questionIndex']]),
+      quizAttempts: new InMemoryCollection([], [['attemptId']]),
     };
   }
   return g.memoryCols;

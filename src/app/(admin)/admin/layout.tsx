@@ -3,7 +3,7 @@ import { requireServerUser } from '@/features/auth/session';
 import LogoutButton from '@/features/auth/LogoutButton';
 import { MudraBrandLogo } from '@/components/brand/MudraBrandLogo';
 import { MobileBottomNav } from '@/components/navigation/MobileBottomNav';
-import { BookOpen, Users, FolderTree, FileSpreadsheet } from 'lucide-react';
+import { BookOpen, Users, FolderTree, FileSpreadsheet, Trophy } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
 
@@ -27,7 +27,7 @@ export default async function AdminLayout({
               <MudraBrandLogo
                 size="sm"
                 theme="dark"
-                subtitle="Admin Console • Accounts, Imports & Publication"
+                subtitle="Admin Console • Accounts, Quizzes, Imports & Publication"
               />
             </Link>
 
@@ -52,6 +52,13 @@ export default async function AdminLayout({
               >
                 <FolderTree className="h-3.5 w-3.5 text-amber-400" />
                 <span>Categories</span>
+              </Link>
+              <Link
+                href="/admin?tab=quizzes"
+                className="inline-flex items-center gap-1.5 rounded-xl bg-amber-400/15 border border-amber-400/30 px-3 py-1.5 text-amber-300 hover:bg-amber-400/25 font-bold"
+              >
+                <Trophy className="h-3.5 w-3.5 text-amber-400" />
+                <span>Mudra Quiz</span>
               </Link>
               <Link
                 href="/library"

@@ -1,8 +1,8 @@
 # Mudra Publications — Eaadharam Document Migration Report
 
-- **Latest Run ID**: `MIGRATE-2026-11-25T09-10-51-736Z`
+- **Latest Run ID**: `MIGRATE-2026-11-26T20-01-36-240Z`
 - **Source Site**: `https://www.eaadharam.in/2020/07/home-eaadharam_5.html`
-- **Executed At**: `2026-11-25T09:11:06.673Z`
+- **Executed At**: `2026-11-26T20:01:51.681Z`
 
 ## Summary Metrics
 
@@ -30,7 +30,7 @@
 | Doc ID | Document Number | Normalized Number | Categories | Text Layer | SHA-256 (Prefix) | Action |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `DOC-2025-0001` | `IGR/5897/2024-RR2` | `IGR58972024RR2` | `lrc-orders-sale`, `lrc-orders`, `registration-stamp-duty` | Yes (Text) | `3b69bd630f1a…` | **skipped_duplicate** |
-| `DOC-2023-0002` | `GO(P)No.45/2023/TD` | `GOPNO452023TD` | `registration-fair-value`, `registration`, `registration-stamp-duty` | No (Scanned) | `b59933ee3f45…` | **skipped_duplicate** |
+| `DOC-2023-0002` | `GO(P)No.45/2023/TD` | `GOPNO452023TD` | `registration-fair-value`, `registration`, `registration-stamp-duty` | No (Scanned) | `1d3f5c26bdb8…` | **skipped_duplicate** |
 | `DOC-2022-0003` | `LR/3322/2022-LR` | `LR33222022LR` | `lrc-orders-sale`, `lrc-orders`, `registration-stamp-duty`, `lrc-orders-rectification` | Yes (Text) | `b4116f4e047c…` | **skipped_duplicate** |
 | `DOC-2025-0001` | `IGR/5897/2024-RR2` | `IGR58972024RR2` | `lrc-orders-sale`, `lrc-orders`, `registration-stamp-duty` | Yes (Text) | `3b69bd630f1a…` | **skipped_duplicate** |
 | `DOC-2023-0004` | `IGR/6397/2022-RR2` | `IGR63972022RR2` | `lrc-orders-sale`, `lrc-orders`, `registration-stamp-duty` | Yes (Text) | `fd64497931d9…` | **skipped_duplicate** |

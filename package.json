@@ -10,7 +10,8 @@
     "db:setup": "tsx scripts/db/setup-indexes.ts",
     "db:migrate": "tsx scripts/db/schema-migration.ts",
     "import:eaadharam": "tsx scripts/import/migrate-eaadharam.ts",
-    "verify": "tsx scripts/verify-handover.ts"
+    "verify": "tsx scripts/verify-handover.ts",
+    "verify:quiz": "tsx scripts/verify-quiz.ts"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -23,6 +24,7 @@
     "pdfjs-dist": "^4.8.69",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "xlsx": "^0.18.5",
     "zod": "^3.23.8"
   },
   "devDependencies": {

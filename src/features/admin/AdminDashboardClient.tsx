@@ -16,7 +16,9 @@ import {
   PlusCircle,
   Loader2,
   ExternalLink,
+  Trophy,
 } from 'lucide-react';
+import AdminQuizBuilder from '@/features/quiz/AdminQuizBuilder';
 
 interface AdminUserItem {
   userId: string;
@@ -413,6 +415,19 @@ export default function AdminDashboardClient({
 
         <button
           type="button"
+          onClick={() => setActiveTab('quizzes')}
+          className={`inline-flex items-center gap-2 rounded-lg px-4 py-2 text-xs font-bold transition ${
+            activeTab === 'quizzes'
+              ? 'bg-mudra-800 text-white shadow'
+              : 'bg-white text-mudra-800 border border-mudra-200 hover:bg-parchment-100'
+          }`}
+        >
+          <Trophy className="h-4 w-4 text-amber-500" />
+          <span>Mudra Quiz Builder &amp; Live Host</span>
+        </button>
+
+        <button
+          type="button"
           onClick={() => setActiveTab('import')}
           className={`inline-flex items-center gap-2 rounded-lg px-4 py-2 text-xs font-bold transition ${
             activeTab === 'import'
@@ -424,6 +439,9 @@ export default function AdminDashboardClient({
           <span>Eaadharam Migration &amp; Dedup</span>
         </button>
       </div>
+
+      {/* TAB: MUDRA QUIZ BUILDER & LIVE HOST */}
+      {activeTab === 'quizzes' && <AdminQuizBuilder />}
 
       {/* TAB 1: ACCOUNTS MANAGEMENT */}
       {activeTab === 'users' && (

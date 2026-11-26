@@ -10,11 +10,11 @@ import {
   Shield,
   LogIn,
   Info,
-  Phone,
   X,
   ChevronRight,
   LogOut,
   BookOpen,
+  Trophy,
 } from 'lucide-react';
 import { MudraBrandLogo } from '@/components/brand/MudraBrandLogo';
 
@@ -40,10 +40,6 @@ const QUICK_CATEGORIES = [
   { slug: 'acts-statutory-rules', nameEn: 'Acts & Statutory Rules', nameMl: 'നിയമങ്ങളും ചട്ടങ്ങളും' },
 ];
 
-/**
- * Native Mobile App-Style Bottom Navigation Bar & Slide-Up Category Sheet
- * Appears on mobile screens (`md:hidden`) with safe-area padding, active tab pills, and touch feedback.
- */
 export function MobileBottomNav({
   mode,
   userRole,
@@ -52,6 +48,7 @@ export function MobileBottomNav({
 }: MobileBottomNavProps) {
   const pathname = usePathname();
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const isQuiz = pathname.startsWith('/quiz');
 
   if (mode === 'public') {
     return (
@@ -70,6 +67,15 @@ export function MobileBottomNav({
             <span>Home</span>
           </Link>
           <Link
+            href="/quiz"
+            className={`flex flex-col items-center justify-center gap-1 text-[11px] font-bold transition active:scale-95 ${
+              isQuiz ? 'text-amber-600' : 'text-mudra-700'
+            }`}
+          >
+            <Trophy className="h-5 w-5" />
+            <span>Quiz</span>
+          </Link>
+          <Link
             href="/about"
             className={`flex flex-col items-center justify-center gap-1 text-[11px] font-semibold transition active:scale-95 ${
               pathname === '/about' ? 'text-mudra-800' : 'text-mudra-500'
@@ -77,15 +83,6 @@ export function MobileBottomNav({
           >
             <Info className="h-5 w-5" />
             <span>About</span>
-          </Link>
-          <Link
-            href="/contact"
-            className={`flex flex-col items-center justify-center gap-1 text-[11px] font-semibold transition active:scale-95 ${
-              pathname === '/contact' ? 'text-mudra-800' : 'text-mudra-500'
-            }`}
-          >
-            <Phone className="h-5 w-5" />
-            <span>Contact</span>
           </Link>
           <Link
             href="/login"
@@ -112,11 +109,9 @@ export function MobileBottomNav({
 
   return (
     <>
-      {/* Slide-Up Mobile App Category & Account Sheet */}
       {drawerOpen && (
         <div className="md:hidden fixed inset-0 z-50 flex flex-col justify-end bg-black/60 backdrop-blur-xs">
           <div className="max-h-[82vh] w-full rounded-t-3xl bg-white shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom duration-200">
-            {/* Sheet Drag Handle & Header */}
             <div className="bg-[#0b192c] text-white px-5 pt-3 pb-4">
               <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-white/25" />
               <div className="flex items-center justify-between">
@@ -136,7 +131,6 @@ export function MobileBottomNav({
               </div>
             </div>
 
-            {/* Category List */}
             <div className="flex-1 overflow-y-auto p-4 space-y-1.5">
               <p className="px-2 pb-1 text-[11px] font-bold uppercase tracking-wider text-mudra-600">
                 Browse Eaadharam Categories
@@ -157,7 +151,6 @@ export function MobileBottomNav({
               ))}
             </div>
 
-            {/* Sheet Footer */}
             <div className="border-t border-mudra-100 bg-parchment-50 px-5 py-3.5 flex items-center justify-between">
               <span className="text-xs font-medium text-mudra-700">
                 Role: <strong className="uppercase">{userRole || 'reader'}</strong>
@@ -178,12 +171,11 @@ export function MobileBottomNav({
         </div>
       )}
 
-      {/* Fixed Bottom App Tab Bar */}
       <nav
         aria-label="Mobile Library Bottom Tab Bar"
         className="md:hidden fixed bottom-0 inset-x-0 z-40 border-t border-mudra-800/80 bg-[#0b192c]/95 text-parchment-200 backdrop-blur-lg shadow-[0_-6px_24px_rgba(0,0,0,0.25)] pb-[env(safe-area-inset-bottom)]"
       >
-        <div className={`grid ${userRole === 'admin' ? 'grid-cols-4' : 'grid-cols-3'} h-16`}>
+        <div className={`grid ${userRole === 'admin' ? 'grid-cols-5' : 'grid-cols-4'} h-16`}>
           <Link
             href="/library"
             className={`flex flex-col items-center justify-center gap-1 text-[11px] font-semibold transition active:scale-95 ${
@@ -215,9 +207,19 @@ export function MobileBottomNav({
             <span>Search</span>
           </Link>
 
+          <Link
+            href="/quiz"
+            className={`flex flex-col items-center justify-center gap-1 text-[11px] font-semibold transition active:scale-95 ${
+              isQuiz ? 'text-amber-400' : 'text-parchment-300'
+            }`}
+          >
+            <Trophy className="h-5 w-5" />
+            <span>Quiz</span>
+          </Link>
+
           {userRole === 'admin' && (
             <Link
-              href="/admin"
+              href="/admin?tab=quizzes"
               className={`flex flex-col items-center justify-center gap-1 text-[11px] font-semibold transition active:scale-95 ${
                 isAdmin ? 'text-amber-400' : 'text-parchment-300'
               }`}
