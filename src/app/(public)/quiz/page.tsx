@@ -70,6 +70,17 @@ function QuizLobbyInner() {
         typeof window !== 'undefined'
           ? window.localStorage.getItem(`mudra_quiz_token_${code}`)
           : null;
+      const savedName =
+        typeof window !== 'undefined'
+          ? window.localStorage.getItem(`mudra_quiz_name_${code}`)
+          : null;
+
+      // If the user typed a different player name on this device, create a fresh participant session instead of overwriting the previous player
+      const effectiveToken =
+        savedToken &&
+        (!savedName || savedName.trim().toLowerCase() === displayName.trim().toLowerCase())
+          ? savedToken
+          : null;
 
       const res = await fetch(`/api/quiz/rooms/${encodeURIComponent(code)}/join`, {
         method: 'POST',
@@ -77,7 +88,7 @@ function QuizLobbyInner() {
         body: JSON.stringify({
           roomCode: code,
           displayName,
-          participantToken: savedToken,
+          participantToken: effectiveToken,
           preferredLanguage,
         }),
       });
@@ -94,6 +105,10 @@ function QuizLobbyInner() {
         window.localStorage.setItem(
           `mudra_quiz_token_${code}`,
           data.participant.participantToken
+        );
+        window.localStorage.setItem(
+          `mudra_quiz_name_${code}`,
+          data.participant.displayName || displayName.trim()
         );
       }
 

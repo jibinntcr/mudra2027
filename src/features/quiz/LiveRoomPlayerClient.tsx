@@ -67,9 +67,11 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
   const [advancing, setAdvancing] = useState(false);
   const [remainingSeconds, setRemainingSeconds] = useState<number>(0);
   const [muted, setMuted] = useState<boolean>(false);
+  const [mobileRankDrawerOpen, setMobileRankDrawerOpen] = useState<boolean>(false);
 
   const lastPlayedRevealQRef = useRef<number>(-1);
   const lastPlayedPodiumRef = useRef<boolean>(false);
+  const serverClockOffsetMsRef = useRef<number>(0);
 
   useEffect(() => {
     setMuted(isQuizSoundMuted());
@@ -94,6 +96,10 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
       );
       if (res.ok) {
         const data = await res.json();
+        if (data.serverNow) {
+          serverClockOffsetMsRef.current =
+            new Date(data.serverNow).getTime() - Date.now();
+        }
         setState(data);
         if (data.me?.preferredLanguage) {
           setLang(data.me.preferredLanguage);
@@ -133,15 +139,16 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
     }
 
     const tick = () => {
+      const alignedNow = Date.now() + serverClockOffsetMsRef.current;
       if (room.status === 'question_open' && room.questionDeadlineAt) {
-        const diff = new Date(room.questionDeadlineAt).getTime() - Date.now();
+        const diff = new Date(room.questionDeadlineAt).getTime() - alignedNow;
         setRemainingSeconds(Math.max(0, Math.ceil(diff / 1000)));
       } else if (
         room.status === 'question_revealed' &&
         room.mode === 'auto_live' &&
         room.revealEndsAt
       ) {
-        const diff = new Date(room.revealEndsAt).getTime() - Date.now();
+        const diff = new Date(room.revealEndsAt).getTime() - alignedNow;
         setRemainingSeconds(Math.max(0, Math.ceil(diff / 1000)));
       } else {
         setRemainingSeconds(0);
@@ -152,9 +159,23 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
     return () => clearInterval(timer);
   }, [state]);
 
-  // Keyboard shortcuts (1-4 or A-D) for accessibility
+  // Clear submitError automatically whenever question index or room status changes
+  useEffect(() => {
+    setSubmitError(null);
+  }, [state?.room?.currentQuestionIndex, state?.room?.status]);
+
+  // Keyboard shortcuts (1-4 or A-D) for accessibility — disabled when typing in input fields
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.tagName === 'INPUT' ||
+          target.tagName === 'TEXTAREA' ||
+          target.isContentEditable)
+      ) {
+        return;
+      }
       if (
         !state?.room ||
         state.room.status !== 'question_open' ||
@@ -200,6 +221,7 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
     action: 'start_demo_room' | 'reveal_question' | 'next_question' | 'restart_demo_room'
   ) {
     setAdvancing(true);
+    setSubmitError(null);
     playQuizSound('select');
     try {
       await fetch(`/api/quiz/rooms/${encodeURIComponent(normalizedCode)}/state`, {
@@ -208,6 +230,10 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
         body: JSON.stringify({
           participantToken,
           action,
+          expectedQuestionIndex:
+            typeof state?.room?.currentQuestionIndex === 'number'
+              ? state.room.currentQuestionIndex
+              : undefined,
         }),
       });
       await pollRoomState();
@@ -244,6 +270,10 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
             `mudra_quiz_token_${normalizedCode}`,
             data.participant.participantToken
           );
+          window.localStorage.setItem(
+            `mudra_quiz_name_${normalizedCode}`,
+            data.participant.displayName || displayNameInput.trim()
+          );
         }
       }
       await pollRoomState();
@@ -273,7 +303,12 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
       );
       const data = await res.json();
       if (!res.ok) {
-        setSubmitError(data.error || 'Could not submit answer.');
+        if (data.code === 'LATE_SUBMISSION') {
+          // Another player or timer just revealed the question; sync immediately without showing an error
+          await pollRoomState();
+        } else {
+          setSubmitError(data.error || 'Could not submit answer.');
+        }
       } else {
         await pollRoomState();
       }
@@ -532,13 +567,55 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
               </div>
             </div>
           )}
+
+          {/* Mobile Compact Live Rank Strip (Visible on Mobile right below HUD) */}
+          <div className="lg:hidden mt-3 pt-3 border-t border-white/10">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+                <span className="shrink-0 inline-flex items-center gap-1 rounded-lg bg-amber-400/20 border border-amber-400/40 px-2 py-1 text-[10px] font-black text-amber-300">
+                  <Trophy className="h-3 w-3" />
+                  <span>Top Ranks:</span>
+                </span>
+                {leaderboard.slice(0, 3).map(
+                  (
+                    item: {
+                      participantId?: string;
+                      displayName: string;
+                      rank: number;
+                      totalPoints: number;
+                    },
+                    idx: number
+                  ) => (
+                    <span
+                      key={item.participantId || idx}
+                      className="shrink-0 inline-flex items-center gap-1 rounded-lg bg-white/10 border border-white/15 px-2 py-1 text-[10px] font-bold text-white"
+                    >
+                      <strong className="text-amber-300">#{item.rank}</strong>
+                      <span className="max-w-[75px] truncate">{item.displayName}</span>
+                      <span className="font-mono text-amber-200">{item.totalPoints}</span>
+                    </span>
+                  )
+                )}
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setMobileRankDrawerOpen(!mobileRankDrawerOpen)}
+                className="shrink-0 rounded-xl bg-white/10 border border-amber-400/40 px-2.5 py-1 text-[10px] font-black text-amber-300"
+              >
+                {mobileRankDrawerOpen ? 'Hide Ranks ▲' : `All Ranks (${participantCount}) ▼`}
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* MAIN TWO-COLUMN GAMIFIED ARENA: LEFT LIVE RANK LIST + RIGHT GAME STAGE */}
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 items-start">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-12 items-start">
           {/* LEFT SIDEBAR: PERSISTENT LIVE RANK LIST (LEADERBOARD) */}
           <aside
-            className="lg:col-span-4 order-2 lg:order-1 rounded-3xl bg-[#0d1f38]/95 border border-amber-400/30 p-5 shadow-2xl lg:sticky lg:top-20"
+            className={`lg:col-span-4 ${
+              mobileRankDrawerOpen ? 'order-1' : 'order-2'
+            } lg:order-1 rounded-3xl bg-[#0d1f38]/95 border border-amber-400/30 p-4 sm:p-5 shadow-2xl lg:sticky lg:top-20`}
             data-testid="live-rank-list-sidebar"
           >
             <div className="flex items-center justify-between border-b border-white/10 pb-3.5 mb-4">
@@ -569,6 +646,7 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
                 {leaderboard.map(
                   (
                     item: {
+                      participantId?: string;
                       displayName: string;
                       rank: number;
                       isTied: boolean;
@@ -577,7 +655,9 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
                     },
                     idx: number
                   ) => {
-                    const isMe = item.displayName === me.displayName && item.rank === me.rank;
+                    const isMe = item.participantId
+                      ? item.participantId === me.participantId
+                      : item.displayName === me.displayName && item.rank === me.rank;
                     const rankBadgeClass =
                       item.rank === 1
                         ? 'bg-gradient-to-br from-amber-300 to-amber-500 text-[#0b192c] ring-2 ring-amber-200'
@@ -676,7 +756,11 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
           </aside>
 
           {/* RIGHT MAIN STAGE: LOBBY / ACTIVE QUESTION / REVEAL / PODIUM */}
-          <main className="lg:col-span-8 order-1 lg:order-2 space-y-5">
+          <main
+            className={`lg:col-span-8 ${
+              mobileRankDrawerOpen ? 'order-2' : 'order-1'
+            } lg:order-2 space-y-5`}
+          >
             {/* STAGE 1: LOBBY SCREEN */}
             {room.status === 'lobby' && (
               <div className="rounded-3xl border-2 border-amber-400/40 bg-[#0d1f38]/95 p-6 sm:p-10 text-center shadow-2xl space-y-6">

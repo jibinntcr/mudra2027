@@ -781,6 +781,120 @@ async function runMudraQuizVerification() {
     `    • Exported .xlsx report verified (${exportBuf.byteLength} bytes, 100 participant rows, 4 question breakdown rows)\n`
   );
 
+  // 6. TEST MULTIPLAYER EDGE CASES: MID-GAME JOINS, SAME-ACCOUNT MULTI-JOIN, DUPLICATE NICKNAMES, & CONCURRENT NEXT-BUTTON CLICKS
+  console.log(
+    '6. Testing Multiplayer Edge Cases (Mid-Game Joins, Same-Account Multi-Join, Duplicate Nicknames & Concurrent Next Clicks)...'
+  );
+  const mpRoomCreateRes = await fetch(`${BASE_URL}/api/admin/quizzes/rooms`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Cookie: adminCookie },
+    body: JSON.stringify({
+      quizId,
+      mode: 'auto_live',
+      capacity: 50,
+      revealDurationSeconds: 10,
+    }),
+  });
+  assert.strictEqual(mpRoomCreateRes.status, 201);
+  const mpRoomCode = (await mpRoomCreateRes.json()).room.roomCode;
+
+  // Player A1 and Player A2 join using the SAME signed-in reader account (`readerCookie`) AND same nickname "Arun"
+  const [joinA1, joinA2] = await Promise.all([
+    fetch(`${BASE_URL}/api/quiz/rooms/${mpRoomCode}/join`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Cookie: readerCookie },
+      body: JSON.stringify({ roomCode: mpRoomCode, displayName: 'Arun' }),
+    }).then((r) => r.json()),
+    fetch(`${BASE_URL}/api/quiz/rooms/${mpRoomCode}/join`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Cookie: readerCookie },
+      body: JSON.stringify({ roomCode: mpRoomCode, displayName: 'Arun' }),
+    }).then((r) => r.json()),
+  ]);
+
+  assert(
+    joinA1.participant.participantId !== joinA2.participant.participantId,
+    'Two tabs/players using the same signed-in account must receive distinct participantIds'
+  );
+  assert(
+    joinA1.participant.displayName !== joinA2.participant.displayName,
+    'Duplicate display names in the same room must be automatically disambiguated (e.g. Arun and Arun (2))'
+  );
+  console.log(
+    `  ✓ Same-account multi-join & duplicate nickname disambiguation verified: "${joinA1.participant.displayName}" vs "${joinA2.participant.displayName}"`
+  );
+
+  // Start the quiz via player PATCH action (`start_demo_room`)
+  await fetch(`${BASE_URL}/api/quiz/rooms/${mpRoomCode}/state`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      participantToken: joinA1.participant.participantToken,
+      action: 'start_demo_room',
+    }),
+  });
+
+  // Player A3 joins MID-GAME while Question 1 is already open (`question_open`)!
+  const midGameJoinRes = await fetch(`${BASE_URL}/api/quiz/rooms/${mpRoomCode}/join`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ roomCode: mpRoomCode, displayName: 'MidGame_Player' }),
+  });
+  const midGameJoin = await midGameJoinRes.json();
+  assert.strictEqual(
+    midGameJoinRes.status,
+    200,
+    'New player joining after quiz has already started must be allowed to join seamlessly'
+  );
+  assert.strictEqual(midGameJoin.roomStatus, 'question_open');
+  console.log('  ✓ Mid-game join verified: Late-arriving player joined seamlessly while Question 1 was open');
+
+  // Now 10 concurrent requests click "Reveal & Next" (`reveal_question`) with `expectedQuestionIndex: 0`
+  await Promise.all(
+    Array.from({ length: 10 }, () =>
+      fetch(`${BASE_URL}/api/quiz/rooms/${mpRoomCode}/state`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          participantToken: joinA1.participant.participantToken,
+          action: 'reveal_question',
+          expectedQuestionIndex: 0,
+        }),
+      })
+    )
+  );
+
+  // Now 10 concurrent players click "Next Question" (`next_question`) at the exact same time for `expectedQuestionIndex: 0`
+  // It must advance strictly from Q1 (index 0) -> Q2 (index 1) and NEVER skip Q2!
+  await Promise.all(
+    Array.from({ length: 10 }, () =>
+      fetch(`${BASE_URL}/api/quiz/rooms/${mpRoomCode}/state`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          participantToken: joinA1.participant.participantToken,
+          action: 'next_question',
+          expectedQuestionIndex: 0,
+        }),
+      })
+    )
+  );
+
+  const afterConcurrentNext = await (
+    await fetch(
+      `${BASE_URL}/api/quiz/rooms/${mpRoomCode}/state?participantToken=${joinA1.participant.participantToken}`
+    )
+  ).json();
+  assert.strictEqual(
+    afterConcurrentNext.room.currentQuestionIndex,
+    1,
+    `10 concurrent 'Next Question' clicks for index 0 must land on index 1, got ${afterConcurrentNext.room.currentQuestionIndex}`
+  );
+  assert.strictEqual(afterConcurrentNext.room.status, 'question_open');
+  console.log(
+    '  ✓ Concurrent "Next Question" click protection verified: 10 simultaneous clicks advanced strictly from Q1 to Q2 without skipping\n'
+  );
+
   console.log('===================================================================');
   console.log(' ALL MUDRA QUIZ E2E & 100-PLAYER LOAD VERIFICATIONS PASSED!');
   console.log('===================================================================');

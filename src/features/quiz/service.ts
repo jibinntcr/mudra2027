@@ -922,6 +922,7 @@ export async function executeHostRoomAction(params: {
   joinLocked?: boolean;
   revealDurationSeconds?: number;
   capacity?: number;
+  expectedQuestionIndex?: number;
 }): Promise<QuizRoomDocument> {
   const { quizRooms, quizParticipants } = await getCollections();
   const { room, quizVersion } = await syncLiveRoomStateMachine(params.roomCode);
@@ -1018,6 +1019,12 @@ export async function executeHostRoomAction(params: {
     if (room.status !== 'question_open') {
       return room;
     }
+    if (
+      typeof params.expectedQuestionIndex === 'number' &&
+      room.currentQuestionIndex !== params.expectedQuestionIndex
+    ) {
+      return room;
+    }
     const revealEndsAt =
       room.mode === 'auto_live'
         ? new Date(now.getTime() + (room.revealDurationSeconds || 6) * 1000)
@@ -1027,6 +1034,7 @@ export async function executeHostRoomAction(params: {
       {
         roomCode: room.roomCode,
         status: 'question_open',
+        currentQuestionIndex: room.currentQuestionIndex,
         transitionVersion: room.transitionVersion,
       },
       {
@@ -1049,6 +1057,12 @@ export async function executeHostRoomAction(params: {
   }
 
   if (params.action === 'next_question') {
+    if (
+      typeof params.expectedQuestionIndex === 'number' &&
+      room.currentQuestionIndex !== params.expectedQuestionIndex
+    ) {
+      return room;
+    }
     if (room.status === 'question_open') {
       // First close & reveal if host clicks next while open
       await resetUnansweredStreaksForClosedQuestion(
@@ -1066,6 +1080,7 @@ export async function executeHostRoomAction(params: {
       await quizRooms.updateOne(
         {
           roomCode: room.roomCode,
+          currentQuestionIndex: room.currentQuestionIndex,
           transitionVersion: room.transitionVersion,
         },
         {
@@ -1085,6 +1100,7 @@ export async function executeHostRoomAction(params: {
       await quizRooms.updateOne(
         {
           roomCode: room.roomCode,
+          currentQuestionIndex: room.currentQuestionIndex,
           transitionVersion: room.transitionVersion,
         },
         {
@@ -1128,7 +1144,8 @@ export async function joinOrReconnectLiveRoom(params: {
 }> {
   const { quizParticipants } = await getCollections();
   const normalizedCode = params.roomCode.trim().toUpperCase();
-  const { room } = await syncLiveRoomStateMachine(normalizedCode);
+  await ensureDefaultPublishedQuiz();
+  let { room } = await syncLiveRoomStateMachine(normalizedCode);
 
   if (!room) {
     const err = new Error('Room code not found. Please check your 6-character code.');
@@ -1137,19 +1154,52 @@ export async function joinOrReconnectLiveRoom(params: {
   }
 
   const now = new Date();
+  const isDemoRoom = ['MUD207', 'LIVE01', 'AAD100'].includes(normalizedCode);
 
-  // 1. Check reconnection by participantToken OR signed-in userId
+  // Auto-reset completed demo rooms when a new player joins so demo room codes never fail with "already ended"
+  if (room.status === 'completed' && isDemoRoom) {
+    const { quizRooms, quizSubmissions } = await getCollections();
+    await quizSubmissions.deleteMany({ roomCode: normalizedCode });
+    await quizParticipants.updateMany(
+      { roomCode: normalizedCode },
+      {
+        $set: {
+          totalPoints: 0,
+          correctCount: 0,
+          answeredCount: 0,
+          cumulativeCorrectTimeMs: 0,
+          currentStreak: 0,
+          maxStreak: 0,
+          lastSeenAt: now,
+        },
+      }
+    );
+    await quizRooms.updateOne(
+      { roomCode: normalizedCode },
+      {
+        $set: {
+          status: 'lobby',
+          currentQuestionIndex: -1,
+          questionOpenedAt: null,
+          questionDeadlineAt: null,
+          revealStartedAt: null,
+          revealEndsAt: null,
+          completedAt: null,
+          updatedAt: now,
+        },
+        $inc: { transitionVersion: 1 },
+      }
+    );
+    const refreshed = await syncLiveRoomStateMachine(normalizedCode);
+    if (refreshed.room) room = refreshed.room;
+  }
+
+  // 1. Check reconnection ONLY by participantToken so multiple players sharing the same account or device can join independently
   let existingParticipant: QuizParticipantDocument | null = null;
   if (params.participantToken) {
     existingParticipant = await quizParticipants.findOne({
       roomCode: normalizedCode,
       participantToken: params.participantToken,
-    });
-  }
-  if (!existingParticipant && params.userId) {
-    existingParticipant = await quizParticipants.findOne({
-      roomCode: normalizedCode,
-      userId: params.userId,
     });
   }
 
@@ -1161,12 +1211,19 @@ export async function joinOrReconnectLiveRoom(params: {
     }
 
     const updatedLang = params.preferredLanguage || existingParticipant.preferredLanguage;
+    const requestedName = (params.displayName || '').trim();
+    const updatedName =
+      requestedName && requestedName.length >= 2
+        ? requestedName.slice(0, 40)
+        : existingParticipant.displayName;
+
     await quizParticipants.updateOne(
       { participantId: existingParticipant.participantId },
       {
         $set: {
           lastSeenAt: now,
           preferredLanguage: updatedLang,
+          displayName: updatedName,
         },
       }
     );
@@ -1176,6 +1233,7 @@ export async function joinOrReconnectLiveRoom(params: {
         ...existingParticipant,
         lastSeenAt: now,
         preferredLanguage: updatedLang,
+        displayName: updatedName,
       },
       reconnected: true,
       room,
@@ -1195,13 +1253,8 @@ export async function joinOrReconnectLiveRoom(params: {
     throw err;
   }
 
-  if (room.status !== 'lobby') {
-    const err = new Error(
-      'This live quiz is already in progress. New players can only join in the lobby, while existing players can reconnect using their session.'
-    );
-    (err as Error & { statusCode?: number }).statusCode = 403;
-    throw err;
-  }
+  // Note: New players are allowed to join both in 'lobby' AND while a live game is in progress
+  // ('question_open' / 'question_revealed') unless the host explicitly locked joining (`room.joinLocked === true`).
 
   const activeCount = await quizParticipants.countDocuments({
     roomCode: normalizedCode,
@@ -1224,6 +1277,24 @@ export async function joinOrReconnectLiveRoom(params: {
     throw err;
   }
 
+  // Disambiguate duplicate display names in the same room so every player has a distinct leaderboard identity
+  const existingInRoom = await quizParticipants
+    .find({ roomCode: normalizedCode, removed: false })
+    .toArray();
+  const takenNamesLower = new Set(
+    existingInRoom.map((p) => p.displayName.trim().toLowerCase())
+  );
+  let finalDisplayName = cleanName.slice(0, 40);
+  if (takenNamesLower.has(finalDisplayName.toLowerCase())) {
+    for (let suffix = 2; suffix <= 999; suffix++) {
+      const candidate = `${cleanName.slice(0, 34)} (${suffix})`;
+      if (!takenNamesLower.has(candidate.toLowerCase())) {
+        finalDisplayName = candidate;
+        break;
+      }
+    }
+  }
+
   const participantId = `P-${normalizedCode}-${crypto.randomBytes(6).toString('hex')}`;
   const participantToken = crypto.randomBytes(18).toString('hex');
 
@@ -1236,7 +1307,7 @@ export async function joinOrReconnectLiveRoom(params: {
     versionId: room.versionId,
     userId: params.userId || null,
     loginId: params.loginId || null,
-    displayName: cleanName.slice(0, 40),
+    displayName: finalDisplayName,
     isGuest: !params.userId,
     preferredLanguage: params.preferredLanguage || 'en',
     removed: false,

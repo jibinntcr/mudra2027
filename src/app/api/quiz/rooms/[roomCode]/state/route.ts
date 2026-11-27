@@ -192,8 +192,9 @@ export async function GET(
       participantCount: allParticipants.length,
       currentQuestionAnsweredCount: currentAnswerCount,
       currentQuestion: currentQuestionPayload,
-      // Shared leaderboard: only displayName, rank, isTied, totalPoints, and streak
-      leaderboard: ranked.slice(0, 30).map((p) => ({
+      // Shared leaderboard: participantId, displayName, rank, isTied, totalPoints, and streak
+      leaderboard: ranked.slice(0, 50).map((p) => ({
+        participantId: p.participantId,
         displayName: p.displayName,
         rank: p.rank,
         isTied: p.isTied,
@@ -280,23 +281,33 @@ export async function PATCH(
   }
 
   if (body.action === 'reveal_question') {
+    const expectedQuestionIndex =
+      typeof body.expectedQuestionIndex === 'number'
+        ? body.expectedQuestionIndex
+        : undefined;
     const room = await executeHostRoomAction({
       roomCode: normalizedCode,
       action: 'reveal_question',
+      expectedQuestionIndex,
     });
     return NextResponse.json(
-      { ok: true, status: room.status },
+      { ok: true, status: room.status, currentQuestionIndex: room.currentQuestionIndex },
       { status: 200, headers: { 'Cache-Control': 'private, no-store' } }
     );
   }
 
   if (body.action === 'next_question') {
+    const expectedQuestionIndex =
+      typeof body.expectedQuestionIndex === 'number'
+        ? body.expectedQuestionIndex
+        : undefined;
     const room = await executeHostRoomAction({
       roomCode: normalizedCode,
       action: 'next_question',
+      expectedQuestionIndex,
     });
     return NextResponse.json(
-      { ok: true, status: room.status },
+      { ok: true, status: room.status, currentQuestionIndex: room.currentQuestionIndex },
       { status: 200, headers: { 'Cache-Control': 'private, no-store' } }
     );
   }
