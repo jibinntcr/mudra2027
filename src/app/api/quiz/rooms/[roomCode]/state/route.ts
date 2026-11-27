@@ -8,15 +8,14 @@ import {
 import { rankParticipants } from '@/features/quiz/scoring';
 
 /**
- * Live Room Real-Time State & Language Switch Endpoint
+ * Live Room Real-Time State, Language Switch & Interactive Progression Endpoint
  *
  * SECURITY & FAIRNESS:
  * - While `room.status === 'question_open'`, NEVER sends `correctOptionId`, `explanationEn`, `explanationMl`,
  *   or `linkedDocSnapshot` to any client.
  * - Sends `correctOptionId`, `explanationEn`, `explanationMl`, and `linkedDocSnapshot` ONLY when
  *   `room.status === 'question_revealed'` or `room.status === 'completed'`.
- * - Shared leaderboards expose ONLY `displayName`, `rank`, `isTied`, and `totalPoints` (plus streak indicator).
- * - Player-specific answer breakdown & end-of-quiz review is returned ONLY to the matching authenticated `participantToken`.
+ * - Shared leaderboards expose ONLY `displayName`, `rank`, `isTied`, `totalPoints`, and `currentStreak`.
  */
 export async function GET(
   req: NextRequest,
@@ -191,7 +190,7 @@ export async function GET(
       currentQuestionAnsweredCount: currentAnswerCount,
       currentQuestion: currentQuestionPayload,
       // Shared leaderboard: only displayName, rank, isTied, totalPoints, and streak
-      leaderboard: ranked.slice(0, 20).map((p) => ({
+      leaderboard: ranked.slice(0, 30).map((p) => ({
         displayName: p.displayName,
         rank: p.rank,
         isTied: p.isTied,
@@ -250,7 +249,12 @@ export async function GET(
 }
 
 /**
- * Updates participant preferred language ('en' or 'ml') without losing progress
+ * Supports:
+ * - Language switching (`preferredLanguage: 'en' | 'ml'`)
+ * - Starting the live room (`action: 'start_demo_room'`)
+ * - Revealing the answer after submitting (`action: 'reveal_question'`)
+ * - Advancing to the next question or final podium (`action: 'next_question'`)
+ * - Resetting a completed demo room for replay (`action: 'restart_demo_room'`)
  */
 export async function PATCH(
   req: NextRequest,
@@ -268,6 +272,68 @@ export async function PATCH(
     });
     return NextResponse.json(
       { ok: true, status: room.status },
+      { status: 200, headers: { 'Cache-Control': 'private, no-store' } }
+    );
+  }
+
+  if (body.action === 'reveal_question') {
+    const room = await executeHostRoomAction({
+      roomCode: normalizedCode,
+      action: 'reveal_question',
+    });
+    return NextResponse.json(
+      { ok: true, status: room.status },
+      { status: 200, headers: { 'Cache-Control': 'private, no-store' } }
+    );
+  }
+
+  if (body.action === 'next_question') {
+    const room = await executeHostRoomAction({
+      roomCode: normalizedCode,
+      action: 'next_question',
+    });
+    return NextResponse.json(
+      { ok: true, status: room.status },
+      { status: 200, headers: { 'Cache-Control': 'private, no-store' } }
+    );
+  }
+
+  if (body.action === 'restart_demo_room') {
+    const { quizRooms, quizParticipants, quizSubmissions } = await getCollections();
+    const now = new Date();
+    await quizSubmissions.deleteMany({ roomCode: normalizedCode });
+    await quizParticipants.updateMany(
+      { roomCode: normalizedCode },
+      {
+        $set: {
+          totalPoints: 0,
+          correctCount: 0,
+          answeredCount: 0,
+          cumulativeCorrectTimeMs: 0,
+          currentStreak: 0,
+          maxStreak: 0,
+          lastSeenAt: now,
+        },
+      }
+    );
+    await quizRooms.updateOne(
+      { roomCode: normalizedCode },
+      {
+        $set: {
+          status: 'lobby',
+          currentQuestionIndex: -1,
+          questionOpenedAt: null,
+          questionDeadlineAt: null,
+          revealStartedAt: null,
+          revealEndsAt: null,
+          completedAt: null,
+          updatedAt: now,
+        },
+        $inc: { transitionVersion: 1 },
+      }
+    );
+    return NextResponse.json(
+      { ok: true, status: 'lobby' },
       { status: 200, headers: { 'Cache-Control': 'private, no-store' } }
     );
   }
