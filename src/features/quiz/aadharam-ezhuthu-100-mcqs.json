@@ -1,0 +1,3802 @@
+[
+  {
+    "questionId": "Q-AE-001",
+    "order": 1,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §17(1)(a)",
+    "promptEn": "Which of these instruments must be registered?",
+    "promptMl": "ഇവയിൽ നിർബന്ധമായും രജിസ്റ്റർ ചെയ്യേണ്ട രേഖ ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Land tax receipt",
+        "textMl": "ഭൂനികുതി രസീത്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Encumbrance certificate",
+        "textMl": "ബാധ്യതാ സർട്ടിഫിക്കറ്റ്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Will",
+        "textMl": "വിൽപത്രം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Gift deed for immovable property",
+        "textMl": "സ്ഥാവരസ്വത്തിന്റെ ദാനാധാരം"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Gift deed for immovable property. [Topic: Registration Act, 1908 · Statutory Reference: R §17(1)(a)]",
+    "explanationMl": "ശരിയുത്തരം (D): സ്ഥാവരസ്വത്തിന്റെ ദാനാധാരം. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §17(1)(a)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-002",
+    "order": 2,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §17(1)(d)",
+    "promptEn": "Which lease is compulsorily registrable on account of its term?",
+    "promptMl": "കാലാവധി കണക്കിലെടുത്താൽ നിർബന്ധമായും രജിസ്റ്റർ ചെയ്യേണ്ട പാട്ടം ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Fixed two-year lease",
+        "textMl": "രണ്ടുവർഷത്തെ നിശ്ചിതകാല പാട്ടം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Fixed six-month lease with monthly rent",
+        "textMl": "മാസവാടകയുള്ള ആറുമാസത്തെ പാട്ടം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Fixed three-month lease with monthly rent",
+        "textMl": "മാസവാടകയുള്ള മൂന്നുമാസത്തെ പാട്ടം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Fixed eleven-month lease with monthly rent",
+        "textMl": "മാസവാടകയുള്ള പതിനൊന്നുമാസത്തെ പാട്ടം"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Fixed two-year lease. [Topic: Registration Act, 1908 · Statutory Reference: R §17(1)(d)]",
+    "explanationMl": "ശരിയുത്തരം (A): രണ്ടുവർഷത്തെ നിശ്ചിതകാല പാട്ടം. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §17(1)(d)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-003",
+    "order": 3,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §18(e)",
+    "promptEn": "Which instrument may be registered at the maker's option?",
+    "promptMl": "തയ്യാറാക്കുന്ന വ്യക്തിയുടെ ഇഷ്ടപ്രകാരം രജിസ്റ്റർ ചെയ്യാവുന്ന രേഖ ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Will",
+        "textMl": "വിൽപത്രം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Fixed three-year lease of a building",
+        "textMl": "കെട്ടിടത്തിന്റെ മൂന്നുവർഷത്തെ നിശ്ചിതകാല പാട്ടം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Sale deed for a house",
+        "textMl": "വീട് വിൽക്കുന്ന ആധാരം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Gift deed for land",
+        "textMl": "ഭൂമിയുടെ ദാനാധാരം"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Will. [Topic: Registration Act, 1908 · Statutory Reference: R §18(e)]",
+    "explanationMl": "ശരിയുത്തരം (A): വിൽപത്രം. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §18(e)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-004",
+    "order": 4,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §19",
+    "promptEn": "The registering officer neither understands the deed's language nor finds it commonly used in the district. What should accompany the deed?",
+    "promptMl": "ആധാരത്തിലെ ഭാഷ രജിസ്ട്രേഷൻ ഉദ്യോഗസ്ഥന് മനസ്സിലാകുന്നില്ല. ജില്ലയിൽ ആ ഭാഷ സാധാരണ ഉപയോഗിക്കുന്നതുമല്ല. ആധാരത്തോടൊപ്പം എന്തു നൽകണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The previous owner's identity proof",
+        "textMl": "മുൻ ഉടമയുടെ തിരിച്ചറിയൽ രേഖ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "A certified land survey sketch alone",
+        "textMl": "സാക്ഷ്യപ്പെടുത്തിയ ഭൂസർവേ സ്കെച്ച് മാത്രം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "A true translation into a commonly used language in the district and a true copy",
+        "textMl": "ജില്ലയിൽ സാധാരണ ഉപയോഗിക്കുന്ന ഭാഷയിലുള്ള ശരിയായ പരിഭാഷയും ആധാരത്തിന്റെ യഥാതഥ പകർപ്പും"
+      },
+      {
+        "optionId": "D",
+        "textEn": "A declaration of the document's value",
+        "textMl": "ആധാരത്തിലെ വസ്തുവില സംബന്ധിച്ച പ്രഖ്യാപനം"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): A true translation into a commonly used language in the district and a true copy. [Topic: Registration Act, 1908 · Statutory Reference: R §19]",
+    "explanationMl": "ശരിയുത്തരം (C): ജില്ലയിൽ സാധാരണ ഉപയോഗിക്കുന്ന ഭാഷയിലുള്ള ശരിയായ പരിഭാഷയും ആധാരത്തിന്റെ യഥാതഥ പകർപ്പും. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §19]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-005",
+    "order": 5,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §20",
+    "promptEn": "How should an alteration in a deed be authenticated to address a possible refusal under Section 20?",
+    "promptMl": "വകുപ്പ് 20 പ്രകാരമുള്ള നിരസിക്കൽ ഒഴിവാക്കാൻ ആധാരത്തിലെ തിരുത്തൽ എങ്ങനെ സാക്ഷ്യപ്പെടുത്തണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The executants attest it with signatures or initials",
+        "textMl": "ആധാരം എഴുതിക്കൊടുക്കുന്നവർ ഒപ്പോ ചുരുക്കൊപ്പോ രേഖപ്പെടുത്തി സാക്ഷ്യപ്പെടുത്തണം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The deed writer circles it in pencil",
+        "textMl": "ആധാരമെഴുത്തുകാരൻ പെൻസിൽകൊണ്ട് വട്ടമിടണം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The purchaser adds a separate address proof",
+        "textMl": "വാങ്ങുന്നയാൾ വേറെ വിലാസരേഖ ചേർക്കണം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The presenter attaches a fee receipt",
+        "textMl": "ആധാരം ഹാജരാക്കുന്നയാൾ ഫീസ് രസീത് ചേർക്കണം"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): The executants attest it with signatures or initials. [Topic: Registration Act, 1908 · Statutory Reference: R §20]",
+    "explanationMl": "ശരിയുത്തരം (A): ആധാരം എഴുതിക്കൊടുക്കുന്നവർ ഒപ്പോ ചുരുക്കൊപ്പോ രേഖപ്പെടുത്തി സാക്ഷ്യപ്പെടുത്തണം. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §20]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-006",
+    "order": 6,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §21(1)",
+    "promptEn": "What must the description of immovable property enable the reader to do?",
+    "promptMl": "സ്ഥാവരസ്വത്തിന്റെ വിവരണം വായിക്കുന്നയാൾക്ക് എന്തു ചെയ്യാൻ കഴിയണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Calculate the seller's income tax",
+        "textMl": "വിൽക്കുന്നയാളുടെ ആദായനികുതി കണക്കാക്കാൻ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Identify the property",
+        "textMl": "വസ്തു തിരിച്ചറിയാൻ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Determine the parties' relationship",
+        "textMl": "കക്ഷികൾ തമ്മിലുള്ള ബന്ധം കണ്ടെത്താൻ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Confirm the writer's licence status",
+        "textMl": "ആധാരമെഴുത്തുകാരന്റെ ലൈസൻസ് നില ഉറപ്പാക്കാൻ"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Identify the property. [Topic: Registration Act, 1908 · Statutory Reference: R §21(1)]",
+    "explanationMl": "ശരിയുത്തരം (B): വസ്തു തിരിച്ചറിയാൻ. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §21(1)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-007",
+    "order": 7,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §21(4)",
+    "promptEn": "A deed includes a map of the property. What must accompany it for registration under Section 21(4)?",
+    "promptMl": "ആധാരത്തിൽ വസ്തുവിന്റെ ഭൂപടം ഉൾപ്പെടുത്തിയിട്ടുണ്ട്. വകുപ്പ് 21(4) പ്രകാരം രജിസ്ട്രേഷനായി എന്തു ചേർക്കണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "A true copy of the map",
+        "textMl": "ഭൂപടത്തിന്റെ യഥാതഥ പകർപ്പ്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "An encumbrance certificate for the adjoining plot",
+        "textMl": "ചേർന്നുകിടക്കുന്ന സ്ഥലത്തിന്റെ ബാധ്യതാ സർട്ടിഫിക്കറ്റ്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "A map of the whole district",
+        "textMl": "ജില്ലയുടെ മുഴുവൻ ഭൂപടം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "A fresh valuation report in every case",
+        "textMl": "എല്ലാ കേസിലും പുതിയ മൂല്യനിർണയ റിപ്പോർട്ട്"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): A true copy of the map. [Topic: Registration Act, 1908 · Statutory Reference: R §21(4)]",
+    "explanationMl": "ശരിയുത്തരം (A): ഭൂപടത്തിന്റെ യഥാതഥ പകർപ്പ്. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §21(4)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-008",
+    "order": 8,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §23",
+    "promptEn": "Subject to statutory exceptions, what is the usual presentation period for a deed other than a will?",
+    "promptMl": "നിയമത്തിലെ ഒഴിവുകൾക്ക് വിധേയമായി, വിൽപത്രം ഒഴികെയുള്ള ആധാരം സാധാരണ എത്ര സമയത്തിനകം ഹാജരാക്കണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Six months from the tax payment date",
+        "textMl": "നികുതി അടച്ച തീയതി മുതൽ ആറുമാസം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Three months from execution",
+        "textMl": "ആധാരം ഒപ്പിട്ട തീയതി മുതൽ മൂന്ന് മാസം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Four months from the token date",
+        "textMl": "ടോക്കൺ തീയതി മുതൽ നാല് മാസം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Four months from execution",
+        "textMl": "ആധാരം ഒപ്പിട്ട തീയതി മുതൽ നാല് മാസം"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Four months from execution. [Topic: Registration Act, 1908 · Statutory Reference: R §23]",
+    "explanationMl": "ശരിയുത്തരം (D): ആധാരം ഒപ്പിട്ട തീയതി മുതൽ നാല് മാസം. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §23]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-009",
+    "order": 9,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §25",
+    "promptEn": "Which circumstance can support a request for delayed presentation under Section 25, subject to its limits?",
+    "promptMl": "വകുപ്പ് 25-ലെ പരിധികൾക്ക് വിധേയമായി, വൈകി ആധാരം ഹാജരാക്കാനുള്ള അപേക്ഷയ്ക്ക് കാരണമാകാവുന്ന സാഹചര്യം ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "A decision to wait for a rise in market value",
+        "textMl": "വിപണിവില ഉയരുന്നതുവരെ കാത്തിരിക്കാനുള്ള തീരുമാനം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "A preference for a different document writer",
+        "textMl": "മറ്റൊരു ആധാരമെഴുത്തുകാരനെ തിരഞ്ഞെടുക്കാനുള്ള താൽപര്യം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "A plan to negotiate a new price after signing",
+        "textMl": "ഒപ്പിട്ടശേഷം പുതിയ വില ചർച്ച ചെയ്യാനുള്ള തീരുമാനം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Urgent necessity or unavoidable accident",
+        "textMl": "അടിയന്തര ആവശ്യമോ ഒഴിവാക്കാനാകാത്ത അപകടസംഭവമോ"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Urgent necessity or unavoidable accident. [Topic: Registration Act, 1908 · Statutory Reference: R §25]",
+    "explanationMl": "ശരിയുത്തരം (D): അടിയന്തര ആവശ്യമോ ഒഴിവാക്കാനാകാത്ത അപകടസംഭവമോ. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §25]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-010",
+    "order": 10,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §25",
+    "promptEn": "For an eligible delay under Section 25, what is the maximum prescribed fine relative to the proper registration fee?",
+    "promptMl": "വകുപ്പ് 25 പ്രകാരം അനുവദിക്കാവുന്ന കാലതാമസത്തിന്, അടയ്ക്കേണ്ട രജിസ്ട്രേഷൻ ഫീസിന്റെ എത്ര മടങ്ങ് വരെയാണ് പിഴ ചുമത്താവുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Twenty times",
+        "textMl": "ഇരുപതുമടങ്ങ്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Two times",
+        "textMl": "രണ്ടുമടങ്ങ്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Ten times",
+        "textMl": "പത്തുമടങ്ങ്"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Four times",
+        "textMl": "നാലുമടങ്ങ്"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): Ten times. [Topic: Registration Act, 1908 · Statutory Reference: R §25]",
+    "explanationMl": "ശരിയുത്തരം (C): പത്തുമടങ്ങ്. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §25]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-011",
+    "order": 11,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §27",
+    "promptEn": "When may a will be presented for registration or deposited under Section 27?",
+    "promptMl": "വകുപ്പ് 27 പ്രകാരം വിൽപത്രം എപ്പോൾ രജിസ്ട്രേഷനായി ഹാജരാക്കുകയോ നിക്ഷേപിക്കുകയോ ചെയ്യാം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "At any time, subject to the applicable procedure",
+        "textMl": "ബാധകമായ നടപടിക്രമങ്ങൾക്ക് വിധേയമായി ഏതു സമയത്തും"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Only within four months of execution",
+        "textMl": "ഒപ്പിട്ടശേഷം നാല് മാസത്തിനകം മാത്രം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Only during the testator's lifetime in every case",
+        "textMl": "എല്ലാ സാഹചര്യത്തിലും വിൽപത്രകർത്താവിന്റെ ജീവിതകാലത്ത് മാത്രം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Only after a fixed one-year waiting period",
+        "textMl": "നിശ്ചിതമായ ഒരുവർഷത്തെ കാത്തിരിപ്പിനുശേഷം മാത്രം"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): At any time, subject to the applicable procedure. [Topic: Registration Act, 1908 · Statutory Reference: R §27]",
+    "explanationMl": "ശരിയുത്തരം (A): ബാധകമായ നടപടിക്രമങ്ങൾക്ക് വിധേയമായി ഏതു സമയത്തും. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §27]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-012",
+    "order": 12,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §28",
+    "promptEn": "Under the general rule, which Sub-Registrar's office can receive a land sale deed?",
+    "promptMl": "പൊതുനിയമപ്രകാരം ഭൂമിയുടെ വിൽപ്പനയാധാരം ഏത് സബ് രജിസ്ട്രാർ ഓഫീസിൽ ഹാജരാക്കാം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Only the office where the stamp paper was bought",
+        "textMl": "മുദ്രപത്രം വാങ്ങിയ സ്ഥലത്തെ ഓഫീസ് മാത്രം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "An office whose sub-district contains all or part of the land",
+        "textMl": "ഭൂമി മുഴുവനായോ ഭാഗികമായോ അധികാരപരിധിയിൽ ഉൾപ്പെടുന്ന ഓഫീസ്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Only the office where the witnesses live",
+        "textMl": "സാക്ഷികൾ താമസിക്കുന്ന സ്ഥലത്തെ ഓഫീസ് മാത്രം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Only the office nearest the buyer's home",
+        "textMl": "വാങ്ങുന്നയാളുടെ വീടിന് ഏറ്റവും അടുത്തുള്ള ഓഫീസ് മാത്രം"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): An office whose sub-district contains all or part of the land. [Topic: Registration Act, 1908 · Statutory Reference: R §28]",
+    "explanationMl": "ശരിയുത്തരം (B): ഭൂമി മുഴുവനായോ ഭാഗികമായോ അധികാരപരിധിയിൽ ഉൾപ്പെടുന്ന ഓഫീസ്. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §28]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-013",
+    "order": 13,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §§32–33",
+    "promptEn": "A broker wants to present a deed solely as the seller's agent. What authority is generally required for that role?",
+    "promptMl": "വിൽക്കുന്നയാളുടെ പ്രതിനിധിയായി മാത്രം ഒരു ബ്രോക്കർ ആധാരം ഹാജരാക്കാൻ ആഗ്രഹിക്കുന്നു. സാധാരണ എന്ത് അധികാരമാണ് വേണ്ടത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "A witness's written permission",
+        "textMl": "സാക്ഷിയുടെ രേഖാമൂലമുള്ള അനുമതി"
+      },
+      {
+        "optionId": "B",
+        "textEn": "A copy of the brokerage agreement alone",
+        "textMl": "ബ്രോക്കറേജ് കരാറിന്റെ പകർപ്പ് മാത്രം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "An informal telephone instruction",
+        "textMl": "ഫോണിലൂടെ നൽകിയ അനൗപചാരിക നിർദേശം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "A power of attorney executed and authenticated as required by law",
+        "textMl": "നിയമപ്രകാരം നിർവഹിച്ച് സാക്ഷ്യപ്പെടുത്തിയ അധികാരപത്രം"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): A power of attorney executed and authenticated as required by law. [Topic: Registration Act, 1908 · Statutory Reference: R §§32–33]",
+    "explanationMl": "ശരിയുത്തരം (D): നിയമപ്രകാരം നിർവഹിച്ച് സാക്ഷ്യപ്പെടുത്തിയ അധികാരപത്രം. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §§32–33]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-014",
+    "order": 14,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §32A",
+    "promptEn": "For a transfer of ownership of immovable property, whose photographs and fingerprints must also be affixed under the proviso to Section 32A?",
+    "promptMl": "സ്ഥാവരസ്വത്തിന്റെ ഉടമസ്ഥാവകാശ കൈമാറ്റത്തിൽ വകുപ്പ് 32A-യിലെ വ്യവസ്ഥപ്രകാരം ആരുടെ ഫോട്ടോയും വിരലടയാളവും കൂടി പതിക്കണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The witnesses alone",
+        "textMl": "സാക്ഷികളുടെ മാത്രം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The deed writer and scribe",
+        "textMl": "ആധാരമെഴുത്തുകാരന്റെയും പകർപ്പെഴുത്തുകാരന്റെയും"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Each buyer and seller mentioned in the document",
+        "textMl": "ആധാരത്തിൽ പറയുന്ന ഓരോ വാങ്ങുന്നയാളുടെയും വിൽക്കുന്നയാളുടെയും"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The registering officer and office assistant",
+        "textMl": "രജിസ്ട്രേഷൻ ഉദ്യോഗസ്ഥന്റെയും ഓഫീസ് സഹായിയുടെയും"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): Each buyer and seller mentioned in the document. [Topic: Registration Act, 1908 · Statutory Reference: R §32A]",
+    "explanationMl": "ശരിയുത്തരം (C): ആധാരത്തിൽ പറയുന്ന ഓരോ വാങ്ങുന്നയാളുടെയും വിൽക്കുന്നയാളുടെയും. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §32A]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-015",
+    "order": 15,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §34(3)",
+    "promptEn": "What does the registering officer examine when a person appears as a representative or agent?",
+    "promptMl": "ഒരാൾ പ്രതിനിധിയായോ ഏജന്റായോ ഹാജരാകുമ്പോൾ രജിസ്ട്രേഷൻ ഉദ്യോഗസ്ഥൻ എന്ത് പരിശോധിക്കും?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The person's right to appear in that capacity",
+        "textMl": "ആ നിലയിൽ ഹാജരാകാനുള്ള വ്യക്തിയുടെ അധികാരം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The person's eligibility for a bank loan",
+        "textMl": "ബാങ്ക് വായ്പയ്ക്കുള്ള വ്യക്തിയുടെ യോഗ്യത"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The deed writer's professional fee",
+        "textMl": "ആധാരമെഴുത്തുകാരന്റെ പ്രതിഫലം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The market price of nearby properties",
+        "textMl": "സമീപ വസ്തുക്കളുടെ വിപണിവില"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): The person's right to appear in that capacity. [Topic: Registration Act, 1908 · Statutory Reference: R §34(3)]",
+    "explanationMl": "ശരിയുത്തരം (A): ആ നിലയിൽ ഹാജരാകാനുള്ള വ്യക്തിയുടെ അധികാരം. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §34(3)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-016",
+    "order": 16,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §35(3)(a)",
+    "promptEn": "An alleged executant appears and denies signing the deed. What must the registering officer do as to that person?",
+    "promptMl": "ആധാരം ഒപ്പിട്ടുവെന്ന് പറയപ്പെടുന്നയാൾ ഹാജരായി ഒപ്പ് നിഷേധിക്കുന്നു. ആ വ്യക്തിയെ സംബന്ധിച്ച് ഉദ്യോഗസ്ഥൻ എന്തു ചെയ്യണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Register it on payment of an extra fee",
+        "textMl": "അധിക ഫീസ് വാങ്ങി രജിസ്റ്റർ ചെയ്യണം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Refuse registration as to that person",
+        "textMl": "ആ വ്യക്തിയെ സംബന്ധിച്ച് രജിസ്ട്രേഷൻ നിരസിക്കണം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Ask the deed writer to sign instead",
+        "textMl": "പകരം ആധാരമെഴുത്തുകാരനോട് ഒപ്പിടാൻ ആവശ്യപ്പെടണം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Convert the deed into a power of attorney",
+        "textMl": "ആധാരത്തെ അധികാരപത്രമാക്കി മാറ്റണം"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Refuse registration as to that person. [Topic: Registration Act, 1908 · Statutory Reference: R §35(3)(a)]",
+    "explanationMl": "ശരിയുത്തരം (B): ആ വ്യക്തിയെ സംബന്ധിച്ച് രജിസ്ട്രേഷൻ നിരസിക്കണം. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §35(3)(a)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-017",
+    "order": 17,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §47",
+    "promptEn": "A deed is registered after its execution date. Which statutory test determines when it operates?",
+    "promptMl": "ആധാരം ഒപ്പിട്ട തീയതിക്കുശേഷം രജിസ്റ്റർ ചെയ്തു. അത് ഏതു സമയം മുതൽ പ്രാബല്യത്തിൽ വരുമെന്ന് എങ്ങനെ നിർണയിക്കും?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The time it would have operated if registration had not been required",
+        "textMl": "രജിസ്ട്രേഷൻ ആവശ്യമില്ലായിരുന്നെങ്കിൽ ആധാരം പ്രാബല്യത്തിൽ വരുമായിരുന്ന സമയം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The date the registration token was booked in every case",
+        "textMl": "എല്ലാ കേസിലും ടോക്കൺ ബുക്ക് ചെയ്ത തീയതി"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The date the deed writer first opened the file",
+        "textMl": "ആധാരമെഴുത്തുകാരൻ ആദ്യം ഫയൽ തുറന്ന തീയതി"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The date the buyer paid land tax in every case",
+        "textMl": "എല്ലാ കേസിലും വാങ്ങുന്നയാൾ ഭൂനികുതി അടച്ച തീയതി"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): The time it would have operated if registration had not been required. [Topic: Registration Act, 1908 · Statutory Reference: R §47]",
+    "explanationMl": "ശരിയുത്തരം (A): രജിസ്ട്രേഷൻ ആവശ്യമില്ലായിരുന്നെങ്കിൽ ആധാരം പ്രാബല്യത്തിൽ വരുമായിരുന്ന സമയം. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §47]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-018",
+    "order": 18,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §49",
+    "promptEn": "A land sale deed required to be registered remains unregistered. What is the general effect on the purported transfer?",
+    "promptMl": "നിർബന്ധമായും രജിസ്റ്റർ ചെയ്യേണ്ട ഭൂമിയുടെ വിൽപ്പനയാധാരം രജിസ്റ്റർ ചെയ്തില്ല. കൈമാറ്റത്തിൽ അതിന്റെ പൊതുവായ ഫലം എന്ത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The stamp vendor can validate the transfer",
+        "textMl": "മുദ്രപത്ര വിൽപ്പനക്കാരന് കൈമാറ്റം സാധൂകരിക്കാം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The sale takes effect when two neighbours sign",
+        "textMl": "രണ്ട് അയൽക്കാർ ഒപ്പിട്ടാൽ വിൽപ്പന പ്രാബല്യത്തിലാകും"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The deed does not effect the intended transfer of the property",
+        "textMl": "ഉദ്ദേശിച്ച വസ്തുകൈമാറ്റം ആധാരം വഴി നടക്കില്ല"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The sale takes effect once the buyer pays land tax",
+        "textMl": "വാങ്ങുന്നയാൾ ഭൂനികുതി അടച്ചാൽ വിൽപ്പന പ്രാബല്യത്തിലാകും"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): The deed does not effect the intended transfer of the property. [Topic: Registration Act, 1908 · Statutory Reference: R §49]",
+    "explanationMl": "ശരിയുത്തരം (C): ഉദ്ദേശിച്ച വസ്തുകൈമാറ്റം ആധാരം വഴി നടക്കില്ല. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §49]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-019",
+    "order": 19,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §51",
+    "promptEn": "Which register book records non-testamentary documents relating to immovable property?",
+    "promptMl": "സ്ഥാവരസ്വത്തുമായി ബന്ധപ്പെട്ട വിൽപത്രേതര രേഖകൾ ഏത് രജിസ്റ്റർ ബുക്കിലാണ് രേഖപ്പെടുത്തുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Book 2",
+        "textMl": "ബുക്ക് 2"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Book 1",
+        "textMl": "ബുക്ക് 1"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Book 4",
+        "textMl": "ബുക്ക് 4"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Book 3",
+        "textMl": "ബുക്ക് 3"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Book 1. [Topic: Registration Act, 1908 · Statutory Reference: R §51]",
+    "explanationMl": "ശരിയുത്തരം (B): ബുക്ക് 1. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §51]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-020",
+    "order": 20,
+    "type": "single_choice",
+    "sectionEn": "Registration Act, 1908",
+    "sectionMl": "രജിസ്ട്രേഷൻ നിയമം, 1908",
+    "reference": "R §60",
+    "promptEn": "Which certificate is endorsed after the statutory requirements for registration are complied with?",
+    "promptMl": "രജിസ്ട്രേഷനുള്ള നിയമപരമായ ആവശ്യകതകൾ പൂർത്തിയാക്കിയാൽ ആധാരത്തിൽ രേഖപ്പെടുത്തുന്ന സർട്ടിഫിക്കറ്റ് ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Fair value certificate",
+        "textMl": "ന്യായവില സർട്ടിഫിക്കറ്റ്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Certificate of registration",
+        "textMl": "രജിസ്ട്രേഷൻ സർട്ടിഫിക്കറ്റ്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Land tax clearance certificate",
+        "textMl": "ഭൂനികുതി കുടിശ്ശികയില്ലാ സർട്ടിഫിക്കറ്റ്"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Possession certificate",
+        "textMl": "കൈവശാവകാശ സർട്ടിഫിക്കറ്റ്"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Certificate of registration. [Topic: Registration Act, 1908 · Statutory Reference: R §60]",
+    "explanationMl": "ശരിയുത്തരം (B): രജിസ്ട്രേഷൻ സർട്ടിഫിക്കറ്റ്. [വിഷയം: രജിസ്ട്രേഷൻ നിയമം, 1908 · അവലംബം: R §60]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-021",
+    "order": 21,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §2",
+    "promptEn": "For an instrument, what does “executed” mean under the Kerala Stamp Act?",
+    "promptMl": "കേരള മുദ്രപത്ര നിയമത്തിൽ ഒരു രേഖ ‘നിർവഹിച്ചു’ എന്നതിന്റെ അർത്ഥം എന്ത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Issued as a certified copy",
+        "textMl": "സാക്ഷ്യപ്പെടുത്തിയ പകർപ്പായി നൽകി"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Presented for registration",
+        "textMl": "രജിസ്ട്രേഷനായി ഹാജരാക്കി"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Signed",
+        "textMl": "ഒപ്പിട്ടു"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Entered in land records",
+        "textMl": "ഭൂരേഖകളിൽ ചേർത്തു"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): Signed. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §2]",
+    "explanationMl": "ശരിയുത്തരം (C): ഒപ്പിട്ടു. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §2]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-022",
+    "order": 22,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §3 and Schedule",
+    "promptEn": "Where does the Kerala Stamp Act list classes of instruments and their proper stamp duty?",
+    "promptMl": "രേഖകളുടെ വിഭാഗങ്ങളും അവയ്ക്ക് ബാധകമായ മുദ്രവിലയും കേരള മുദ്രപത്ര നിയമത്തിൽ എവിടെയാണ് നൽകിയിരിക്കുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The registration index",
+        "textMl": "രജിസ്ട്രേഷൻ ഇൻഡക്സിൽ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The deed writer's fee schedule",
+        "textMl": "ആധാരമെഴുത്തുകാരുടെ ഫീസ് പട്ടികയിൽ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The Schedule to the Act",
+        "textMl": "നിയമത്തിന്റെ പട്ടികയിൽ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The Basic Tax Register",
+        "textMl": "അടിസ്ഥാന നികുതി രജിസ്റ്ററിൽ"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): The Schedule to the Act. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §3 and Schedule]",
+    "explanationMl": "ശരിയുത്തരം (C): നിയമത്തിന്റെ പട്ടികയിൽ. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §3 and Schedule]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-023",
+    "order": 23,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §4",
+    "promptEn": "Several instruments complete a single transaction of sale. Under Section 4, which bears the full duty prescribed for the conveyance?",
+    "promptMl": "ഒരൊറ്റ വിൽപ്പന ഇടപാട് പൂർത്തിയാക്കാൻ പല രേഖകൾ ഉപയോഗിക്കുന്നു. വകുപ്പ് 4 പ്രകാരം കൈമാറ്റത്തിനുള്ള മുഴുവൻ മുദ്രവില ഏത് രേഖയ്ക്കാണ് ബാധകം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The purchaser's identity document",
+        "textMl": "വാങ്ങുന്നയാളുടെ തിരിച്ചറിയൽ രേഖയ്ക്ക്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The principal instrument",
+        "textMl": "പ്രധാന രേഖയ്ക്ക്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Only the last instrument signed",
+        "textMl": "അവസാനം ഒപ്പിട്ട രേഖയ്ക്ക് മാത്രം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Every instrument independently",
+        "textMl": "ഓരോ രേഖയ്ക്കും വെവ്വേറെ"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): The principal instrument. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §4]",
+    "explanationMl": "ശരിയുത്തരം (B): പ്രധാന രേഖയ്ക്ക്. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §4]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-024",
+    "order": 24,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §5",
+    "promptEn": "One instrument covers two distinct matters, each chargeable to duty. Under Section 5, how is duty determined?",
+    "promptMl": "മുദ്രവില ബാധകമായ രണ്ട് വ്യത്യസ്ത വിഷയങ്ങൾ ഒരേ രേഖയിൽ ഉൾപ്പെടുന്നു. വകുപ്പ് 5 പ്രകാരം മുദ്രവില എങ്ങനെ കണക്കാക്കും?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Apply only the lower of the two duties",
+        "textMl": "രണ്ടിൽ കുറഞ്ഞ മുദ്രവില മാത്രം ചുമത്തണം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Use a single fixed duty irrespective of the matters",
+        "textMl": "വിഷയങ്ങൾ പരിഗണിക്കാതെ ഒരേ നിശ്ചിത മുദ്രവില ചുമത്തണം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Apply only the duty for the first matter stated",
+        "textMl": "ആദ്യം രേഖപ്പെടുത്തിയ വിഷയത്തിന്റെ മുദ്രവില മാത്രം ചുമത്തണം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Add the duties that would apply to separate instruments for those matters",
+        "textMl": "ഓരോ വിഷയത്തിനും വേറെ രേഖ ഉണ്ടാക്കിയാൽ ബാധകമായ മുദ്രവിലകൾ കൂട്ടണം"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Add the duties that would apply to separate instruments for those matters. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §5]",
+    "explanationMl": "ശരിയുത്തരം (D): ഓരോ വിഷയത്തിനും വേറെ രേഖ ഉണ്ടാക്കിയാൽ ബാധകമായ മുദ്രവിലകൾ കൂട്ടണം. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §5]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-025",
+    "order": 25,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §6",
+    "promptEn": "Subject to Section 5, an instrument fits two Schedule descriptions with different duties. Which duty generally applies?",
+    "promptMl": "വകുപ്പ് 5-ന് വിധേയമായി, ഒരു രേഖ വ്യത്യസ്ത മുദ്രവിലയുള്ള രണ്ട് പട്ടിക വിവരണങ്ങളിൽ ഉൾപ്പെടുന്നു. സാധാരണ ഏത് മുദ്രവിലയാണ് ബാധകം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The sum in every case",
+        "textMl": "എല്ലാ സാഹചര്യത്തിലും രണ്ടിന്റെയും ആകെ തുക"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The lower of the two duties",
+        "textMl": "രണ്ടിൽ കുറഞ്ഞ മുദ്രവില"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The higher of the two duties",
+        "textMl": "രണ്ടിൽ ഉയർന്ന മുദ്രവില"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The average of the two duties",
+        "textMl": "രണ്ട് മുദ്രവിലകളുടെയും ശരാശരി"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): The higher of the two duties. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §6]",
+    "explanationMl": "ശരിയുത്തരം (C): രണ്ടിൽ ഉയർന്ന മുദ്രവില. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §6]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-026",
+    "order": 26,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §12",
+    "promptEn": "Why is an adhesive stamp cancelled when its use is permitted?",
+    "promptMl": "ഒട്ടിക്കുന്ന മുദ്ര ഉപയോഗിക്കാൻ അനുവാദമുള്ളപ്പോൾ അത് റദ്ദാക്കുന്നത് എന്തിനാണ്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "To replace the executant's signature",
+        "textMl": "ആധാരം എഴുതിക്കൊടുക്കുന്നയാളുടെ ഒപ്പിന് പകരമാക്കാൻ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "To establish the market value of the land",
+        "textMl": "ഭൂമിയുടെ വിപണിവില നിശ്ചയിക്കാൻ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "To prevent reuse",
+        "textMl": "വീണ്ടും ഉപയോഗിക്കുന്നത് തടയാൻ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "To open a new land tax account",
+        "textMl": "പുതിയ ഭൂനികുതി അക്കൗണ്ട് തുറക്കാൻ"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): To prevent reuse. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §12]",
+    "explanationMl": "ശരിയുത്തരം (C): വീണ്ടും ഉപയോഗിക്കുന്നത് തടയാൻ. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §12]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-027",
+    "order": 27,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §14",
+    "promptEn": "An impressed stamp has already been used for one chargeable instrument. How may it generally be used for a second chargeable instrument?",
+    "promptMl": "പതിപ്പിച്ച മുദ്ര മുദ്രവില ബാധകമായ ഒരു രേഖയ്ക്ക് ഉപയോഗിച്ചുകഴിഞ്ഞു. മുദ്രവില ബാധകമായ രണ്ടാമത്തെ രേഖയ്ക്ക് അത് സാധാരണ എങ്ങനെ ഉപയോഗിക്കാം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "It may be reused on the same day",
+        "textMl": "അതേ ദിവസം വീണ്ടും ഉപയോഗിക്കാം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "It may be reused for the same parties",
+        "textMl": "അതേ കക്ഷികൾക്കായി വീണ്ടും ഉപയോഗിക്കാം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "It may be reused if both instruments concern the same plot",
+        "textMl": "രണ്ട് രേഖകളും ഒരേ സ്ഥലത്തെക്കുറിച്ചാണെങ്കിൽ വീണ്ടും ഉപയോഗിക്കാം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "It may not be used for the second instrument",
+        "textMl": "രണ്ടാമത്തെ രേഖയ്ക്ക് അത് ഉപയോഗിക്കാനാവില്ല"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): It may not be used for the second instrument. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §14]",
+    "explanationMl": "ശരിയുത്തരം (D): രണ്ടാമത്തെ രേഖയ്ക്ക് അത് ഉപയോഗിക്കാനാവില്ല. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §14]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-028",
+    "order": 28,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §17",
+    "promptEn": "In general, when must a chargeable instrument executed in Kerala be stamped?",
+    "promptMl": "കേരളത്തിൽ നിർവഹിക്കുന്നതും മുദ്രവില ബാധകവുമായ രേഖയ്ക്ക് സാധാരണ എപ്പോഴാണ് മുദ്രവില അടയ്ക്കേണ്ടത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Before or at execution",
+        "textMl": "ഒപ്പിടുന്നതിനു മുമ്പോ ഒപ്പിടുന്ന സമയത്തോ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Only after registration",
+        "textMl": "രജിസ്ട്രേഷനുശേഷം മാത്രം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "After the first land tax payment",
+        "textMl": "ആദ്യ ഭൂനികുതി അടച്ചതിനുശേഷം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Within one year of execution in every case",
+        "textMl": "എല്ലാ കേസിലും ഒപ്പിട്ടശേഷം ഒരുവർഷത്തിനകം"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Before or at execution. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §17]",
+    "explanationMl": "ശരിയുത്തരം (A): ഒപ്പിടുന്നതിനു മുമ്പോ ഒപ്പിടുന്ന സമയത്തോ. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §17]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-029",
+    "order": 29,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §18",
+    "promptEn": "A chargeable instrument executed only outside India first arrives in Kerala. What is the ordinary period to stamp it under Section 18?",
+    "promptMl": "ഇന്ത്യയ്ക്ക് പുറത്തുമാത്രം നിർവഹിച്ച മുദ്രവില ബാധകമായ രേഖ ആദ്യമായി കേരളത്തിലെത്തുന്നു. വകുപ്പ് 18 പ്രകാരം മുദ്രവില അടയ്ക്കാനുള്ള സാധാരണ കാലാവധി എത്ര?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Six months after first receipt in Kerala",
+        "textMl": "കേരളത്തിൽ ആദ്യമായി ലഭിച്ച് ആറുമാസത്തിനകം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Four months after first receipt in Kerala",
+        "textMl": "കേരളത്തിൽ ആദ്യമായി ലഭിച്ച് നാല് മാസത്തിനകം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "One month after first receipt in Kerala",
+        "textMl": "കേരളത്തിൽ ആദ്യമായി ലഭിച്ച് ഒരുമാസത്തിനകം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Three months after first receipt in Kerala",
+        "textMl": "കേരളത്തിൽ ആദ്യമായി ലഭിച്ച് മൂന്ന് മാസത്തിനകം"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Three months after first receipt in Kerala. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §18]",
+    "explanationMl": "ശരിയുത്തരം (D): കേരളത്തിൽ ആദ്യമായി ലഭിച്ച് മൂന്ന് മാസത്തിനകം. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §18]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-030",
+    "order": 30,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §28",
+    "promptEn": "What must a deed state fully and accurately for assessment of stamp duty?",
+    "promptMl": "മുദ്രവില നിർണയിക്കാൻ ആധാരത്തിൽ എന്താണ് പൂർണമായും കൃത്യമായും രേഖപ്പെടുത്തേണ്ടത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Only the cost of preparing the deed",
+        "textMl": "ആധാരം തയ്യാറാക്കാനുള്ള ചെലവ് മാത്രം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The consideration, if any, and all facts affecting duty",
+        "textMl": "പ്രതിഫലം ഉണ്ടെങ്കിൽ അതും മുദ്രവിലയെ ബാധിക്കുന്ന എല്ലാ വസ്തുതകളും"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Only the previous owner's purchase price",
+        "textMl": "മുൻ ഉടമ വസ്തു വാങ്ങിയ വില മാത്രം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Only the amount paid as advance",
+        "textMl": "മുൻകൂറായി നൽകിയ തുക മാത്രം"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): The consideration, if any, and all facts affecting duty. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §28]",
+    "explanationMl": "ശരിയുത്തരം (B): പ്രതിഫലം ഉണ്ടെങ്കിൽ അതും മുദ്രവിലയെ ബാധിക്കുന്ന എല്ലാ വസ്തുതകളും. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §28]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-031",
+    "order": 31,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §28A",
+    "promptEn": "Which officer ordinarily fixes the statutory fair value of land within the officer's jurisdiction?",
+    "promptMl": "സ്വന്തം അധികാരപരിധിയിലെ ഭൂമിയുടെ നിയമപ്രകാരമുള്ള ന്യായവില സാധാരണ നിശ്ചയിക്കുന്ന ഉദ്യോഗസ്ഥൻ ആര്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Revenue Divisional Officer",
+        "textMl": "റവന്യൂ ഡിവിഷണൽ ഓഫീസർ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Sub-Registrar",
+        "textMl": "സബ് രജിസ്ട്രാർ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Municipal Secretary",
+        "textMl": "മുനിസിപ്പൽ സെക്രട്ടറി"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Village Officer",
+        "textMl": "വില്ലേജ് ഓഫീസർ"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Revenue Divisional Officer. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §28A]",
+    "explanationMl": "ശരിയുത്തരം (A): റവന്യൂ ഡിവിഷണൽ ഓഫീസർ. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §28A]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-032",
+    "order": 32,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "P Registration SOP",
+    "promptEn": "In an ordinary sale of vacant land, the stated price is higher than the notified fair value for that land. Which figure is used for stamp-duty assessment?",
+    "promptMl": "ഒഴിഞ്ഞ ഭൂമിയുടെ സാധാരണ വിൽപ്പനയിൽ രേഖപ്പെടുത്തിയ വില, ആ ഭൂമിയുടെ വിജ്ഞാപനം ചെയ്ത ന്യായവിലയെക്കാൾ കൂടുതലാണ്. മുദ്രവില കണക്കാക്കാൻ ഏത് തുകയാണ് സ്വീകരിക്കുക?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The lower notified fair value",
+        "textMl": "കുറഞ്ഞ വിജ്ഞാപിത ന്യായവില"
+      },
+      {
+        "optionId": "B",
+        "textEn": "An average of both figures",
+        "textMl": "രണ്ട് തുകകളുടെയും ശരാശരി"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The higher stated sale price",
+        "textMl": "രേഖപ്പെടുത്തിയ ഉയർന്ന വിൽപ്പനവില"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The advance received alone",
+        "textMl": "ലഭിച്ച മുൻകൂർ തുക മാത്രം"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): The higher stated sale price. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: P Registration SOP]",
+    "explanationMl": "ശരിയുത്തരം (C): രേഖപ്പെടുത്തിയ ഉയർന്ന വിൽപ്പനവില. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: P Registration SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-033",
+    "order": 33,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §31",
+    "promptEn": "A party seeks formal adjudication on proper stamp duty. Who determines it under Section 31?",
+    "promptMl": "ബാധകമായ മുദ്രവില സംബന്ധിച്ച് ഔദ്യോഗിക നിർണയം ആവശ്യപ്പെടുമ്പോൾ വകുപ്പ് 31 പ്രകാരം അത് നിർണയിക്കുന്നത് ആര്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The licensed stamp vendor",
+        "textMl": "ലൈസൻസുള്ള മുദ്രപത്ര വിൽപ്പനക്കാരൻ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The deed writer",
+        "textMl": "ആധാരമെഴുത്തുകാരൻ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The Village Officer",
+        "textMl": "വില്ലേജ് ഓഫീസർ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The Collector",
+        "textMl": "കളക്ടർ"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): The Collector. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §31]",
+    "explanationMl": "ശരിയുത്തരം (D): കളക്ടർ. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §31]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-034",
+    "order": 34,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §32",
+    "promptEn": "After adjudication under Section 31, what does a Section 32 endorsement ordinarily indicate where duty is chargeable?",
+    "promptMl": "വകുപ്പ് 31 പ്രകാരമുള്ള നിർണയത്തിനുശേഷം, മുദ്രവില ബാധകമായ രേഖയിൽ വകുപ്പ് 32 പ്രകാരമുള്ള കുറിപ്പ് സാധാരണ എന്ത് വ്യക്തമാക്കുന്നു?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "That the property title is guaranteed",
+        "textMl": "വസ്തുവിന്റെ ഉടമസ്ഥാവകാശം ഉറപ്പാക്കിയെന്ന്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "That land tax is fully paid",
+        "textMl": "ഭൂനികുതി പൂർണമായി അടച്ചെന്ന്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "That the proper duty has been paid",
+        "textMl": "ബാധകമായ മുദ്രവില അടച്ചിട്ടുണ്ടെന്ന്"
+      },
+      {
+        "optionId": "D",
+        "textEn": "That the deed has automatically been registered",
+        "textMl": "ആധാരം സ്വയം രജിസ്റ്റർ ആയെന്ന്"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): That the proper duty has been paid. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §32]",
+    "explanationMl": "ശരിയുത്തരം (C): ബാധകമായ മുദ്രവില അടച്ചിട്ടുണ്ടെന്ന്. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §32]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-035",
+    "order": 35,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §33",
+    "promptEn": "What is the statutory action when an authority covered by Section 33 finds that a chargeable instrument produced before it appears insufficiently stamped?",
+    "promptMl": "വകുപ്പ് 33 ബാധകമായ അധികാരിയുടെ മുമ്പിൽ ഹാജരാക്കിയ രേഖയ്ക്ക് ആവശ്യമായ മുദ്രവില അടച്ചിട്ടില്ലെന്ന് തോന്നിയാൽ നിയമപ്രകാരമുള്ള നടപടി ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Cancel the underlying transaction immediately",
+        "textMl": "അടിസ്ഥാന ഇടപാട് ഉടൻ റദ്ദാക്കുക"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Issue a new title deed",
+        "textMl": "പുതിയ ഉടമസ്ഥാവകാശ ആധാരം നൽകുക"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Impound the instrument",
+        "textMl": "രേഖ പിടിച്ചുവയ്ക്കുക"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Change the property value without inquiry",
+        "textMl": "പരിശോധന കൂടാതെ വസ്തുവില മാറ്റുക"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): Impound the instrument. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §33]",
+    "explanationMl": "ശരിയുത്തരം (C): രേഖ പിടിച്ചുവയ്ക്കുക. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §33]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-036",
+    "order": 36,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §34",
+    "promptEn": "What is the general evidentiary consequence of insufficient stamping, subject to the Act's exceptions and cure provisions?",
+    "promptMl": "നിയമത്തിലെ ഒഴിവുകൾക്കും ന്യൂനത പരിഹരിക്കാനുള്ള വ്യവസ്ഥകൾക്കും വിധേയമായി, മുദ്രവില കുറവുള്ള രേഖയ്ക്ക് തെളിവിന്റെ കാര്യത്തിൽ സാധാരണ എന്ത് ഫലമാണുള്ളത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "It is admissible whenever a party signs it again",
+        "textMl": "കക്ഷി വീണ്ടും ഒപ്പിട്ടാൽ രേഖ തെളിവായി സ്വീകരിക്കാം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "It cannot be admitted in evidence while the stamping defect remains uncured",
+        "textMl": "മുദ്രവിലയിലെ ന്യൂനത പരിഹരിക്കാത്തിടത്തോളം രേഖ തെളിവായി സ്വീകരിക്കാനാവില്ല"
+      },
+      {
+        "optionId": "C",
+        "textEn": "It automatically becomes a certified copy",
+        "textMl": "രേഖ സ്വയം സാക്ഷ്യപ്പെടുത്തിയ പകർപ്പാകും"
+      },
+      {
+        "optionId": "D",
+        "textEn": "It is admissible if a broker confirms the sale",
+        "textMl": "ബ്രോക്കർ വിൽപ്പന സ്ഥിരീകരിച്ചാൽ രേഖ തെളിവായി സ്വീകരിക്കാം"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): It cannot be admitted in evidence while the stamping defect remains uncured. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §34]",
+    "explanationMl": "ശരിയുത്തരം (B): മുദ്രവിലയിലെ ന്യൂനത പരിഹരിക്കാത്തിടത്തോളം രേഖ തെളിവായി സ്വീകരിക്കാനാവില്ല. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §34]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-037",
+    "order": 37,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §45A",
+    "promptEn": "A registrable land instrument states a land value below the notified fair value. Which section specifically addresses that comparison?",
+    "promptMl": "രജിസ്റ്റർ ചെയ്യേണ്ട ഭൂമിയുടെ രേഖയിൽ കാണിച്ച വില വിജ്ഞാപിത ന്യായവിലയെക്കാൾ കുറവാണ്. ഈ താരതമ്യം പ്രത്യേകമായി കൈകാര്യം ചെയ്യുന്ന വകുപ്പ് ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Section 31",
+        "textMl": "വകുപ്പ് 31"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Section 45A",
+        "textMl": "വകുപ്പ് 45A"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Section 17",
+        "textMl": "വകുപ്പ് 17"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Section 12",
+        "textMl": "വകുപ്പ് 12"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Section 45A. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §45A]",
+    "explanationMl": "ശരിയുത്തരം (B): വകുപ്പ് 45A. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §45A]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-038",
+    "order": 38,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §45B",
+    "promptEn": "While registering an instrument, the registering officer has reason to believe the property value or consideration was not truly set forth. To whom may the officer refer it after registration under Section 45B?",
+    "promptMl": "രജിസ്റ്റർ ചെയ്യുന്ന സമയത്ത് വസ്തുവിലയോ പ്രതിഫലമോ യഥാർഥമായി രേഖപ്പെടുത്തിയിട്ടില്ലെന്ന് വിശ്വസിക്കാൻ രജിസ്ട്രേഷൻ ഉദ്യോഗസ്ഥന് കാരണമുണ്ട്. രജിസ്ട്രേഷനുശേഷം വകുപ്പ് 45B പ്രകാരം രേഖ ആർക്കാണ് അയയ്ക്കാവുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The Collector",
+        "textMl": "കളക്ടർക്ക്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The deed writer's association",
+        "textMl": "ആധാരമെഴുത്തുകാരുടെ സംഘടനയ്ക്ക്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The local surveyor",
+        "textMl": "പ്രാദേശിക സർവേയർക്ക്"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The stamp vendor",
+        "textMl": "മുദ്രപത്ര വിൽപ്പനക്കാരന്"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): The Collector. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §45B]",
+    "explanationMl": "ശരിയുത്തരം (A): കളക്ടർക്ക്. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §45B]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-039",
+    "order": 39,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "P Registration SOP",
+    "promptEn": "In Kerala's document registration workflow, which two government charges are treated separately?",
+    "promptMl": "കേരളത്തിലെ ആധാര രജിസ്ട്രേഷൻ നടപടിക്രമത്തിൽ ഏത് രണ്ട് സർക്കാർ ചാർജുകളാണ് വെവ്വേറെ കണക്കാക്കുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Stamp duty and registration fee",
+        "textMl": "മുദ്രവിലയും രജിസ്ട്രേഷൻ ഫീസും"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Bank interest and loan processing fee",
+        "textMl": "ബാങ്ക് പലിശയും വായ്പാ പ്രോസസ്സിങ് ഫീസും"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Brokerage and advocate's fee",
+        "textMl": "ബ്രോക്കറേജും അഭിഭാഷക ഫീസും"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Land tax and electricity deposit",
+        "textMl": "ഭൂനികുതിയും വൈദ്യുതി നിക്ഷേപത്തുകയും"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Stamp duty and registration fee. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: P Registration SOP]",
+    "explanationMl": "ശരിയുത്തരം (A): മുദ്രവിലയും രജിസ്ട്രേഷൻ ഫീസും. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: P Registration SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-040",
+    "order": 40,
+    "type": "single_choice",
+    "sectionEn": "Kerala Stamp Act, 1959",
+    "sectionMl": "കേരള മുദ്രപത്ര നിയമം, 1959",
+    "reference": "S §2 and Schedule",
+    "promptEn": "Which description best identifies an instrument of partition for stamp classification?",
+    "promptMl": "മുദ്രവില നിർണയിക്കാൻ ഭാഗപത്രം തിരിച്ചറിയുന്നതിന് ഏറ്റവും യോജിക്കുന്ന വിവരണം ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "An owner sells land to a stranger for a price",
+        "textMl": "ഒരു ഉടമ ഭൂമി മറ്റൊരാൾക്ക് വിലയ്ക്ക് വിൽക്കുന്നു"
+      },
+      {
+        "optionId": "B",
+        "textEn": "A borrower gives property as security for a loan",
+        "textMl": "കടം വാങ്ങുന്നയാൾ വസ്തു വായ്പയ്ക്ക് ഈടായി നൽകുന്നു"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Co-owners divide or agree to divide their jointly held property into separate shares",
+        "textMl": "സഹഉടമകൾ കൂട്ടുടമസ്ഥതയിലുള്ള വസ്തു വെവ്വേറെ ഓഹരികളായി വിഭജിക്കുകയോ വിഭജിക്കാൻ സമ്മതിക്കുകയോ ചെയ്യുന്നു"
+      },
+      {
+        "optionId": "D",
+        "textEn": "An owner lets a building for monthly rent",
+        "textMl": "ഒരു ഉടമ കെട്ടിടം മാസവാടകയ്ക്ക് നൽകുന്നു"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): Co-owners divide or agree to divide their jointly held property into separate shares. [Topic: Kerala Stamp Act, 1959 · Statutory Reference: S §2 and Schedule]",
+    "explanationMl": "ശരിയുത്തരം (C): സഹഉടമകൾ കൂട്ടുടമസ്ഥതയിലുള്ള വസ്തു വെവ്വേറെ ഓഹരികളായി വിഭജിക്കുകയോ വിഭജിക്കാൻ സമ്മതിക്കുകയോ ചെയ്യുന്നു. [വിഷയം: കേരള മുദ്രപത്ര നിയമം, 1959 · അവലംബം: S §2 and Schedule]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-041",
+    "order": 41,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 3",
+    "promptEn": "Which activity best describes the work of a document writer under the licensing rules?",
+    "promptMl": "ലൈസൻസ് ചട്ടങ്ങൾ പ്രകാരം ആധാരമെഴുത്തുകാരന്റെ ജോലിയെ ഏറ്റവും നന്നായി വിവരിക്കുന്നത് ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Fixing statutory fair value for land",
+        "textMl": "ഭൂമിയുടെ നിയമപ്രകാരമുള്ള ന്യായവില നിശ്ചയിക്കൽ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Preparing deeds for registration, including title investigation and drafting",
+        "textMl": "ഉടമസ്ഥാവകാശം പരിശോധിക്കുന്നതും കരട് എഴുതുന്നതും ഉൾപ്പെടെ രജിസ്ട്രേഷനുള്ള ആധാരം തയ്യാറാക്കൽ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Issuing registration certificates",
+        "textMl": "രജിസ്ട്രേഷൻ സർട്ടിഫിക്കറ്റുകൾ നൽകൽ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Maintaining the village land-tax register",
+        "textMl": "വില്ലേജിലെ ഭൂനികുതി രജിസ്റ്റർ സൂക്ഷിക്കൽ"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Preparing deeds for registration, including title investigation and drafting. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 3]",
+    "explanationMl": "ശരിയുത്തരം (B): ഉടമസ്ഥാവകാശം പരിശോധിക്കുന്നതും കരട് എഴുതുന്നതും ഉൾപ്പെടെ രജിസ്ട്രേഷനുള്ള ആധാരം തയ്യാറാക്കൽ. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 3]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-042",
+    "order": 42,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 3",
+    "promptEn": "Which activity distinguishes a scribe's role under the licensing rules?",
+    "promptMl": "ലൈസൻസ് ചട്ടങ്ങളിൽ പകർപ്പെഴുത്തുകാരന്റെ പ്രത്യേക ചുമതല ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Authenticating agents' powers of attorney",
+        "textMl": "ഏജന്റുമാരുടെ അധികാരപത്രങ്ങൾ സാക്ഷ്യപ്പെടുത്തൽ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Deciding objections to land boundaries",
+        "textMl": "ഭൂമിയുടെ അതിരുകളെച്ചൊല്ലിയുള്ള എതിർപ്പുകളിൽ തീരുമാനമെടുക്കൽ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Transcribing documents to be presented for registration",
+        "textMl": "രജിസ്ട്രേഷനായി ഹാജരാക്കേണ്ട ആധാരങ്ങളുടെ പകർപ്പെഴുതൽ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Approving transfer of revenue registry",
+        "textMl": "റവന്യൂ രജിസ്ട്രിയിലെ പേരുമാറ്റം അംഗീകരിക്കൽ"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): Transcribing documents to be presented for registration. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 3]",
+    "explanationMl": "ശരിയുത്തരം (C): രജിസ്ട്രേഷനായി ഹാജരാക്കേണ്ട ആധാരങ്ങളുടെ പകർപ്പെഴുതൽ. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 3]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-043",
+    "order": 43,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 6; P Registration SOP",
+    "promptEn": "Who may prepare a deed for their own transaction under the self-preparation exception?",
+    "promptMl": "സ്വയം ആധാരം തയ്യാറാക്കാനുള്ള ഒഴിവനുസരിച്ച് സ്വന്തം ഇടപാടിന് ആധാരം തയ്യാറാക്കാൻ ആർക്കാണ് കഴിയുക?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Only the registering officer",
+        "textMl": "രജിസ്ട്രേഷൻ ഉദ്യോഗസ്ഥന് മാത്രം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "An unrelated, unlicensed person acting for a fee",
+        "textMl": "ബന്ധമില്ലാത്തതും ലൈസൻസില്ലാത്തതുമായ പ്രതിഫലം വാങ്ങുന്ന വ്യക്തിക്ക്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The executant or claimant concerned",
+        "textMl": "ബന്ധപ്പെട്ട എഴുതിക്കൊടുക്കുന്നയാൾക്കോ അവകാശം ലഭിക്കുന്നയാൾക്കോ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Only a licensed stamp vendor",
+        "textMl": "ലൈസൻസുള്ള മുദ്രപത്ര വിൽപ്പനക്കാരന് മാത്രം"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): The executant or claimant concerned. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 6; P Registration SOP]",
+    "explanationMl": "ശരിയുത്തരം (C): ബന്ധപ്പെട്ട എഴുതിക്കൊടുക്കുന്നയാൾക്കോ അവകാശം ലഭിക്കുന്നയാൾക്കോ. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 6; P Registration SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-044",
+    "order": 44,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 22",
+    "promptEn": "Which power does the licensing authority have under Rule 22?",
+    "promptMl": "ചട്ടം 22 പ്രകാരം ലൈസൻസിങ് അധികാരിക്ക് ഏത് അധികാരമുണ്ട്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Fix the notified fair value of all land",
+        "textMl": "എല്ലാ ഭൂമിയുടെയും വിജ്ഞാപിത ന്യായവില നിശ്ചയിക്കുക"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Transfer ownership of disputed property",
+        "textMl": "തർക്കത്തിലുള്ള വസ്തുവിന്റെ ഉടമസ്ഥാവകാശം കൈമാറുക"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Issue land tax receipts",
+        "textMl": "ഭൂനികുതി രസീതുകൾ നൽകുക"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Grant licences to document writers and scribes",
+        "textMl": "ആധാരമെഴുത്തുകാർക്കും പകർപ്പെഴുത്തുകാർക്കും ലൈസൻസ് നൽകുക"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Grant licences to document writers and scribes. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 22]",
+    "explanationMl": "ശരിയുത്തരം (D): ആധാരമെഴുത്തുകാർക്കും പകർപ്പെഴുത്തുകാർക്കും ലൈസൻസ് നൽകുക. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 22]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-045",
+    "order": 45,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 8, Form A",
+    "promptEn": "Which form is used to apply for a document writer's licence under Rule 8?",
+    "promptMl": "ചട്ടം 8 പ്രകാരം ആധാരമെഴുത്തുകാരുടെ ലൈസൻസിന് അപേക്ഷിക്കേണ്ട ഫോം ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Form B",
+        "textMl": "ഫോം B"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Form I",
+        "textMl": "ഫോം I"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Form C",
+        "textMl": "ഫോം C"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Form A",
+        "textMl": "ഫോം A"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Form A. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 8, Form A]",
+    "explanationMl": "ശരിയുത്തരം (D): ഫോം A. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 8, Form A]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-046",
+    "order": 46,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 8, Form B",
+    "promptEn": "Which form is used to apply for a scribe's licence under Rule 8?",
+    "promptMl": "ചട്ടം 8 പ്രകാരം പകർപ്പെഴുത്തുകാരുടെ ലൈസൻസിന് അപേക്ഷിക്കേണ്ട ഫോം ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Form I",
+        "textMl": "ഫോം I"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Form A",
+        "textMl": "ഫോം A"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Form D",
+        "textMl": "ഫോം D"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Form B",
+        "textMl": "ഫോം B"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Form B. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 8, Form B]",
+    "explanationMl": "ശരിയുത്തരം (D): ഫോം B. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 8, Form B]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-047",
+    "order": 47,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 8, Form I",
+    "promptEn": "Which form is used for an application to renew a licence under the rules?",
+    "promptMl": "ചട്ടങ്ങൾ പ്രകാരം ലൈസൻസ് പുതുക്കാനുള്ള അപേക്ഷയ്ക്ക് ഉപയോഗിക്കുന്ന ഫോം ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Form I",
+        "textMl": "ഫോം I"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Form F",
+        "textMl": "ഫോം F"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Form A",
+        "textMl": "ഫോം A"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Form E",
+        "textMl": "ഫോം E"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Form I. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 8, Form I]",
+    "explanationMl": "ശരിയുത്തരം (A): ഫോം I. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 8, Form I]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-048",
+    "order": 48,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 10, Form C",
+    "promptEn": "In which form is a document writer's licence issued under Rule 10?",
+    "promptMl": "ചട്ടം 10 പ്രകാരം ആധാരമെഴുത്തുകാരുടെ ലൈസൻസ് ഏത് ഫോമിലാണ് നൽകുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Form A",
+        "textMl": "ഫോം A"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Form E",
+        "textMl": "ഫോം E"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Form C",
+        "textMl": "ഫോം C"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Form D",
+        "textMl": "ഫോം D"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): Form C. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 10, Form C]",
+    "explanationMl": "ശരിയുത്തരം (C): ഫോം C. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 10, Form C]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-049",
+    "order": 49,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 10, Form D",
+    "promptEn": "In which form is a scribe's licence issued under Rule 10?",
+    "promptMl": "ചട്ടം 10 പ്രകാരം പകർപ്പെഴുത്തുകാരുടെ ലൈസൻസ് ഏത് ഫോമിലാണ് നൽകുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Form F",
+        "textMl": "ഫോം F"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Form D",
+        "textMl": "ഫോം D"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Form B",
+        "textMl": "ഫോം B"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Form C",
+        "textMl": "ഫോം C"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Form D. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 10, Form D]",
+    "explanationMl": "ശരിയുത്തരം (B): ഫോം D. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 10, Form D]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-050",
+    "order": 50,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 13 and fee schedule",
+    "promptEn": "Which source sets the maximum professional fee a document writer may charge for the listed services?",
+    "promptMl": "പട്ടികപ്പെടുത്തിയ സേവനങ്ങൾക്ക് ആധാരമെഴുത്തുകാരന് ഈടാക്കാവുന്ന പരമാവധി പ്രതിഫലം ഏത് രേഖയിലാണ് നിശ്ചയിക്കുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The registration token receipt",
+        "textMl": "രജിസ്ട്രേഷൻ ടോക്കൺ രസീത്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The village land-tax register",
+        "textMl": "വില്ലേജിലെ ഭൂനികുതി രജിസ്റ്റർ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The property fair-value notification",
+        "textMl": "വസ്തുവിന്റെ ന്യായവില വിജ്ഞാപനം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The fee schedule under the licensing rules",
+        "textMl": "ലൈസൻസ് ചട്ടങ്ങൾക്കു കീഴിലെ ഫീസ് പട്ടിക"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): The fee schedule under the licensing rules. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 13 and fee schedule]",
+    "explanationMl": "ശരിയുത്തരം (D): ലൈസൻസ് ചട്ടങ്ങൾക്കു കീഴിലെ ഫീസ് പട്ടിക. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 13 and fee schedule]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-051",
+    "order": 51,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 19, Form E",
+    "promptEn": "Which form is the document writer's register of documents prepared?",
+    "promptMl": "ആധാരമെഴുത്തുകാരൻ തയ്യാറാക്കിയ ആധാരങ്ങൾ രേഖപ്പെടുത്തുന്ന രജിസ്റ്ററിന്റെ ഫോം ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Form C",
+        "textMl": "ഫോം C"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Form E",
+        "textMl": "ഫോം E"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Form A",
+        "textMl": "ഫോം A"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Form I",
+        "textMl": "ഫോം I"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Form E. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 19, Form E]",
+    "explanationMl": "ശരിയുത്തരം (B): ഫോം E. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 19, Form E]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-052",
+    "order": 52,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 19, Form F",
+    "promptEn": "Which form is used for the document writer's fee receipt under Rule 19?",
+    "promptMl": "ചട്ടം 19 പ്രകാരം ആധാരമെഴുത്തുകാരന്റെ ഫീസ് രസീത് ഏത് ഫോമിലാണ് നൽകുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Form F",
+        "textMl": "ഫോം F"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Form D",
+        "textMl": "ഫോം D"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Form E",
+        "textMl": "ഫോം E"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Form B",
+        "textMl": "ഫോം B"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Form F. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 19, Form F]",
+    "explanationMl": "ശരിയുത്തരം (A): ഫോം F. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 19, Form F]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-053",
+    "order": 53,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 25; G 2026 notification",
+    "promptEn": "Which rule provides for the document writer's licensing test cited in the 2026 Kerala Gazette notification?",
+    "promptMl": "2026-ലെ കേരള ഗസറ്റ് വിജ്ഞാപനത്തിൽ പരാമർശിക്കുന്ന ആധാരം തയ്യാറാക്കൽ ലൈസൻസ് പരീക്ഷയ്ക്ക് വ്യവസ്ഥ ചെയ്യുന്ന ചട്ടം ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Rule 8",
+        "textMl": "ചട്ടം 8"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Rule 25",
+        "textMl": "ചട്ടം 25"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Rule 19",
+        "textMl": "ചട്ടം 19"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Rule 34",
+        "textMl": "ചട്ടം 34"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Rule 25. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 25; G 2026 notification]",
+    "explanationMl": "ശരിയുത്തരം (B): ചട്ടം 25. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 25; G 2026 notification]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-054",
+    "order": 54,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "G 2026 notification",
+    "promptEn": "What practical task formed Part II of the 2026 Kerala document writer licensing exam as notified?",
+    "promptMl": "വിജ്ഞാപനപ്രകാരം 2026-ലെ കേരള ആധാരമെഴുത്ത് ലൈസൻസ് പരീക്ഷയുടെ രണ്ടാം ഭാഗത്തെ പ്രായോഗിക പ്രവൃത്തി എന്തായിരുന്നു?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Drawing a village boundary map",
+        "textMl": "വില്ലേജിന്റെ അതിർത്തി ഭൂപടം വരയ്ക്കൽ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Preparing a bank loan statement",
+        "textMl": "ബാങ്ക് വായ്പാ സ്റ്റേറ്റ്മെന്റ് തയ്യാറാക്കൽ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Entering receipts in a tax ledger",
+        "textMl": "നികുതി ലെഡ്ജറിൽ രസീതുകൾ രേഖപ്പെടുത്തൽ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Preparing deed drafts",
+        "textMl": "ആധാരങ്ങളുടെ നക്കൽ തയ്യാറാക്കൽ"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Preparing deed drafts. [Topic: Document writers’ licensing and duties · Statutory Reference: G 2026 notification]",
+    "explanationMl": "ശരിയുത്തരം (D): ആധാരങ്ങളുടെ നക്കൽ തയ്യാറാക്കൽ. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: G 2026 notification]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-055",
+    "order": 55,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 29",
+    "promptEn": "Who issues the certificate to candidates who pass the prescribed licensing test?",
+    "promptMl": "നിർദിഷ്ട ലൈസൻസ് പരീക്ഷ വിജയിക്കുന്നവർക്ക് സർട്ടിഫിക്കറ്റ് നൽകുന്നത് ആര്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The Village Officer",
+        "textMl": "വില്ലേജ് ഓഫീസർ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The stamp vendor",
+        "textMl": "മുദ്രപത്ര വിൽപ്പനക്കാരൻ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The local survey office",
+        "textMl": "പ്രാദേശിക സർവേ ഓഫീസ്"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The licensing authority",
+        "textMl": "ലൈസൻസിങ് അധികാരി"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): The licensing authority. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 29]",
+    "explanationMl": "ശരിയുത്തരം (D): ലൈസൻസിങ് അധികാരി. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 29]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-056",
+    "order": 56,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rules 19 and 30",
+    "promptEn": "A document writer collects fees but routinely fails to issue receipts. What action can follow under the rules?",
+    "promptMl": "ആധാരമെഴുത്തുകാരൻ ഫീസ് വാങ്ങുന്നെങ്കിലും പതിവായി രസീത് നൽകുന്നില്ല. ചട്ടപ്രകാരം എന്ത് നടപടി സ്വീകരിക്കാം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Revision of the plot's notified fair value",
+        "textMl": "സ്ഥലത്തിന്റെ വിജ്ഞാപിത ന്യായവില പുനർനിർണയിക്കൽ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Suspension of the licence",
+        "textMl": "ലൈസൻസ് താൽക്കാലികമായി നിർത്തിവയ്ക്കൽ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Automatic renewal of the licence",
+        "textMl": "ലൈസൻസ് സ്വയം പുതുക്കൽ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Cancellation of the purchaser's land-tax account",
+        "textMl": "വാങ്ങുന്നയാളുടെ ഭൂനികുതി അക്കൗണ്ട് റദ്ദാക്കൽ"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Suspension of the licence. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rules 19 and 30]",
+    "explanationMl": "ശരിയുത്തരം (B): ലൈസൻസ് താൽക്കാലികമായി നിർത്തിവയ്ക്കൽ. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rules 19 and 30]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-057",
+    "order": 57,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 30",
+    "promptEn": "Which practice can be a ground for suspension of a document writer's licence?",
+    "promptMl": "ആധാരമെഴുത്തുകാരന്റെ ലൈസൻസ് താൽക്കാലികമായി നിർത്തിവയ്ക്കാൻ കാരണമാകാവുന്ന നടപടി ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Acting as a tout to solicit business",
+        "textMl": "ഇടപാടുകൾ പിടിക്കാൻ അനധികൃത ഇടനിലക്കാരനായി പ്രവർത്തിക്കൽ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Using a suitable departmental model deed",
+        "textMl": "അനുയോജ്യമായ വകുപ്പുതല മാതൃകാ ആധാരം ഉപയോഗിക്കൽ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Keeping the prescribed document register",
+        "textMl": "നിർദിഷ്ട ആധാര രജിസ്റ്റർ സൂക്ഷിക്കൽ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Issuing the prescribed fee receipt",
+        "textMl": "നിർദിഷ്ട ഫീസ് രസീത് നൽകൽ"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Acting as a tout to solicit business. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 30]",
+    "explanationMl": "ശരിയുത്തരം (A): ഇടപാടുകൾ പിടിക്കാൻ അനധികൃത ഇടനിലക്കാരനായി പ്രവർത്തിക്കൽ. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 30]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-058",
+    "order": 58,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 33",
+    "promptEn": "Who may suspend or cancel a licence under Rule 33?",
+    "promptMl": "ചട്ടം 33 പ്രകാരം ലൈസൻസ് താൽക്കാലികമായി നിർത്തിവയ്ക്കാനോ റദ്ദാക്കാനോ ആർക്കാണ് അധികാരം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The licensing authority",
+        "textMl": "ലൈസൻസിങ് അധികാരിക്ക്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The local stamp vendor",
+        "textMl": "പ്രാദേശിക മുദ്രപത്ര വിൽപ്പനക്കാരന്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The document witness",
+        "textMl": "ആധാരത്തിലെ സാക്ഷിക്ക്"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The deed purchaser",
+        "textMl": "ആധാരത്തിലെ വാങ്ങുന്നയാൾക്ക്"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): The licensing authority. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 33]",
+    "explanationMl": "ശരിയുത്തരം (A): ലൈസൻസിങ് അധികാരിക്ക്. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 33]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-059",
+    "order": 59,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "L Rule 34",
+    "promptEn": "To whom does an appeal lie against an order suspending or cancelling a document writer's licence?",
+    "promptMl": "ആധാരമെഴുത്ത് ലൈസൻസ് നിർത്തിവയ്ക്കുകയോ റദ്ദാക്കുകയോ ചെയ്ത ഉത്തരവിനെതിരെ അപ്പീൽ നൽകേണ്ടത് ആർക്കാണ്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The stamp vendor",
+        "textMl": "മുദ്രപത്ര വിൽപ്പനക്കാരന്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The Government",
+        "textMl": "സർക്കാരിന്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The applicant's bank",
+        "textMl": "അപേക്ഷകന്റെ ബാങ്കിന്"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The Village Officer",
+        "textMl": "വില്ലേജ് ഓഫീസർക്ക്"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): The Government. [Topic: Document writers’ licensing and duties · Statutory Reference: L Rule 34]",
+    "explanationMl": "ശരിയുത്തരം (B): സർക്കാരിന്. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: L Rule 34]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-060",
+    "order": 60,
+    "type": "single_choice",
+    "sectionEn": "Document writers’ licensing and duties",
+    "sectionMl": "ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും",
+    "reference": "G 2026 notification",
+    "promptEn": "According to the 2026 Kerala Gazette notification, what minimum mark was required in each of the two parts to pass?",
+    "promptMl": "2026-ലെ കേരള ഗസറ്റ് വിജ്ഞാപനപ്രകാരം പരീക്ഷ വിജയിക്കാൻ രണ്ട് ഭാഗങ്ങളിലും പ്രത്യേകം വേണ്ട കുറഞ്ഞ മാർക്ക് എത്ര?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "50% in each part",
+        "textMl": "ഓരോ ഭാഗത്തിലും 50%"
+      },
+      {
+        "optionId": "B",
+        "textEn": "40% in each part",
+        "textMl": "ഓരോ ഭാഗത്തിലും 40%"
+      },
+      {
+        "optionId": "C",
+        "textEn": "40% aggregate only",
+        "textMl": "ആകെ 40% മാത്രം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "30% in each part",
+        "textMl": "ഓരോ ഭാഗത്തിലും 30%"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): 40% in each part. [Topic: Document writers’ licensing and duties · Statutory Reference: G 2026 notification]",
+    "explanationMl": "ശരിയുത്തരം (B): ഓരോ ഭാഗത്തിലും 40%. [വിഷയം: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും · അവലംബം: G 2026 notification]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-061",
+    "order": 61,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §54",
+    "promptEn": "Which element distinguishes a sale of immovable property from a gift?",
+    "promptMl": "സ്ഥാവരസ്വത്തിന്റെ വിൽപ്പനയെ ദാനത്തിൽനിന്ന് വേർതിരിക്കുന്ന ഘടകം ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "A transfer as security for repayment of debt",
+        "textMl": "കടം തിരിച്ചടയ്ക്കുന്നതിനുള്ള ഈടായ കൈമാറ്റം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Acceptance of the transfer during the donor's lifetime",
+        "textMl": "ദാതാവിന്റെ ജീവിതകാലത്തുള്ള കൈമാറ്റത്തിന്റെ സ്വീകരണം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "A price paid, promised or partly paid and partly promised",
+        "textMl": "നൽകിയതോ നൽകാമെന്ന് സമ്മതിച്ചതോ ഭാഗികമായി നൽകി ബാക്കി നൽകാമെന്ന് സമ്മതിച്ചതോ ആയ വില"
+      },
+      {
+        "optionId": "D",
+        "textEn": "A right to enjoy the property for a fixed term only",
+        "textMl": "നിശ്ചിതകാലത്തേക്ക് മാത്രം വസ്തു അനുഭവിക്കാനുള്ള അവകാശം"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): A price paid, promised or partly paid and partly promised. [Topic: Property transfers and deed types · Statutory Reference: T §54]",
+    "explanationMl": "ശരിയുത്തരം (C): നൽകിയതോ നൽകാമെന്ന് സമ്മതിച്ചതോ ഭാഗികമായി നൽകി ബാക്കി നൽകാമെന്ന് സമ്മതിച്ചതോ ആയ വില. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §54]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-062",
+    "order": 62,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §54",
+    "promptEn": "The buyer and seller sign a contract for a future sale of land. What does the contract by itself create in the property?",
+    "promptMl": "ഭാവിയിൽ ഭൂമി വിൽക്കാൻ വാങ്ങുന്നയാളും വിൽക്കുന്നയാളും കരാർ ഒപ്പിട്ടു. കരാർകൊണ്ടുമാത്രം ഭൂമിയിൽ എന്ത് അവകാശം ഉണ്ടാകും?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "A mortgage for the seller",
+        "textMl": "വിൽക്കുന്നയാൾക്ക് പണയാവകാശം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Immediate ownership for the buyer",
+        "textMl": "വാങ്ങുന്നയാൾക്ക് ഉടൻ ഉടമസ്ഥാവകാശം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "No interest in or charge on the property",
+        "textMl": "ഭൂമിയിൽ അവകാശമോ ചാർജോ ഉണ്ടാകില്ല"
+      },
+      {
+        "optionId": "D",
+        "textEn": "An easement over the adjoining land",
+        "textMl": "സമീപഭൂമിയിൽ ഈസ്മെന്റ് അവകാശം"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): No interest in or charge on the property. [Topic: Property transfers and deed types · Statutory Reference: T §54]",
+    "explanationMl": "ശരിയുത്തരം (C): ഭൂമിയിൽ അവകാശമോ ചാർജോ ഉണ്ടാകില്ല. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §54]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-063",
+    "order": 63,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §55(1)(a)",
+    "promptEn": "In the absence of a contract to the contrary, what material defect is a seller bound to disclose to the buyer?",
+    "promptMl": "വിരുദ്ധമായ കരാർ ഇല്ലെങ്കിൽ, ഏത് പ്രധാന ന്യൂനതയാണ് വിൽക്കുന്നയാൾ വാങ്ങുന്നയാളെ അറിയിക്കേണ്ടത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Any defect in an adjoining plot owned by a stranger",
+        "textMl": "മറ്റൊരാളുടെ സമീപസ്ഥലത്തെ ഏതു ന്യൂനതയും"
+      },
+      {
+        "optionId": "B",
+        "textEn": "A defect in the property or title known to the seller and not discoverable by the buyer with ordinary care",
+        "textMl": "വിൽക്കുന്നയാൾക്ക് അറിയാവുന്നതും വാങ്ങുന്നയാൾക്ക് സാധാരണ ശ്രദ്ധയോടെ കണ്ടെത്താനാകാത്തതുമായ വസ്തുവിലെയോ ഉടമസ്ഥാവകാശത്തിലെയോ ന്യൂനത"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Any typographical error in a nearby owner's unrelated deed",
+        "textMl": "സമീപത്തെ ഉടമയുടെ ബന്ധമില്ലാത്ത ആധാരത്തിലെ ഏതു അച്ചടിപ്പിശകും"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Every change in market price after execution",
+        "textMl": "ആധാരം ഒപ്പിട്ടതിനുശേഷമുള്ള എല്ലാ വിപണിവില മാറ്റങ്ങളും"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): A defect in the property or title known to the seller and not discoverable by the buyer with ordinary care. [Topic: Property transfers and deed types · Statutory Reference: T §55(1)(a)]",
+    "explanationMl": "ശരിയുത്തരം (B): വിൽക്കുന്നയാൾക്ക് അറിയാവുന്നതും വാങ്ങുന്നയാൾക്ക് സാധാരണ ശ്രദ്ധയോടെ കണ്ടെത്താനാകാത്തതുമായ വസ്തുവിലെയോ ഉടമസ്ഥാവകാശത്തിലെയോ ന്യൂനത. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §55(1)(a)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-064",
+    "order": 64,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §58(a)",
+    "promptEn": "What is the purpose of a mortgage under Section 58?",
+    "promptMl": "വകുപ്പ് 58 പ്രകാരം പണയത്തിന്റെ ഉദ്ദേശ്യം എന്ത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Divide land among co-owners",
+        "textMl": "സഹഉടമകൾക്കിടയിൽ ഭൂമി വിഭജിക്കുക"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Transfer an interest in specified immovable property as security for a debt or monetary obligation",
+        "textMl": "കടത്തിനോ പണമടയ്ക്കാനുള്ള ബാധ്യതയ്ക്കോ ഈടായി നിർദിഷ്ട സ്ഥാവരസ്വത്തിലെ അവകാശം കൈമാറുക"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Transfer absolute ownership as a gift",
+        "textMl": "പൂർണ ഉടമസ്ഥാവകാശം ദാനമായി കൈമാറുക"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Allow a tenant to occupy under a lease",
+        "textMl": "പാട്ടക്കരാർ പ്രകാരം വാടകക്കാരന് കൈവശം അനുവദിക്കുക"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Transfer an interest in specified immovable property as security for a debt or monetary obligation. [Topic: Property transfers and deed types · Statutory Reference: T §58(a)]",
+    "explanationMl": "ശരിയുത്തരം (B): കടത്തിനോ പണമടയ്ക്കാനുള്ള ബാധ്യതയ്ക്കോ ഈടായി നിർദിഷ്ട സ്ഥാവരസ്വത്തിലെ അവകാശം കൈമാറുക. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §58(a)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-065",
+    "order": 65,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §58(b)",
+    "promptEn": "In a simple mortgage, does the mortgagor deliver possession to the mortgagee as part of the mortgage?",
+    "promptMl": "സാധാരണ പണയത്തിൽ പണയത്തിന്റെ ഭാഗമായി പണയംവയ്ക്കുന്നയാൾ പണയം സ്വീകരിക്കുന്നയാൾക്ക് വസ്തുവിന്റെ കൈവശം കൈമാറുമോ?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Yes, whenever the mortgage covers land",
+        "textMl": "അതെ, ഭൂമി പണയപ്പെടുത്തുമ്പോഴെല്ലാം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "No, possession is not delivered under a simple mortgage",
+        "textMl": "ഇല്ല, സാധാരണ പണയത്തിൽ കൈവശം കൈമാറുന്നില്ല"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Yes, whenever the debt is payable with interest",
+        "textMl": "അതെ, കടത്തിന് പലിശ നൽകേണ്ടപ്പോഴെല്ലാം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Yes, possession must always be delivered",
+        "textMl": "അതെ, എല്ലാ സാഹചര്യത്തിലും കൈവശം നൽകണം"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): No, possession is not delivered under a simple mortgage. [Topic: Property transfers and deed types · Statutory Reference: T §58(b)]",
+    "explanationMl": "ശരിയുത്തരം (B): ഇല്ല, സാധാരണ പണയത്തിൽ കൈവശം കൈമാറുന്നില്ല. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §58(b)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-066",
+    "order": 66,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §58(d)",
+    "promptEn": "Which feature is characteristic of a usufructuary mortgage?",
+    "promptMl": "അനുഭവപ്പണയത്തിന്റെ പ്രത്യേകത ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Both parties permanently exchange ownership of their properties",
+        "textMl": "കക്ഷികൾ തങ്ങളുടെ വസ്തുക്കളുടെ ഉടമസ്ഥാവകാശം സ്ഥിരമായി പരസ്പരം മാറ്റുന്നു"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The mortgagee merely acts as a witness to the transaction",
+        "textMl": "പണയം സ്വീകരിക്കുന്നയാൾ ഇടപാടിലെ സാക്ഷിയായി മാത്രം പ്രവർത്തിക്കുന്നു"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The mortgagor permanently transfers the land by gift",
+        "textMl": "പണയംവയ്ക്കുന്നയാൾ ഭൂമി സ്ഥിരമായി ദാനം ചെയ്യുന്നു"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The mortgagee is entitled to retain possession and receive rents or profits as provided in the mortgage",
+        "textMl": "പണയവ്യവസ്ഥപ്രകാരം പണയം സ്വീകരിക്കുന്നയാൾക്ക് കൈവശം നിലനിർത്താനും വാടകയോ വരുമാനമോ സ്വീകരിക്കാനും അവകാശമുണ്ട്"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): The mortgagee is entitled to retain possession and receive rents or profits as provided in the mortgage. [Topic: Property transfers and deed types · Statutory Reference: T §58(d)]",
+    "explanationMl": "ശരിയുത്തരം (D): പണയവ്യവസ്ഥപ്രകാരം പണയം സ്വീകരിക്കുന്നയാൾക്ക് കൈവശം നിലനിർത്താനും വാടകയോ വരുമാനമോ സ്വീകരിക്കാനും അവകാശമുണ്ട്. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §58(d)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-067",
+    "order": 67,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §58(f)",
+    "promptEn": "What distinguishes a mortgage by deposit of title deeds?",
+    "promptMl": "ഉടമസ്ഥാവകാശ രേഖകൾ നിക്ഷേപിച്ചുള്ള പണയത്തിന്റെ പ്രത്യേകത ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Title documents are delivered in a place covered by the provision with intent to create security",
+        "textMl": "വകുപ്പ് ബാധകമായ സ്ഥലത്ത് ഈട് സൃഷ്ടിക്കാനുള്ള ഉദ്ദേശ്യത്തോടെ ഉടമസ്ഥാവകാശ രേഖകൾ കൈമാറുന്നു"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Title documents are shown to a neighbour for identification",
+        "textMl": "തിരിച്ചറിയലിനായി ഉടമസ്ഥാവകാശ രേഖകൾ അയൽക്കാരനെ കാണിക്കുന്നു"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Original documents are stored with a writer for safekeeping alone",
+        "textMl": "സുരക്ഷിതമായി സൂക്ഷിക്കാൻ മാത്രം മൂലരേഖകൾ ആധാരമെഴുത്തുകാരനെ ഏൽപ്പിക്കുന്നു"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Photocopies are sent to a prospective buyer for price negotiation",
+        "textMl": "വില ചർച്ചയ്ക്കായി വാങ്ങാൻ സാധ്യതയുള്ളയാൾക്ക് ഫോട്ടോകോപ്പികൾ അയയ്ക്കുന്നു"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Title documents are delivered in a place covered by the provision with intent to create security. [Topic: Property transfers and deed types · Statutory Reference: T §58(f)]",
+    "explanationMl": "ശരിയുത്തരം (A): വകുപ്പ് ബാധകമായ സ്ഥലത്ത് ഈട് സൃഷ്ടിക്കാനുള്ള ഉദ്ദേശ്യത്തോടെ ഉടമസ്ഥാവകാശ രേഖകൾ കൈമാറുന്നു. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §58(f)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-068",
+    "order": 68,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §60",
+    "promptEn": "After the mortgage amount becomes due, what is the mortgagor's right on proper payment or tender, provided the right subsists?",
+    "promptMl": "പണയത്തുക അടയ്ക്കേണ്ട സമയമായശേഷം, അവകാശം നിലനിൽക്കുന്നുണ്ടെങ്കിൽ തുക യഥാവിധി അടയ്ക്കുകയോ അടയ്ക്കാൻ ഹാജരാക്കുകയോ ചെയ്താൽ പണയംവയ്ക്കുന്നയാൾക്ക് ഏത് അവകാശമുണ്ട്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Right to revise the statutory fair value",
+        "textMl": "നിയമപ്രകാരമുള്ള ന്യായവില മാറ്റാനുള്ള അവകാശം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Right to convert the mortgage into a perpetual lease",
+        "textMl": "പണയത്തെ ശാശ്വത പാട്ടമാക്കി മാറ്റാനുള്ള അവകാശം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Right to redeem the mortgage",
+        "textMl": "പണയം വീണ്ടെടുക്കാനുള്ള അവകാശം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Right to purchase the mortgagee's adjoining property",
+        "textMl": "പണയം സ്വീകരിച്ചയാളുടെ സമീപവസ്തു വാങ്ങാനുള്ള അവകാശം"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): Right to redeem the mortgage. [Topic: Property transfers and deed types · Statutory Reference: T §60]",
+    "explanationMl": "ശരിയുത്തരം (C): പണയം വീണ്ടെടുക്കാനുള്ള അവകാശം. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §60]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-069",
+    "order": 69,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §105",
+    "promptEn": "What does a lease of immovable property primarily transfer?",
+    "promptMl": "സ്ഥാവരസ്വത്തിന്റെ പാട്ടം പ്രധാനമായും എന്താണ് കൈമാറുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The right to enjoy the property on agreed terms",
+        "textMl": "സമ്മതിച്ച വ്യവസ്ഥകളനുസരിച്ച് വസ്തു അനുഭവിക്കാനുള്ള അവകാശം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The power to register deeds on behalf of the State",
+        "textMl": "സർക്കാരിനുവേണ്ടി ആധാരം രജിസ്റ്റർ ചെയ്യാനുള്ള അധികാരം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Absolute ownership of the property",
+        "textMl": "വസ്തുവിന്റെ പൂർണ ഉടമസ്ഥാവകാശം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The right to determine stamp duty",
+        "textMl": "മുദ്രവില നിർണയിക്കാനുള്ള അവകാശം"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): The right to enjoy the property on agreed terms. [Topic: Property transfers and deed types · Statutory Reference: T §105]",
+    "explanationMl": "ശരിയുത്തരം (A): സമ്മതിച്ച വ്യവസ്ഥകളനുസരിച്ച് വസ്തു അനുഭവിക്കാനുള്ള അവകാശം. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §105]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-070",
+    "order": 70,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §107",
+    "promptEn": "Who must execute a registered lease instrument when a lease is made by that instrument?",
+    "promptMl": "പാട്ടം രജിസ്റ്റർ ചെയ്യുന്ന രേഖ വഴിയാണ് നൽകുന്നതെങ്കിൽ ആ രേഖയിൽ ആരൊക്കെ ഒപ്പിടണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Only the lessor",
+        "textMl": "പാട്ടം നൽകുന്നയാൾ മാത്രം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Both the lessor and the lessee",
+        "textMl": "പാട്ടം നൽകുന്നയാളും പാട്ടം എടുക്കുന്നയാളും"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Only the lessee",
+        "textMl": "പാട്ടം എടുക്കുന്നയാൾ മാത്രം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Only the deed writer and the witnesses",
+        "textMl": "ആധാരമെഴുത്തുകാരനും സാക്ഷികളും മാത്രം"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Both the lessor and the lessee. [Topic: Property transfers and deed types · Statutory Reference: T §107]",
+    "explanationMl": "ശരിയുത്തരം (B): പാട്ടം നൽകുന്നയാളും പാട്ടം എടുക്കുന്നയാളും. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §107]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-071",
+    "order": 71,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §111(a)",
+    "promptEn": "A fixed-term lease ends when its stated period expires. Which mode of determination is this?",
+    "promptMl": "നിശ്ചിതകാല പാട്ടം അതിന്റെ കാലാവധി പൂർത്തിയാകുമ്പോൾ അവസാനിക്കുന്നു. പാട്ടം അവസാനിക്കുന്ന ഏത് രീതിയാണിത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Expiry of the term",
+        "textMl": "കാലാവധി പൂർത്തിയാകൽ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Forfeiture for breach",
+        "textMl": "ലംഘനം മൂലമുള്ള അവകാശനഷ്ടം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Express surrender",
+        "textMl": "പ്രകടമായ ഒഴിഞ്ഞുകൊടുക്കൽ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Merger of lessor and lessee interests",
+        "textMl": "പാട്ടം നൽകുന്നയാളുടെയും എടുക്കുന്നയാളുടെയും അവകാശങ്ങളുടെ ലയനം"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Expiry of the term. [Topic: Property transfers and deed types · Statutory Reference: T §111(a)]",
+    "explanationMl": "ശരിയുത്തരം (A): കാലാവധി പൂർത്തിയാകൽ. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §111(a)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-072",
+    "order": 72,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §118",
+    "promptEn": "Two parties transfer ownership of their respective plots to each other. How is the transaction classified?",
+    "promptMl": "രണ്ട് കക്ഷികൾ തങ്ങളുടെ സ്ഥലങ്ങളുടെ ഉടമസ്ഥാവകാശം പരസ്പരം കൈമാറുന്നു. ഇടപാട് ഏത് വിഭാഗത്തിലാണ്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Mortgage",
+        "textMl": "പണയം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Gift",
+        "textMl": "ദാനം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Lease",
+        "textMl": "പാട്ടം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Exchange",
+        "textMl": "വസ്തു വച്ചുമാറ്റം"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Exchange. [Topic: Property transfers and deed types · Statutory Reference: T §118]",
+    "explanationMl": "ശരിയുത്തരം (D): വസ്തു വച്ചുമാറ്റം. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §118]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-073",
+    "order": 73,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §122",
+    "promptEn": "Which combination is fundamental to a gift under Section 122?",
+    "promptMl": "വകുപ്പ് 122 പ്രകാരം ദാനത്തിന്റെ അടിസ്ഥാന ഘടകങ്ങൾ ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Transfer of future property for monthly rent",
+        "textMl": "ഭാവിയിൽ ലഭിക്കുന്ന വസ്തു മാസവാടകയ്ക്ക് കൈമാറുക"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Voluntary transfer of existing property without consideration, accepted by or on behalf of the donee",
+        "textMl": "പ്രതിഫലം കൂടാതെ നിലവിലുള്ള വസ്തു സ്വമേധയാ കൈമാറുകയും സ്വീകർത്താവോ പ്രതിനിധിയോ സ്വീകരിക്കുകയും ചെയ്യുക"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Sale of existing property for a promised price",
+        "textMl": "നിലവിലുള്ള വസ്തു നൽകാമെന്നു സമ്മതിച്ച വിലയ്ക്ക് വിൽക്കുക"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Temporary transfer of possession as security for a loan",
+        "textMl": "വായ്പയ്ക്ക് ഈടായി കൈവശം താൽക്കാലികമായി കൈമാറുക"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Voluntary transfer of existing property without consideration, accepted by or on behalf of the donee. [Topic: Property transfers and deed types · Statutory Reference: T §122]",
+    "explanationMl": "ശരിയുത്തരം (B): പ്രതിഫലം കൂടാതെ നിലവിലുള്ള വസ്തു സ്വമേധയാ കൈമാറുകയും സ്വീകർത്താവോ പ്രതിനിധിയോ സ്വീകരിക്കുകയും ചെയ്യുക. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §122]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-074",
+    "order": 74,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §122",
+    "promptEn": "When must acceptance of a gift occur under Section 122?",
+    "promptMl": "വകുപ്പ് 122 പ്രകാരം ദാനം എപ്പോഴാണ് സ്വീകരിക്കേണ്ടത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "At any time after the land tax is paid",
+        "textMl": "ഭൂനികുതി അടച്ചതിനുശേഷം ഏതു സമയത്തും"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Only after the donor's death",
+        "textMl": "ദാതാവിന്റെ മരണത്തിനുശേഷം മാത്രം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Within four months after the donee's death",
+        "textMl": "സ്വീകർത്താവിന്റെ മരണത്തിനുശേഷം നാല് മാസത്തിനകം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "During the donor's lifetime while the donor remains capable of giving",
+        "textMl": "ദാതാവ് ജീവിച്ചിരിക്കുമ്പോഴും ദാനം ചെയ്യാൻ ശേഷിയുള്ളപ്പോഴും"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): During the donor's lifetime while the donor remains capable of giving. [Topic: Property transfers and deed types · Statutory Reference: T §122]",
+    "explanationMl": "ശരിയുത്തരം (D): ദാതാവ് ജീവിച്ചിരിക്കുമ്പോഴും ദാനം ചെയ്യാൻ ശേഷിയുള്ളപ്പോഴും. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §122]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-075",
+    "order": 75,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §123",
+    "promptEn": "Under Section 123, what form is required for a gift of immovable property?",
+    "promptMl": "വകുപ്പ് 123 പ്രകാരം സ്ഥാവരസ്വത്ത് ദാനം ചെയ്യുന്നതിന് ആവശ്യമായ രേഖാരൂപം ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "A plain receipt signed by the donee alone",
+        "textMl": "സ്വീകർത്താവ് മാത്രം ഒപ്പിട്ട സാധാരണ രസീത്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "An unregistered letter with the donor's signature alone",
+        "textMl": "ദാതാവിന്റെ ഒപ്പ് മാത്രമുള്ള രജിസ്റ്റർ ചെയ്യാത്ത കത്ത്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "A registered instrument signed by or on behalf of the donor and attested by at least two witnesses",
+        "textMl": "ദാതാവോ ദാതാവിനുവേണ്ടി മറ്റൊരാളോ ഒപ്പിട്ടതും കുറഞ്ഞത് രണ്ടു സാക്ഷികൾ സാക്ഷ്യപ്പെടുത്തിയതുമായ രജിസ്റ്റർ ചെയ്ത രേഖ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "An oral promise made before one witness",
+        "textMl": "ഒരു സാക്ഷിയുടെ സാന്നിധ്യത്തിലുള്ള വാക്കാലുള്ള വാഗ്ദാനം"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): A registered instrument signed by or on behalf of the donor and attested by at least two witnesses. [Topic: Property transfers and deed types · Statutory Reference: T §123]",
+    "explanationMl": "ശരിയുത്തരം (C): ദാതാവോ ദാതാവിനുവേണ്ടി മറ്റൊരാളോ ഒപ്പിട്ടതും കുറഞ്ഞത് രണ്ടു സാക്ഷികൾ സാക്ഷ്യപ്പെടുത്തിയതുമായ രജിസ്റ്റർ ചെയ്ത രേഖ. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §123]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-076",
+    "order": 76,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §126",
+    "promptEn": "Can a completed gift be revoked solely because the donor changes their mind?",
+    "promptMl": "ദാതാവ് മനസ്സുമാറ്റി എന്ന കാരണത്താൽ മാത്രം പൂർത്തിയായ ദാനം റദ്ദാക്കാനാകുമോ?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "No, a change of mind alone is insufficient",
+        "textMl": "ഇല്ല, മനസ്സുമാറ്റം മാത്രം മതിയായ കാരണമല്ല"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Yes, whenever the donor requests it",
+        "textMl": "അതെ, ദാതാവ് ആവശ്യപ്പെടുമ്പോഴെല്ലാം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Yes, if the property's market value increases",
+        "textMl": "അതെ, വസ്തുവിന്റെ വിപണിവില ഉയർന്നാൽ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Yes, if the gift deed was registered",
+        "textMl": "അതെ, ദാനാധാരം രജിസ്റ്റർ ചെയ്തിട്ടുണ്ടെങ്കിൽ"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): No, a change of mind alone is insufficient. [Topic: Property transfers and deed types · Statutory Reference: T §126]",
+    "explanationMl": "ശരിയുത്തരം (A): ഇല്ല, മനസ്സുമാറ്റം മാത്രം മതിയായ കാരണമല്ല. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §126]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-077",
+    "order": 77,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "T §44",
+    "promptEn": "One co-owner transfers their undivided share. Subject to legal exceptions, which right does the transferee acquire?",
+    "promptMl": "ഒരു സഹഉടമ വിഭജിക്കാത്ത തന്റെ ഓഹരി കൈമാറുന്നു. നിയമത്തിലെ ഒഴിവുകൾക്ക് വിധേയമായി കൈമാറ്റം ലഭിക്കുന്നയാൾക്ക് ഏത് അവകാശം ലഭിക്കും?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Power to cancel any previous registered document",
+        "textMl": "മുൻ രജിസ്റ്റർ രേഖകളെല്ലാം റദ്ദാക്കാനുള്ള അധികാരം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Exclusive ownership of every co-owner's share",
+        "textMl": "എല്ലാ സഹഉടമകളുടെയും ഓഹരികളിൽ പൂർണ ഉടമസ്ഥാവകാശം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The right to seek partition of the property to the extent of the transferred share",
+        "textMl": "കൈമാറിയ ഓഹരിയുടെ പരിധിയിൽ വസ്തു ഭാഗിച്ചുകിട്ടാൻ ആവശ്യപ്പെടാനുള്ള അവകാശം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "An automatic right to a specific numbered plot in every case",
+        "textMl": "എല്ലാ കേസിലും നിർദിഷ്ട നമ്പറുള്ള പ്ലോട്ടിൽ സ്വയമേവയുള്ള അവകാശം"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): The right to seek partition of the property to the extent of the transferred share. [Topic: Property transfers and deed types · Statutory Reference: T §44]",
+    "explanationMl": "ശരിയുത്തരം (C): കൈമാറിയ ഓഹരിയുടെ പരിധിയിൽ വസ്തു ഭാഗിച്ചുകിട്ടാൻ ആവശ്യപ്പെടാനുള്ള അവകാശം. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: T §44]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-078",
+    "order": 78,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "E §4",
+    "promptEn": "Which situation best illustrates an easement?",
+    "promptMl": "ഈസ്മെന്റ് അവകാശത്തിന് ഏറ്റവും യോജിച്ച ഉദാഹരണം ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "A borrower deposits documents as loan security",
+        "textMl": "കടം വാങ്ങുന്നയാൾ രേഖകൾ വായ്പയ്ക്ക് ഈടായി നിക്ഷേപിക്കുന്നു"
+      },
+      {
+        "optionId": "B",
+        "textEn": "A tenant pays rent for a flat",
+        "textMl": "വാടകക്കാരൻ ഫ്ലാറ്റിന് വാടക നൽകുന്നു"
+      },
+      {
+        "optionId": "C",
+        "textEn": "A purchaser receives ownership of land for a price",
+        "textMl": "വാങ്ങുന്നയാൾ വില നൽകി ഭൂമിയുടെ ഉടമസ്ഥാവകാശം നേടുന്നു"
+      },
+      {
+        "optionId": "D",
+        "textEn": "A plot owner has a right of way over another plot for use of their own land",
+        "textMl": "സ്വന്തം ഭൂമി ഉപയോഗിക്കുന്നതിനായി മറ്റൊരു സ്ഥലത്തിലൂടെ കടന്നുപോകാനുള്ള അവകാശം ഭൂവുടമയ്ക്കുണ്ട്"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): A plot owner has a right of way over another plot for use of their own land. [Topic: Property transfers and deed types · Statutory Reference: E §4]",
+    "explanationMl": "ശരിയുത്തരം (D): സ്വന്തം ഭൂമി ഉപയോഗിക്കുന്നതിനായി മറ്റൊരു സ്ഥലത്തിലൂടെ കടന്നുപോകാനുള്ള അവകാശം ഭൂവുടമയ്ക്കുണ്ട്. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: E §4]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-079",
+    "order": 79,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "E §52",
+    "promptEn": "What does a licence under Section 52 permit?",
+    "promptMl": "വകുപ്പ് 52 പ്രകാരമുള്ള ലൈസൻസ് എന്താണ് അനുവദിക്കുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "An automatic transfer of ownership",
+        "textMl": "ഉടമസ്ഥാവകാശത്തിന്റെ സ്വയമേവയുള്ള കൈമാറ്റം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "An act on another's immovable property without creating an easement or property interest",
+        "textMl": "ഈസ്മെന്റ് അവകാശമോ വസ്തുവിൽ മറ്റൊരു അവകാശമോ സൃഷ്ടിക്കാതെ മറ്റൊരാളുടെ സ്ഥാവരസ്വത്തിൽ ഒരു പ്രവൃത്തി ചെയ്യാൻ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Compulsory partition of adjoining land",
+        "textMl": "സമീപഭൂമിയുടെ നിർബന്ധിത വിഭജനം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "A permanent mortgage of the property",
+        "textMl": "വസ്തുവിന്റെ സ്ഥിരമായ പണയം"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): An act on another's immovable property without creating an easement or property interest. [Topic: Property transfers and deed types · Statutory Reference: E §52]",
+    "explanationMl": "ശരിയുത്തരം (B): ഈസ്മെന്റ് അവകാശമോ വസ്തുവിൽ മറ്റൊരു അവകാശമോ സൃഷ്ടിക്കാതെ മറ്റൊരാളുടെ സ്ഥാവരസ്വത്തിൽ ഒരു പ്രവൃത്തി ചെയ്യാൻ. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: E §52]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-080",
+    "order": 80,
+    "type": "single_choice",
+    "sectionEn": "Property transfers and deed types",
+    "sectionMl": "സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും",
+    "reference": "R §§40–41; I §2(h)",
+    "promptEn": "Which instrument expresses how a person wants their property dealt with after death?",
+    "promptMl": "തന്റെ മരണശേഷം സ്വത്ത് എങ്ങനെ വിനിയോഗിക്കണമെന്ന ആഗ്രഹം രേഖപ്പെടുത്തുന്ന രേഖ ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Sale deed",
+        "textMl": "വിൽപ്പനയാധാരം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Mortgage deed",
+        "textMl": "പണയാധാരം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Will",
+        "textMl": "വിൽപത്രം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Lease deed",
+        "textMl": "പാട്ടാധാരം"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): Will. [Topic: Property transfers and deed types · Statutory Reference: R §§40–41; I §2(h)]",
+    "explanationMl": "ശരിയുത്തരം (C): വിൽപത്രം. [വിഷയം: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും · അവലംബം: R §§40–41; I §2(h)]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-081",
+    "order": 81,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "R §21; P Model Documents",
+    "promptEn": "Which part of a deed normally groups the survey number, extent and boundaries?",
+    "promptMl": "സർവേ നമ്പർ, വിസ്തീർണം, അതിരുകൾ എന്നിവ സാധാരണ ആധാരത്തിന്റെ ഏതു ഭാഗത്താണ് ഒന്നിച്ചു രേഖപ്പെടുത്തുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Attestation block",
+        "textMl": "സാക്ഷ്യപ്പെടുത്തൽ ഭാഗം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Signature block",
+        "textMl": "ഒപ്പിടാനുള്ള ഭാഗം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Property schedule",
+        "textMl": "വസ്തുവിന്റെ പട്ടിക"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Consideration clause",
+        "textMl": "പ്രതിഫലം രേഖപ്പെടുത്തുന്ന വ്യവസ്ഥ"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): Property schedule. [Topic: Drafting, property records and online services · Statutory Reference: R §21; P Model Documents]",
+    "explanationMl": "ശരിയുത്തരം (C): വസ്തുവിന്റെ പട്ടിക. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: R §21; P Model Documents]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-082",
+    "order": 82,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "P Registration SOP",
+    "promptEn": "A model sale deed contains a sample village name and a sample survey number. What should the drafter do?",
+    "promptMl": "മാതൃകാ വിൽപ്പനയാധാരത്തിൽ ഉദാഹരണത്തിനുള്ള വില്ലേജ് പേരും സർവേ നമ്പറും നൽകിയിട്ടുണ്ട്. ആധാരം തയ്യാറാക്കുന്നയാൾ എന്തു ചെയ്യണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Replace both with verified details for this transaction",
+        "textMl": "രണ്ടും മാറ്റി ഈ ഇടപാടിനായി പരിശോധിച്ച് ഉറപ്പാക്കിയ വിവരങ്ങൾ ചേർക്കണം"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Delete both details and show the buyer's address alone",
+        "textMl": "രണ്ടും നീക്കി വാങ്ങുന്നയാളുടെ വിലാസം മാത്രം കാണിക്കണം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Copy the details of a nearby property",
+        "textMl": "സമീപവസ്തുവിന്റെ വിവരങ്ങൾ പകർത്തണം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Keep both details unchanged because the model is official",
+        "textMl": "ഔദ്യോഗിക മാതൃകയായതിനാൽ രണ്ടും മാറ്റാതെ സൂക്ഷിക്കണം"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Replace both with verified details for this transaction. [Topic: Drafting, property records and online services · Statutory Reference: P Registration SOP]",
+    "explanationMl": "ശരിയുത്തരം (A): രണ്ടും മാറ്റി ഈ ഇടപാടിനായി പരിശോധിച്ച് ഉറപ്പാക്കിയ വിവരങ്ങൾ ചേർക്കണം. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: P Registration SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-083",
+    "order": 83,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "R §21; P Registration SOP",
+    "promptEn": "The seller's old deed and recent tax receipt show different survey numbers after a resurvey. What is the best drafting step?",
+    "promptMl": "റീസർവേക്കുശേഷം വിൽക്കുന്നയാളുടെ മുൻ ആധാരത്തിലും പുതിയ നികുതി രസീതിലും വ്യത്യസ്ത സർവേ നമ്പറുകളാണ്. ആധാരം തയ്യാറാക്കുമ്പോൾ ആദ്യം എന്തു ചെയ്യണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Replace both with the buyer's Thandaper number",
+        "textMl": "രണ്ടിനും പകരം വാങ്ങുന്നയാളുടെ തണ്ടപ്പേർ നമ്പർ ചേർക്കുക"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Use either number at random",
+        "textMl": "ഏതെങ്കിലും ഒരു നമ്പർ പരിശോധിക്കാതെ ഉപയോഗിക്കുക"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Use only the street name in the property schedule",
+        "textMl": "വസ്തുവിന്റെ പട്ടികയിൽ തെരുവിന്റെ പേര് മാത്രം ഉപയോഗിക്കുക"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Verify the correspondence between the old and new identifiers using relevant records",
+        "textMl": "ബന്ധപ്പെട്ട രേഖകൾ പരിശോധിച്ച് പഴയ നമ്പറും പുതിയ നമ്പറും ഒരേ വസ്തുവിനെയാണോ സൂചിപ്പിക്കുന്നതെന്ന് ഉറപ്പാക്കുക"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Verify the correspondence between the old and new identifiers using relevant records. [Topic: Drafting, property records and online services · Statutory Reference: R §21; P Registration SOP]",
+    "explanationMl": "ശരിയുത്തരം (D): ബന്ധപ്പെട്ട രേഖകൾ പരിശോധിച്ച് പഴയ നമ്പറും പുതിയ നമ്പറും ഒരേ വസ്തുവിനെയാണോ സൂചിപ്പിക്കുന്നതെന്ന് ഉറപ്പാക്കുക. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: R §21; P Registration SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-084",
+    "order": 84,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "R §21; P Model Documents",
+    "promptEn": "Two adjoining plots have a common survey number. Which additional identifiers help distinguish the plot being conveyed?",
+    "promptMl": "ചേർന്നുകിടക്കുന്ന രണ്ട് സ്ഥലങ്ങൾക്ക് ഒരേ സർവേ നമ്പറാണ്. കൈമാറുന്ന സ്ഥലം വേർതിരിച്ചറിയാൻ ഏത് അധിക വിവരങ്ങളാണ് സഹായിക്കുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The stamp vendor's address and licence number",
+        "textMl": "മുദ്രപത്ര വിൽപ്പനക്കാരന്റെ വിലാസവും ലൈസൻസ് നമ്പറും"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The witness's ward and house number",
+        "textMl": "സാക്ഷിയുടെ വാർഡും വീട്ടുനമ്പറും"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The buyer's occupation and phone number",
+        "textMl": "വാങ്ങുന്നയാളുടെ തൊഴിലും ഫോൺ നമ്പറും"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Verified subdivision, extent and boundaries",
+        "textMl": "പരിശോധിച്ചുറപ്പാക്കിയ ഉപവിഭാഗം, വിസ്തീർണം, അതിരുകൾ"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Verified subdivision, extent and boundaries. [Topic: Drafting, property records and online services · Statutory Reference: R §21; P Model Documents]",
+    "explanationMl": "ശരിയുത്തരം (D): പരിശോധിച്ചുറപ്പാക്കിയ ഉപവിഭാഗം, വിസ്തീർണം, അതിരുകൾ. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: R §21; P Model Documents]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-085",
+    "order": 85,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "T §55; P Registration SOP",
+    "promptEn": "Which drafting entry helps trace the instrument by which the seller acquired title?",
+    "promptMl": "വിൽക്കുന്നയാൾക്ക് ഉടമസ്ഥാവകാശം ലഭിച്ച രേഖ കണ്ടെത്താൻ ആധാരത്തിലെ ഏത് വിവരമാണ് സഹായിക്കുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The prior deed's document number, year and registration office",
+        "textMl": "മുൻ ആധാരത്തിന്റെ രേഖാ നമ്പർ, വർഷം, രജിസ്ട്രേഷൻ ഓഫീസ്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The buyer's bank branch and account type",
+        "textMl": "വാങ്ങുന്നയാളുടെ ബാങ്ക് ശാഖയും അക്കൗണ്ടിന്റെ തരവും"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The witnesses' signatures and occupations",
+        "textMl": "സാക്ഷികളുടെ ഒപ്പുകളും തൊഴിലുകളും"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The stamp purchase date and payment method alone",
+        "textMl": "മുദ്രപത്രം വാങ്ങിയ തീയതിയും പണമടച്ച രീതിയും മാത്രം"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): The prior deed's document number, year and registration office. [Topic: Drafting, property records and online services · Statutory Reference: T §55; P Registration SOP]",
+    "explanationMl": "ശരിയുത്തരം (A): മുൻ ആധാരത്തിന്റെ രേഖാ നമ്പർ, വർഷം, രജിസ്ട്രേഷൻ ഓഫീസ്. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: T §55; P Registration SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-086",
+    "order": 86,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "S §28; T §54",
+    "promptEn": "A sale deed records an advance and a balance payable at execution. Which clause should state both amounts?",
+    "promptMl": "വിൽപ്പനയാധാരത്തിൽ മുൻകൂർ തുകയും ഒപ്പിടുമ്പോൾ നൽകേണ്ട ബാക്കിയും രേഖപ്പെടുത്തണം. ഏത് വ്യവസ്ഥയിലാണ് രണ്ട് തുകയും കാണിക്കേണ്ടത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Consideration and payment clause",
+        "textMl": "വിൽപ്പനവിലയും അത് നൽകുന്ന രീതിയും വിവരിക്കുന്ന വ്യവസ്ഥ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Prior title recital alone",
+        "textMl": "മുൻ ഉടമസ്ഥാവകാശം വിവരിക്കുന്ന ഭാഗം മാത്രം"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Witness attestation clause",
+        "textMl": "സാക്ഷികളുടെ സാക്ഷ്യപ്പെടുത്തൽ വ്യവസ്ഥ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Property boundary clause",
+        "textMl": "വസ്തുവിന്റെ അതിരുകൾ വിവരിക്കുന്ന വ്യവസ്ഥ"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Consideration and payment clause. [Topic: Drafting, property records and online services · Statutory Reference: S §28; T §54]",
+    "explanationMl": "ശരിയുത്തരം (A): വിൽപ്പനവിലയും അത് നൽകുന്ന രീതിയും വിവരിക്കുന്ന വ്യവസ്ഥ. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: S §28; T §54]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-087",
+    "order": 87,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "P Registration SOP",
+    "promptEn": "Which portal is used for Kerala Registration Department's online document registration services?",
+    "promptMl": "കേരള രജിസ്ട്രേഷൻ വകുപ്പിന്റെ ആധാര രജിസ്ട്രേഷൻ ഓൺലൈൻ സേവനങ്ങൾക്ക് ഉപയോഗിക്കുന്ന പോർട്ടൽ ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Ente Bhoomi land information portal",
+        "textMl": "എന്റെ ഭൂമി ഭൂരേഖാ പോർട്ടൽ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "e-District citizen services portal",
+        "textMl": "ഇ-ഡിസ്ട്രിക്ട് പൗരസേവന പോർട്ടൽ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "ReLIS land revenue portal",
+        "textMl": "റെലിസ് ഭൂവരുമാന പോർട്ടൽ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "PEARL",
+        "textMl": "പേൾ"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): PEARL. [Topic: Drafting, property records and online services · Statutory Reference: P Registration SOP]",
+    "explanationMl": "ശരിയുത്തരം (D): പേൾ. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: P Registration SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-088",
+    "order": 88,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "P Registration SOP",
+    "promptEn": "Under the published standard PEARL workflow, which option starts a fresh document registration submission after login?",
+    "promptMl": "പ്രസിദ്ധീകരിച്ച സാധാരണ പേൾ നടപടിക്രമത്തിൽ, ലോഗിൻ ചെയ്തശേഷം പുതിയ ആധാര രജിസ്ട്രേഷൻ അപേക്ഷ തുടങ്ങാൻ ഏത് ഓപ്ഷൻ തിരഞ്ഞെടുക്കണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Encumbrance Certificate download",
+        "textMl": "ബാധ്യതാ സർട്ടിഫിക്കറ്റ് ഡൗൺലോഡ്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Fair Value Search",
+        "textMl": "ന്യായവില തിരയൽ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "New Token",
+        "textMl": "ന്യൂ ടോക്കൺ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Application for Certified Copy",
+        "textMl": "സാക്ഷ്യപ്പെടുത്തിയ പകർപ്പിനുള്ള അപേക്ഷ"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): New Token. [Topic: Drafting, property records and online services · Statutory Reference: P Registration SOP]",
+    "explanationMl": "ശരിയുത്തരം (C): ന്യൂ ടോക്കൺ. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: P Registration SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-089",
+    "order": 89,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "P Encumbrance Certificate SOP",
+    "promptEn": "Which service should a buyer use to request a report on entries affecting a property for a specified search period?",
+    "promptMl": "നിശ്ചിത തിരച്ചിൽ കാലയളവിൽ ഒരു വസ്തുവിനെ ബാധിക്കുന്ന രജിസ്റ്റർ എൻട്രികളുടെ വിവരം ലഭിക്കാൻ വാങ്ങുന്നയാൾ ഏത് സേവനം ഉപയോഗിക്കണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Encumbrance Certificate",
+        "textMl": "ബാധ്യതാ സർട്ടിഫിക്കറ്റ്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Land Tax Receipt",
+        "textMl": "ഭൂനികുതി രസീത്"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Fair Value Search",
+        "textMl": "ന്യായവില തിരയൽ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Certified Copy of a particular deed",
+        "textMl": "ഒരു പ്രത്യേക ആധാരത്തിന്റെ സാക്ഷ്യപ്പെടുത്തിയ പകർപ്പ്"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Encumbrance Certificate. [Topic: Drafting, property records and online services · Statutory Reference: P Encumbrance Certificate SOP]",
+    "explanationMl": "ശരിയുത്തരം (A): ബാധ്യതാ സർട്ടിഫിക്കറ്റ്. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: P Encumbrance Certificate SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-090",
+    "order": 90,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "P Encumbrance Certificate SOP",
+    "promptEn": "An EC search covers 2020 through 2025. A mortgage was registered in 2018. What can be concluded if the 2018 entry is absent?",
+    "promptMl": "2020 മുതൽ 2025 വരെയാണ് ബാധ്യതാ സർട്ടിഫിക്കറ്റിന്റെ തിരച്ചിൽ കാലയളവ്. ഒരു പണയം 2018-ൽ രജിസ്റ്റർ ചെയ്തു. 2018-ലെ എൻട്രി കാണുന്നില്ലെങ്കിൽ എന്തു മനസ്സിലാക്കാം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The applicant automatically became the owner in 2025",
+        "textMl": "2025-ൽ അപേക്ഷകൻ സ്വയം ഉടമയായി"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The mortgage was necessarily discharged by 2020",
+        "textMl": "2020-ഓടെ പണയം തീർച്ചയായും ഒഴിവാക്കിയിരുന്നു"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The 2018 registration date falls outside the requested period",
+        "textMl": "2018-ലെ രജിസ്ട്രേഷൻ തീയതി ആവശ്യപ്പെട്ട തിരച്ചിൽ കാലയളവിന് പുറത്താണ്"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The mortgage automatically expired after five years",
+        "textMl": "അഞ്ചുവർഷം കഴിഞ്ഞപ്പോൾ പണയം സ്വയം അവസാനിച്ചു"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): The 2018 registration date falls outside the requested period. [Topic: Drafting, property records and online services · Statutory Reference: P Encumbrance Certificate SOP]",
+    "explanationMl": "ശരിയുത്തരം (C): 2018-ലെ രജിസ്ട്രേഷൻ തീയതി ആവശ്യപ്പെട്ട തിരച്ചിൽ കാലയളവിന് പുറത്താണ്. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: P Encumbrance Certificate SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-091",
+    "order": 91,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "P Encumbrance Certificate SOP",
+    "promptEn": "A search returns no entries for the property and years requested. What does this result establish by itself?",
+    "promptMl": "ആവശ്യപ്പെട്ട വസ്തുവിനും വർഷങ്ങൾക്കും തിരച്ചിലിൽ എൻട്രികൾ ലഭിച്ചില്ല. ഈ ഫലം കൊണ്ടുമാത്രം എന്താണ് വ്യക്തമാകുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The applicant has conclusively proved ownership",
+        "textMl": "അപേക്ഷകൻ ഉടമസ്ഥാവകാശം അന്തിമമായി തെളിയിച്ചു"
+      },
+      {
+        "optionId": "B",
+        "textEn": "No matching entries were found within the scope of that search",
+        "textMl": "ആ തിരച്ചിലിന്റെ പരിധിയിൽ പൊരുത്തപ്പെടുന്ന എൻട്രികൾ കണ്ടെത്തിയില്ല"
+      },
+      {
+        "optionId": "C",
+        "textEn": "All ownership disputes have been decided",
+        "textMl": "ഉടമസ്ഥാവകാശ തർക്കങ്ങളെല്ലാം തീർപ്പാക്കി"
+      },
+      {
+        "optionId": "D",
+        "textEn": "No unregistered claim can exist",
+        "textMl": "രജിസ്റ്റർ ചെയ്യാത്ത അവകാശവാദം ഉണ്ടാകാൻ സാധ്യതയില്ല"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): No matching entries were found within the scope of that search. [Topic: Drafting, property records and online services · Statutory Reference: P Encumbrance Certificate SOP]",
+    "explanationMl": "ശരിയുത്തരം (B): ആ തിരച്ചിലിന്റെ പരിധിയിൽ പൊരുത്തപ്പെടുന്ന എൻട്രികൾ കണ്ടെത്തിയില്ല. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: P Encumbrance Certificate SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-092",
+    "order": 92,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "P Encumbrance Certificate SOP",
+    "promptEn": "Which language choices are listed in Kerala's published EC application procedure?",
+    "promptMl": "കേരളത്തിലെ പ്രസിദ്ധീകരിച്ച ബാധ്യതാ സർട്ടിഫിക്കറ്റ് അപേക്ഷാ നടപടിക്രമത്തിൽ ഏത് ഭാഷകളാണ് നൽകിയിരിക്കുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "English or Hindi",
+        "textMl": "ഇംഗ്ലീഷോ ഹിന്ദിയോ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Hindi or Tamil",
+        "textMl": "ഹിന്ദിയോ തമിഴോ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Malayalam or English",
+        "textMl": "മലയാളമോ ഇംഗ്ലീഷോ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Malayalam or Tamil",
+        "textMl": "മലയാളമോ തമിഴോ"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanationEn": "Correct Answer (C): Malayalam or English. [Topic: Drafting, property records and online services · Statutory Reference: P Encumbrance Certificate SOP]",
+    "explanationMl": "ശരിയുത്തരം (C): മലയാളമോ ഇംഗ്ലീഷോ. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: P Encumbrance Certificate SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-093",
+    "order": 93,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "P Certified Copy SOP; R §57",
+    "promptEn": "A reader needs an officially certified reproduction of a specific earlier registered sale deed. Which service is appropriate?",
+    "promptMl": "മുൻപ് രജിസ്റ്റർ ചെയ്ത ഒരു പ്രത്യേക വിൽപ്പനയാധാരത്തിന്റെ ഔദ്യോഗികമായി സാക്ഷ്യപ്പെടുത്തിയ പകർപ്പ് വായനക്കാരന് വേണം. ഏത് സേവനമാണ് ഉപയോഗിക്കേണ്ടത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Application for revision of fair value",
+        "textMl": "ന്യായവില പുനർനിർണയിക്കാനുള്ള അപേക്ഷ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Application for Certified Copy",
+        "textMl": "സാക്ഷ്യപ്പെടുത്തിയ പകർപ്പിനുള്ള അപേക്ഷ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Application for transfer of registry",
+        "textMl": "പോക്കുവരവിനുള്ള അപേക്ഷ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Application for Encumbrance Certificate",
+        "textMl": "ബാധ്യതാ സർട്ടിഫിക്കറ്റിനുള്ള അപേക്ഷ"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Application for Certified Copy. [Topic: Drafting, property records and online services · Statutory Reference: P Certified Copy SOP; R §57]",
+    "explanationMl": "ശരിയുത്തരം (B): സാക്ഷ്യപ്പെടുത്തിയ പകർപ്പിനുള്ള അപേക്ഷ. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: P Certified Copy SOP; R §57]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-094",
+    "order": 94,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "P Certified Copy SOP",
+    "promptEn": "After applying online for a certified copy, which reference from the SMS can be used to check the application status?",
+    "promptMl": "സാക്ഷ്യപ്പെടുത്തിയ പകർപ്പിന് ഓൺലൈനായി അപേക്ഷിച്ചശേഷം, അപേക്ഷയുടെ സ്ഥിതി പരിശോധിക്കാൻ എസ്.എം.എസിലെ ഏത് വിവരമാണ് ഉപയോഗിക്കാവുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "The last land-tax receipt number",
+        "textMl": "അവസാന ഭൂനികുതി രസീത് നമ്പർ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "The deed writer's licence number",
+        "textMl": "ആധാരമെഴുത്തുകാരന്റെ ലൈസൻസ് നമ്പർ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "The village code alone",
+        "textMl": "വില്ലേജ് കോഡ് മാത്രം"
+      },
+      {
+        "optionId": "D",
+        "textEn": "The transaction ID",
+        "textMl": "ട്രാൻസാക്ഷൻ ഐഡി"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): The transaction ID. [Topic: Drafting, property records and online services · Statutory Reference: P Certified Copy SOP]",
+    "explanationMl": "ശരിയുത്തരം (D): ട്രാൻസാക്ഷൻ ഐഡി. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: P Certified Copy SOP]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-095",
+    "order": 95,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "V Transfer of Registry",
+    "promptEn": "What is the primary purpose of Pokkuvaravu after a transfer of land?",
+    "promptMl": "ഭൂമി കൈമാറിയശേഷം പോക്കുവരവിന്റെ പ്രധാന ഉദ്ദേശ്യം എന്ത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Register the sale deed in Book 1",
+        "textMl": "വിൽപ്പനയാധാരം ബുക്ക് 1-ൽ രജിസ്റ്റർ ചെയ്യുക"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Issue a certified copy of the prior deed",
+        "textMl": "മുൻ ആധാരത്തിന്റെ സാക്ഷ്യപ്പെടുത്തിയ പകർപ്പ് നൽകുക"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Set the agreed consideration in the deed",
+        "textMl": "ആധാരത്തിൽ സമ്മതിച്ച വിൽപ്പനവില നിശ്ചയിക്കുക"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Update the revenue records for land-tax administration",
+        "textMl": "ഭൂനികുതി നിർവഹണത്തിനായി റവന്യൂ രേഖകളിലെ വിവരങ്ങൾ പുതുക്കുക"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Update the revenue records for land-tax administration. [Topic: Drafting, property records and online services · Statutory Reference: V Transfer of Registry]",
+    "explanationMl": "ശരിയുത്തരം (D): ഭൂനികുതി നിർവഹണത്തിനായി റവന്യൂ രേഖകളിലെ വിവരങ്ങൾ പുതുക്കുക. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: V Transfer of Registry]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-096",
+    "order": 96,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "V Transfer of Registry",
+    "promptEn": "In Kerala land records, what does a Thandaper number identify?",
+    "promptMl": "കേരളത്തിലെ ഭൂരേഖകളിൽ തണ്ടപ്പേർ നമ്പർ എന്തിനെയാണ് തിരിച്ചറിയുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "A land revenue account",
+        "textMl": "ഒരു ഭൂവരുമാന അക്കൗണ്ട്"
+      },
+      {
+        "optionId": "B",
+        "textEn": "A registered deed's serial number",
+        "textMl": "ഒരു രജിസ്റ്റർ ചെയ്ത ആധാരത്തിന്റെ ക്രമനമ്പർ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "A registration appointment",
+        "textMl": "ഒരു രജിസ്ട്രേഷൻ അപ്പോയിന്റ്മെന്റ്"
+      },
+      {
+        "optionId": "D",
+        "textEn": "A notary's licence",
+        "textMl": "ഒരു നോട്ടറിയുടെ ലൈസൻസ്"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): A land revenue account. [Topic: Drafting, property records and online services · Statutory Reference: V Transfer of Registry]",
+    "explanationMl": "ശരിയുത്തരം (A): ഒരു ഭൂവരുമാന അക്കൗണ്ട്. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: V Transfer of Registry]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-097",
+    "order": 97,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "V Transfer of Registry; R §17",
+    "promptEn": "A buyer's name now appears in the revenue records. Which statement correctly describes the effect of that entry?",
+    "promptMl": "വാങ്ങുന്നയാളുടെ പേര് ഇപ്പോൾ റവന്യൂ രേഖകളിലുണ്ട്. ആ എൻട്രിയുടെ ഫലം ശരിയായി വിവരിക്കുന്ന പ്രസ്താവന ഏത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "It validates any unregistered sale deed",
+        "textMl": "അത് രജിസ്റ്റർ ചെയ്യാത്ത ഏതു വിൽപ്പനയാധാരവും സാധൂകരിക്കുന്നു"
+      },
+      {
+        "optionId": "B",
+        "textEn": "It automatically cancels all previous mortgages",
+        "textMl": "അത് മുൻ പണയങ്ങളെല്ലാം സ്വയം റദ്ദാക്കുന്നു"
+      },
+      {
+        "optionId": "C",
+        "textEn": "It fixes the notified fair value of the property",
+        "textMl": "അത് വസ്തുവിന്റെ വിജ്ഞാപിത ന്യായവില നിശ്ചയിക്കുന്നു"
+      },
+      {
+        "optionId": "D",
+        "textEn": "It updates the revenue account and cannot replace a legally required registered conveyance",
+        "textMl": "അത് റവന്യൂ അക്കൗണ്ട് പുതുക്കുന്നു. നിയമപ്രകാരം ആവശ്യമായ രജിസ്റ്റർ ചെയ്ത കൈമാറ്റാധാരത്തിന് അത് പകരമാവില്ല"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): It updates the revenue account and cannot replace a legally required registered conveyance. [Topic: Drafting, property records and online services · Statutory Reference: V Transfer of Registry; R §17]",
+    "explanationMl": "ശരിയുത്തരം (D): അത് റവന്യൂ അക്കൗണ്ട് പുതുക്കുന്നു. നിയമപ്രകാരം ആവശ്യമായ രജിസ്റ്റർ ചെയ്ത കൈമാറ്റാധാരത്തിന് അത് പകരമാവില്ല. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: V Transfer of Registry; R §17]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-098",
+    "order": 98,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "R §17(1)(f), Kerala amendment",
+    "promptEn": "In Kerala, which rule applies to an instrument agreeing to sell land worth ₹5 lakh?",
+    "promptMl": "കേരളത്തിൽ അഞ്ച് ലക്ഷം രൂപ വിലയുള്ള ഭൂമി വിൽക്കാനുള്ള കരാർ രേഖയ്ക്ക് ഏത് വ്യവസ്ഥയാണ് ബാധകം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Optional registration because the sale is in the future",
+        "textMl": "വിൽപ്പന പിന്നീട് നടക്കുന്നതിനാൽ ഐച്ഛിക രജിസ്ട്രേഷൻ"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Registration only if the parties are related",
+        "textMl": "കക്ഷികൾ ബന്ധുക്കളാണെങ്കിൽ മാത്രം രജിസ്ട്രേഷൻ"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Registration only if the buyer has paid the entire price",
+        "textMl": "വാങ്ങുന്നയാൾ മുഴുവൻ വിലയും നൽകിയാൽ മാത്രം രജിസ്ട്രേഷൻ"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Compulsory registration under the Kerala amendment to Section 17",
+        "textMl": "വകുപ്പ് 17-ലെ കേരള ഭേദഗതി പ്രകാരമുള്ള നിർബന്ധിത രജിസ്ട്രേഷൻ"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanationEn": "Correct Answer (D): Compulsory registration under the Kerala amendment to Section 17. [Topic: Drafting, property records and online services · Statutory Reference: R §17(1)(f), Kerala amendment]",
+    "explanationMl": "ശരിയുത്തരം (D): വകുപ്പ് 17-ലെ കേരള ഭേദഗതി പ്രകാരമുള്ള നിർബന്ധിത രജിസ്ട്രേഷൻ. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: R §17(1)(f), Kerala amendment]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-099",
+    "order": 99,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "R §71",
+    "promptEn": "If a Sub-Registrar refuses registration on a ground other than lack of territorial jurisdiction, in which book are the reasons recorded?",
+    "promptMl": "വസ്തുവിന്റെ സ്ഥലപരമായ അധികാരപരിധി ഇല്ലാത്തത് ഒഴികെ മറ്റൊരു കാരണത്താൽ സബ് രജിസ്ട്രാർ രജിസ്ട്രേഷൻ നിരസിച്ചാൽ, കാരണം ഏത് ബുക്കിൽ രേഖപ്പെടുത്തണം?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Book 2",
+        "textMl": "ബുക്ക് 2"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Book 1",
+        "textMl": "ബുക്ക് 1"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Book 4",
+        "textMl": "ബുക്ക് 4"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Book 3",
+        "textMl": "ബുക്ക് 3"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanationEn": "Correct Answer (A): Book 2. [Topic: Drafting, property records and online services · Statutory Reference: R §71]",
+    "explanationMl": "ശരിയുത്തരം (A): ബുക്ക് 2. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: R §71]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  },
+  {
+    "questionId": "Q-AE-100",
+    "order": 100,
+    "type": "single_choice",
+    "sectionEn": "Drafting, property records and online services",
+    "sectionMl": "ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും",
+    "reference": "R §§72–73",
+    "promptEn": "A Sub-Registrar refuses registration solely because an executant denies execution. Which route is provided to establish the right to registration?",
+    "promptMl": "എഴുതിക്കൊടുക്കുന്നയാൾ ആധാരം ഒപ്പിട്ടതായി നിഷേധിച്ചതിനാൽ മാത്രം സബ് രജിസ്ട്രാർ രജിസ്ട്രേഷൻ നിരസിച്ചു. രജിസ്ട്രേഷനുള്ള അവകാശം സ്ഥാപിക്കാൻ ഏത് മാർഗമാണ് വ്യവസ്ഥ ചെയ്തിരിക്കുന്നത്?",
+    "options": [
+      {
+        "optionId": "A",
+        "textEn": "Apply to the Village Officer for mutation",
+        "textMl": "പോക്കുവരവിനായി വില്ലേജ് ഓഫീസർക്ക് അപേക്ഷിക്കുക"
+      },
+      {
+        "optionId": "B",
+        "textEn": "Apply to the Registrar under Section 73",
+        "textMl": "വകുപ്പ് 73 പ്രകാരം രജിസ്ട്രാർക്ക് അപേക്ഷിക്കുക"
+      },
+      {
+        "optionId": "C",
+        "textEn": "Appeal under Section 72 for a refusal on other grounds",
+        "textMl": "മറ്റു കാരണങ്ങളാലുള്ള നിരസിക്കലിന് ബാധകമായ വകുപ്പ് 72 പ്രകാരം അപ്പീൽ നൽകുക"
+      },
+      {
+        "optionId": "D",
+        "textEn": "Submit a fair-value objection to the Revenue Divisional Officer",
+        "textMl": "ന്യായവില സംബന്ധിച്ച എതിർപ്പ് റവന്യൂ ഡിവിഷണൽ ഓഫീസർക്ക് നൽകുക"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanationEn": "Correct Answer (B): Apply to the Registrar under Section 73. [Topic: Drafting, property records and online services · Statutory Reference: R §§72–73]",
+    "explanationMl": "ശരിയുത്തരം (B): വകുപ്പ് 73 പ്രകാരം രജിസ്ട്രാർക്ക് അപേക്ഷിക്കുക. [വിഷയം: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും · അവലംബം: R §§72–73]",
+    "timeLimitSeconds": 25,
+    "linkedDocId": null,
+    "linkedDocSnapshot": null
+  }
+]

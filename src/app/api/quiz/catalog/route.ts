@@ -35,6 +35,11 @@ export async function GET() {
       quizzes: publishedQuizzes.map((q) => ({
         quizId: q.quizId,
         slug: q.slug,
+        categorySlug: q.categorySlug || 'aadharam-ezhuthu-exam',
+        categoryNameEn: q.categoryNameEn || 'Aadharam Ezhuthu Exam (Deed Writing)',
+        categoryNameMl: q.categoryNameMl || 'ആധാരമെഴുത്ത് പരീക്ഷ',
+        topicEn: q.topicEn || '',
+        topicMl: q.topicMl || '',
         titleEn: q.titleEn,
         titleMl: q.titleMl,
         descriptionEn: q.descriptionEn,

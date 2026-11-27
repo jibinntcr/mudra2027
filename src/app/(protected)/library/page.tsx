@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { requireServerUser } from '@/features/auth/session';
 import { getCategoryTree } from '@/features/categories/service';
 import { searchLibraryDocuments } from '@/features/search/service';
+import { ensureDefaultPublishedQuiz } from '@/features/quiz/service';
 import { DocumentCard } from '@/features/documents/DocumentCard';
 import { Search, FolderTree, ChevronRight, BookOpen, AlertTriangle } from 'lucide-react';
 
@@ -13,6 +14,7 @@ export default async function LibraryHomePage({
   searchParams: Promise<{ page?: string; error?: string }>;
 }) {
   await requireServerUser({ returnTo: '/library' });
+  await ensureDefaultPublishedQuiz();
   const sp = await searchParams;
   const page = Math.max(1, parseInt(sp.page || '1', 10) || 1);
 

@@ -718,11 +718,20 @@ export default function LiveRoomPlayerClient({ roomCode }: { roomCode: string })
                   {/* Question Prompt Header */}
                   <div className="rounded-2xl bg-gradient-to-r from-[#132c4e] to-[#1a3a63] p-5 sm:p-6 border border-white/10 shadow-inner">
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
-                      <span className="rounded-lg bg-amber-400/20 border border-amber-400/40 px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider text-amber-300">
-                        {currentQuestion.type === 'true_false'
-                          ? 'True / False Challenge'
-                          : 'Multiple Choice Challenge'}
-                      </span>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="rounded-lg bg-amber-400/20 border border-amber-400/40 px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider text-amber-300">
+                          {currentQuestion.type === 'true_false'
+                            ? 'True / False Challenge'
+                            : 'Multiple Choice Challenge'}
+                        </span>
+                        {(currentQuestion.sectionEn || currentQuestion.sectionMl) && (
+                          <span className="rounded-lg bg-indigo-500/25 border border-indigo-400/40 px-2.5 py-0.5 text-[11px] font-bold text-indigo-200">
+                            {lang === 'ml'
+                              ? currentQuestion.sectionMl || currentQuestion.sectionEn
+                              : currentQuestion.sectionEn || currentQuestion.sectionMl}
+                          </span>
+                        )}
+                      </div>
                       <span className="text-xs font-mono text-parchment-200">
                         Question {currentQNumber} of {totalQuestions}
                       </span>

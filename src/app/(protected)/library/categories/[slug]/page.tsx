@@ -3,8 +3,9 @@ import { notFound } from 'next/navigation';
 import { requireServerUser } from '@/features/auth/session';
 import { getCategoryBySlug } from '@/features/categories/service';
 import { searchLibraryDocuments } from '@/features/search/service';
+import { ensureDefaultPublishedQuiz } from '@/features/quiz/service';
 import { DocumentCard } from '@/features/documents/DocumentCard';
-import { ChevronRight, FolderOpen, Search } from 'lucide-react';
+import { ChevronRight, FolderOpen, Search, Trophy } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
 
@@ -18,6 +19,7 @@ export default async function CategoryDetailPage({
   const { slug } = await params;
   const sp = await searchParams;
   await requireServerUser({ returnTo: `/library/categories/${slug}` });
+  await ensureDefaultPublishedQuiz();
 
   const page = Math.max(1, parseInt(sp.page || '1', 10) || 1);
   const year = sp.year && /^\d{4}$/.test(sp.year) ? parseInt(sp.year, 10) : null;
@@ -161,13 +163,35 @@ export default async function CategoryDetailPage({
 
       {/* Document Cards */}
       {searchRes.items.length === 0 ? (
-        <div className="rounded-2xl border border-mudra-200 bg-white p-12 text-center">
-          <p className="font-serif text-base font-bold text-mudra-900">
-            No matching documents found in this category
-          </p>
-          <p className="mt-1 text-xs text-mudra-600">
-            Try clearing the year or search filter, or browse another subcategory.
-          </p>
+        <div className="rounded-2xl border border-mudra-200 bg-white p-12 text-center space-y-3">
+          {slug === 'aadharam-ezhuthu-exam' ? (
+            <>
+              <p className="font-serif text-lg font-bold text-mudra-950">
+                Aadharam Ezhuthu Exam (ആധാരമെഴുത്ത് പരീക്ഷ) — 100 Bilingual MCQs Ready in Quiz Arena
+              </p>
+              <p className="text-xs text-mudra-700 max-w-xl mx-auto">
+                Practice the complete 100-question Deed Writing Licensing Exam (Registration Act 1908, Kerala Stamp Act 1959, Document Writers’ Licence Rules 1960, Property Transfers &amp; PEARL Online Services) in Live Room <strong className="font-mono">AAD100</strong> or Self-Paced mode.
+              </p>
+              <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+                <Link
+                  href="/quiz?code=AAD100"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#0b192c] px-5 py-2.5 text-xs font-black text-amber-300 hover:bg-mudra-900 shadow"
+                >
+                  <Trophy className="h-4 w-4" />
+                  <span>Open Aadharam Ezhuthu 100-MCQ Quiz Arena</span>
+                </Link>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="font-serif text-base font-bold text-mudra-900">
+                No matching documents found in this category
+              </p>
+              <p className="mt-1 text-xs text-mudra-600">
+                Try clearing the year or search filter, or browse another subcategory.
+              </p>
+            </>
+          )}
         </div>
       ) : (
         <div className="space-y-4">

@@ -1,6 +1,7 @@
 import crypto from 'crypto';
 import { getCollections } from '@/lib/db/client';
 import { slugify } from '@/lib/validation/normalize';
+import aadharamEzhuthu100Mcqs from './aadharam-ezhuthu-100-mcqs.json';
 import type {
   QuizDocument,
   QuizVersionDocument,
@@ -98,6 +99,11 @@ export async function ensureFixedQuizVersion(
     versionId,
     quizId: quiz.quizId,
     version: quiz.currentVersion,
+    categorySlug: quiz.categorySlug,
+    categoryNameEn: quiz.categoryNameEn,
+    categoryNameMl: quiz.categoryNameMl,
+    topicEn: quiz.topicEn,
+    topicMl: quiz.topicMl,
     titleEn: quiz.titleEn,
     titleMl: quiz.titleMl,
     descriptionEn: quiz.descriptionEn,
@@ -120,252 +126,425 @@ export async function ensureFixedQuizVersion(
 }
 
 /**
- * Seeds a flagship bilingual Mudra Quiz ("Kerala Registration & Stamp Act Mastery Quiz")
- * linked to authentic Eaadharam PDFs (`DOC-2025-0001`, `DOC-2022-0003`, `DOC-2023-0002`, `DOC-1959-0033`)
- * if no quizzes exist yet.
+ * Seeds the flagship bilingual Mudra Quizzes AND the 100-question "Aadharam Ezhuthu Exam (Deed Writing)"
+ * full exam + 5 topic quizzes from `aadharam-ezhuthu-100-mcqs.json`, plus category & demo rooms.
  */
 export async function ensureDefaultPublishedQuiz(): Promise<void> {
-  const { quizzes, quizRooms } = await getCollections();
-  const count = await quizzes.countDocuments();
-  if (count > 0) {
-    const existingMUD = await quizRooms.findOne({ roomCode: 'MUD207' });
-    if (!existingMUD) {
-      const q = await quizzes.findOne({ status: 'published' });
-      if (q) {
-        const qv = await ensureFixedQuizVersion(q);
-        const now = new Date();
-        await quizRooms
-          .insertOne({
-            roomId: 'ROOM-MUD207-DEMO',
-            roomCode: 'MUD207',
-            quizId: q.quizId,
-            versionId: qv.versionId,
-            version: qv.version,
-            mode: 'auto_live',
-            status: 'lobby',
-            hostUserId: 'system-admin',
-            hostLoginId: 'admin.mudra',
-            capacity: 100,
-            joinLocked: false,
-            revealDurationSeconds: 6,
-            scoringRules: { ...DEFAULT_SCORING_RULES },
-            currentQuestionIndex: -1,
-            questionOpenedAt: null,
-            questionDeadlineAt: null,
-            revealStartedAt: null,
-            revealEndsAt: null,
-            transitionVersion: 1,
-            createdAt: now,
-            updatedAt: now,
-            completedAt: null,
-          })
-          .catch(() => {});
-      }
-    }
-    return;
+  const { quizzes, quizRooms, categories } = await getCollections();
+  const now = new Date();
+
+  // 1. Ensure the "Aadharam Ezhuthu Exam" category exists in `categories`
+  const existingCat = await categories.findOne({ slug: 'aadharam-ezhuthu-exam' });
+  if (!existingCat) {
+    await categories
+      .insertOne({
+        slug: 'aadharam-ezhuthu-exam',
+        nameEn: 'Aadharam Ezhuthu Exam (Deed Writing)',
+        nameMl: 'ആധാരമെഴുത്ത് ലൈസൻസ് പരീക്ഷ',
+        description:
+          'Kerala Document Writers’ Licensing Exam (ആധാരമെഴുത്ത് പരീക്ഷ) — Registration Act 1908, Kerala Stamp Act 1959, Document Writers’ Licence Rules 1960, Transfer of Property Act 1882 & PEARL SOPs.',
+        parentSlug: null,
+        ancestors: [],
+        pathLabel: 'Aadharam Ezhuthu Exam (ആധാരമെഴുത്ത് പരീക്ഷ)',
+        order: 9,
+        isPublished: true,
+        createdAt: now,
+        updatedAt: now,
+      })
+      .catch(() => {});
   }
 
-  const now = new Date();
-  const initialQuestions: QuizQuestionItem[] = [
+  // 2. Ensure the initial 4-question LRC & IGR Orders Quiz exists
+  const existingQ1 = await quizzes.findOne({ quizId: 'QUIZ-2026-0001' });
+  if (!existingQ1) {
+    const initialQuestions: QuizQuestionItem[] = [
+      {
+        questionId: 'Q-STAMP-25',
+        order: 1,
+        type: 'single_choice',
+        promptEn:
+          'Under Section 25 of the Kerala Stamp Act (Order IGR/5897/2024-RR2), when a property is sold subject to a mortgage, which amounts are added to the sale consideration for stamp duty calculation?',
+        promptMl:
+          'കൈമാറ്റ ആധാരങ്ങളിൽ പണയ ബാദ്ധ്യത സംബന്ധിച്ച വിവരം ചേർത്തിട്ടുള്ള സാഹചര്യത്തിൽ (IGR/5897/2024-RR2), സ്റ്റാമ്പ് ഡ്യൂട്ടി നിർണ്ണയത്തിനായി വകുപ്പ് 25 പ്രകാരം പ്രതിഫലത്തിനൊപ്പം ചേർക്കേണ്ട തുകകൾ ഏവ?',
+        options: [
+          {
+            optionId: 'A',
+            textEn: 'Only unpaid mortgage money and unpaid interest',
+            textMl: 'Unpaid mortgage money, unpaid interest എന്നീ തുകകൾ മാത്രം',
+          },
+          {
+            optionId: 'B',
+            textEn: 'Entire original sanctioned loan amount regardless of repayment',
+            textMl: 'തിരിച്ചടവ് പരിഗണിക്കാതെ മൊത്തം പണയ വായ്പാ തുക മുഴുവൻ',
+          },
+          {
+            optionId: 'C',
+            textEn: 'Future interest for the remaining tenure of the loan',
+            textMl: 'വായ്പയുടെ വരാനിരിക്കുന്ന കാലയളവിലെ മുഴുവൻ പലിശയും',
+          },
+          {
+            optionId: 'D',
+            textEn: 'No mortgage liability is ever considered under Section 25',
+            textMl: 'വകുപ്പ് 25 പ്രകാരം പണയ ബാദ്ധ്യത ഒരിക്കലും കണക്കാക്കേണ്ടതില്ല',
+          },
+        ],
+        correctOptionId: 'A',
+        explanationEn:
+          'Order IGR/5897/2024-RR2 dated 24/02/2025 clarifies that only unpaid mortgage principal and unpaid interest as on the date of execution shall be added to consideration under Section 25 of the Kerala Stamp Act.',
+        explanationMl:
+          'IGR/5897/2024-RR2 (തീയതി 24/02/2025) ഉത്തരവ് പ്രകാരം കൈമാറ്റ ആധാരങ്ങളിൽ പണയ ബാദ്ധ്യത ചേർത്തിട്ടുള്ളപ്പോൾ Unpaid mortgage money, unpaid interest എന്നീ തുകകൾ മാത്രമേ വകുപ്പ് 25 പ്രകാരം പ്രതിഫലത്തിനൊപ്പം ചേർക്കേണ്ടതുള്ളൂ.',
+        timeLimitSeconds: 25,
+        linkedDocId: 'DOC-2025-0001',
+      },
+      {
+        questionId: 'Q-NILAM-PURAYIDAM',
+        order: 2,
+        type: 'true_false',
+        promptEn:
+          'If a property was described as "Nilam" in the prior title deed and is now recorded as "Purayidam", excess stamp duty must be levied at registration (Order LR/3322/2022-LR(A3)).',
+        promptMl:
+          'രജിസ്ട്രേഷനായി ഹാജരാക്കിയ ആധാരത്തിന്റെ മുന്നാധാരത്തിൽ വസ്തുവിന്റെ തരം "നിലം" എന്നും ഇപ്പോൾ "പുരയിടം" എന്നും രേഖപ്പെടുത്തിയിട്ടുണ്ടെങ്കിൽ അധിക മുദ്രവില ഈടാക്കേണ്ടതാണ് (LR/3322/2022-LR(A3)).',
+        options: [
+          {
+            optionId: 'TRUE',
+            textEn: 'True (Excess stamp duty is mandatory)',
+            textMl: 'ശരി (അധിക മുദ്രവില നിർബന്ധമാണ്)',
+          },
+          {
+            optionId: 'FALSE',
+            textEn: 'False (No excess stamp duty is required)',
+            textMl: 'തെറ്റ് (അധിക മുദ്രവില ആവശ്യമില്ല)',
+          },
+        ],
+        correctOptionId: 'FALSE',
+        explanationEn:
+          'Land Revenue Commissioner Order LR/3322/2022-LR(A3) dated 21/08/2025 rules that no excess stamp duty is required when a deed presents property currently classified as Purayidam that was earlier recorded as Nilam in the prior deed.',
+        explanationMl:
+          'LR/3322/2022-LR(A3) (21/08/2025) ഉത്തരവ് പ്രകാരം മുന്നാധാരത്തിൽ വസ്തുവിന്റെ തരം "നിലം" എന്ന് രേഖപ്പെടുത്തിയിരുന്നതും ഇപ്പോൾ "പുരയിടം" എന്ന് രേഖപ്പെടുത്തിയിട്ടുള്ളതുമായ ആധാരത്തിന് അധിക മുദ്രവില ആവശ്യമില്ല.',
+        timeLimitSeconds: 20,
+        linkedDocId: 'DOC-2022-0003',
+      },
+      {
+        questionId: 'Q-FAIR-VALUE-28A',
+        order: 3,
+        type: 'single_choice',
+        promptEn:
+          'Under which section of the Kerala Stamp Act 1959 is the Fair Value of land notified and revised by the Government?',
+        promptMl:
+          'കേരള മുദ്രപത്ര നിയമം 1959-ലെ ഏത് വകുപ്പ് പ്രകാരമാണ് ഭൂമിയുടെ ന്യായവില (Fair Value) നിശ്ചയിക്കുകയും പുതുക്കുകയും ചെയ്യുന്നത്?',
+        options: [
+          {
+            optionId: 'A',
+            textEn: 'Section 28A',
+            textMl: 'വകുപ്പ് 28A (Section 28A)',
+          },
+          {
+            optionId: 'B',
+            textEn: 'Section 45B',
+            textMl: 'വകുപ്പ് 45B (Section 45B)',
+          },
+          {
+            optionId: 'C',
+            textEn: 'Section 17',
+            textMl: 'വകുപ്പ് 17 (Section 17)',
+          },
+          {
+            optionId: 'D',
+            textEn: 'Section 78',
+            textMl: 'വകുപ്പ് 78 (Section 78)',
+          },
+        ],
+        correctOptionId: 'A',
+        explanationEn:
+          'Section 28A of the Kerala Stamp Act 1959 empowers the fixing and revision of Fair Value of land across Kerala (see Fair Value Revision Gazette Order GO(P)No.45/2023/TD).',
+        explanationMl:
+          'കേരള സ്റ്റാമ്പ് ആക്ട് വകുപ്പ് 28A പ്രകാരമാണ് ഭൂമിയുടെ ന്യായവില (Fair Value) നിശ്ചയിക്കുകയും പുതുക്കുകയും ചെയ്യുന്നത് (GO(P)No.45/2023/TD).',
+        timeLimitSeconds: 20,
+        linkedDocId: 'DOC-2023-0002',
+      },
+      {
+        questionId: 'Q-SETTLEMENT-51A',
+        order: 4,
+        type: 'single_choice',
+        promptEn:
+          'Which Article of the Kerala Stamp Act Schedule governs concessional stamp duty for a Settlement Deed executed in favour of family members?',
+        promptMl:
+          'കുടുംബാംഗങ്ങൾക്ക് എഴുതിക്കൊടുക്കുന്ന ധനനിശ്ചയാധാരത്തിന് (Settlement Deed) ഇളവുള്ള മുദ്രവില നിശ്ചയിക്കുന്ന കേരള മുദ്രപത്ര നിയമത്തിലെ ആർട്ടിക്കിൾ ഏതാണ്?',
+        options: [
+          {
+            optionId: 'A',
+            textEn: 'Article 51(a)(i)',
+            textMl: 'ആർട്ടിക്കിൾ 51(എ)(1)',
+          },
+          {
+            optionId: 'B',
+            textEn: 'Article 21(1)',
+            textMl: 'ആർട്ടിക്കിൾ 21(1)',
+          },
+          {
+            optionId: 'C',
+            textEn: 'Article 42(i)',
+            textMl: 'ആർട്ടിക്കിൾ 42(1)',
+          },
+          {
+            optionId: 'D',
+            textEn: 'Article 15',
+            textMl: 'ആർട്ടിക്കിൾ 15',
+          },
+        ],
+        correctOptionId: 'A',
+        explanationEn:
+          'As confirmed in Order R.2-5635/2020, a settlement deed of co-owned property in favour of a person falling within the statutory definition of "family" is chargeable under Article 51(a)(i) of the Kerala Stamp Act.',
+        explanationMl:
+          'R.2-5635/2020 ഉത്തരവ് പ്രകാരം കുടുംബം എന്ന നിർവ്വചനത്തിൽ ഉൾപ്പെട്ടുവരുന്നയാൾക്ക് എഴുതിക്കൊടുക്കുന്ന ധനനിശ്ചയാധാരത്തിന് മുദ്രപത്രനിയമം ആർട്ടിക്കിൾ 51(എ)(1) പ്രകാരം മുദ്രവില മതിയാകുന്നതാണ്.',
+        timeLimitSeconds: 20,
+        linkedDocId: 'DOC-2020-0014',
+      },
+    ];
+
+    const hydrated = await hydrateQuestionLinkedDocs(initialQuestions);
+    const defaultQuiz: QuizDocument = {
+      quizId: 'QUIZ-2026-0001',
+      slug: slugify('Kerala Registration & Stamp Act Mastery Quiz'),
+      categorySlug: 'lrc-igr-orders',
+      categoryNameEn: 'LRC & IGR Orders',
+      categoryNameMl: 'എൽ.ആർ.സി & ഐ.ജി.ആർ ഉത്തരവുകൾ',
+      topicEn: 'Recent Circulars & Stamp Rulings',
+      topicMl: 'പുതിയ ഉത്തരവുകളും മുദ്രവില വിധികളും',
+      titleEn: 'Kerala Registration & Stamp Act Mastery Quiz',
+      titleMl: 'കേരള രജിസ്ട്രേഷൻ & മുദ്രപത്ര നിയമം ക്വിസ്',
+      descriptionEn:
+        'Test your mastery of Land Revenue Commissioner (LRC) orders, IGR rulings, Section 25 mortgage stamp duty, Nilam/Purayidam classification, and Fair Value rules.',
+      descriptionMl:
+        'എൽ.ആർ.സി ഉത്തരവുകൾ, രജിസ്ട്രേഷൻ ഐ.ജി സർക്കുലറുകൾ, മുദ്രവില നിർണ്ണയം, ന്യായവില ചട്ടങ്ങൾ എന്നിവയെ ആസ്പദമാക്കിയുള്ള ദ്വിഭാഷാ ക്വിസ്.',
+      status: 'published',
+      defaultTimeSeconds: 20,
+      defaultRevealSeconds: 6,
+      scoringRules: { ...DEFAULT_SCORING_RULES },
+      enabledModes: ['auto_live', 'host_live', 'self_paced'],
+      questions: hydrated,
+      currentVersion: 1,
+      createdBy: 'admin.mudra',
+      createdAt: now,
+      updatedAt: now,
+    };
+
+    await quizzes.insertOne(defaultQuiz).catch(() => {});
+    await ensureFixedQuizVersion(defaultQuiz).catch(() => {});
+  } else if (!existingQ1.categorySlug) {
+    await quizzes
+      .updateOne(
+        { quizId: 'QUIZ-2026-0001' },
+        {
+          $set: {
+            categorySlug: 'lrc-igr-orders',
+            categoryNameEn: 'LRC & IGR Orders',
+            categoryNameMl: 'എൽ.ആർ.സി & ഐ.ജി.ആർ ഉത്തരവുകൾ',
+            topicEn: 'Recent Circulars & Stamp Rulings',
+            topicMl: 'പുതിയ ഉത്തരവുകളും മുദ്രവില വിധികളും',
+          },
+        }
+      )
+      .catch(() => {});
+  }
+
+  // 3. Ensure the 100-question Aadharam Ezhuthu (Deed Writing) Full Exam & 5 Topic Quizzes exist
+  const all100Questions = (aadharamEzhuthu100Mcqs as unknown as QuizQuestionItem[]).map((q, idx) => ({
+    ...q,
+    order: idx + 1,
+  }));
+
+  const aadharamQuizzesToSeed: Array<{
+    quizId: string;
+    slug: string;
+    topicEn: string;
+    topicMl: string;
+    titleEn: string;
+    titleMl: string;
+    descriptionEn: string;
+    descriptionMl: string;
+    questions: QuizQuestionItem[];
+  }> = [
     {
-      questionId: 'Q-STAMP-25',
-      order: 1,
-      type: 'single_choice',
-      promptEn:
-        'Under Section 25 of the Kerala Stamp Act (Order IGR/5897/2024-RR2), when a property is sold subject to a mortgage, which amounts are added to the sale consideration for stamp duty calculation?',
-      promptMl:
-        'കൈമാറ്റ ആധാരങ്ങളിൽ പണയ ബാദ്ധ്യത സംബന്ധിച്ച വിവരം ചേർത്തിട്ടുള്ള സാഹചര്യത്തിൽ (IGR/5897/2024-RR2), സ്റ്റാമ്പ് ഡ്യൂട്ടി നിർണ്ണയത്തിനായി വകുപ്പ് 25 പ്രകാരം പ്രതിഫലത്തിനൊപ്പം ചേർക്കേണ്ട തുകകൾ ഏവ?',
-      options: [
-        {
-          optionId: 'A',
-          textEn: 'Only unpaid mortgage money and unpaid interest',
-          textMl: 'Unpaid mortgage money, unpaid interest എന്നീ തുകകൾ മാത്രം',
-        },
-        {
-          optionId: 'B',
-          textEn: 'Entire original sanctioned loan amount regardless of repayment',
-          textMl: 'തിരിച്ചടവ് പരിഗണിക്കാതെ മൊത്തം പണയ വായ്പാ തുക മുഴുവൻ',
-        },
-        {
-          optionId: 'C',
-          textEn: 'Future interest for the remaining tenure of the loan',
-          textMl: 'വായ്പയുടെ വരാനിരിക്കുന്ന കാലയളവിലെ മുഴുവൻ പലിശയും',
-        },
-        {
-          optionId: 'D',
-          textEn: 'No mortgage liability is ever considered under Section 25',
-          textMl: 'വകുപ്പ് 25 പ്രകാരം പണയ ബാദ്ധ്യത ഒരിക്കലും കണക്കാക്കേണ്ടതില്ല',
-        },
-      ],
-      correctOptionId: 'A',
-      explanationEn:
-        'Order IGR/5897/2024-RR2 dated 24/02/2025 clarifies that only unpaid mortgage principal and unpaid interest as on the date of execution shall be added to consideration under Section 25 of the Kerala Stamp Act.',
-      explanationMl:
-        'IGR/5897/2024-RR2 (തീയതി 24/02/2025) ഉത്തരവ് പ്രകാരം കൈമാറ്റ ആധാരങ്ങളിൽ പണയ ബാദ്ധ്യത ചേർത്തിട്ടുള്ളപ്പോൾ Unpaid mortgage money, unpaid interest എന്നീ തുകകൾ മാത്രമേ വകുപ്പ് 25 പ്രകാരം പ്രതിഫലത്തിനൊപ്പം ചേർക്കേണ്ടതുള്ളൂ.',
-      timeLimitSeconds: 25,
-      linkedDocId: 'DOC-2025-0001',
+      quizId: 'QUIZ-AE-100',
+      slug: 'aadharam-ezhuthu-deed-writing-100-mcqs-full-exam',
+      topicEn: 'Complete 100-MCQ Licensing Exam',
+      topicMl: 'സമ്പൂർണ്ണ 100 ചോദ്യങ്ങളുടെ ലൈസൻസ് പരീക്ഷ',
+      titleEn: 'Aadharam Ezhuthu (Deed Writing) — Complete 100 MCQs Exam',
+      titleMl: 'ആധാരമെഴുത്ത് (Deed Writing) — 100 MCQs സമ്പൂർണ്ണ പരീക്ഷ',
+      descriptionEn:
+        'Comprehensive 100-question bilingual mock exam covering Registration Act 1908, Kerala Stamp Act 1959, Document Writers’ Licence Rules 1960, Property Transfers & Deed Types, and PEARL Online Services.',
+      descriptionMl:
+        'രജിസ്ട്രേഷൻ നിയമം 1908, കേരള മുദ്രപത്ര നിയമം 1959, ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും, സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും, ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും (PEARL) എന്നിവ ഉൾക്കൊള്ളുന്ന 100 ചോദ്യങ്ങളുടെ സമ്പൂർണ്ണ പരീക്ഷ.',
+      questions: all100Questions,
     },
     {
-      questionId: 'Q-NILAM-PURAYIDAM',
-      order: 2,
-      type: 'true_false',
-      promptEn:
-        'If a property was described as "Nilam" in the prior title deed and is now recorded as "Purayidam", excess stamp duty must be levied at registration (Order LR/3322/2022-LR(A3)).',
-      promptMl:
-        'രജിസ്ട്രേഷനായി ഹാജരാക്കിയ ആധാരത്തിന്റെ മുന്നാധാരത്തിൽ വസ്തുവിന്റെ തരം "നിലം" എന്നും ഇപ്പോൾ "പുരയിടം" എന്നും രേഖപ്പെടുത്തിയിട്ടുണ്ടെങ്കിൽ അധിക മുദ്രവില ഈടാക്കേണ്ടതാണ് (LR/3322/2022-LR(A3)).',
-      options: [
-        {
-          optionId: 'TRUE',
-          textEn: 'True (Excess stamp duty is mandatory)',
-          textMl: 'ശരി (അധിക മുദ്രവില നിർബന്ധമാണ്)',
-        },
-        {
-          optionId: 'FALSE',
-          textEn: 'False (No excess stamp duty is required)',
-          textMl: 'തെറ്റ് (അധിക മുദ്രവില ആവശ്യമില്ല)',
-        },
-      ],
-      correctOptionId: 'FALSE',
-      explanationEn:
-        'Land Revenue Commissioner Order LR/3322/2022-LR(A3) dated 21/08/2025 rules that no excess stamp duty is required when a deed presents property currently classified as Purayidam that was earlier recorded as Nilam in the prior deed.',
-      explanationMl:
-        'LR/3322/2022-LR(A3) (21/08/2025) ഉത്തരവ് പ്രകാരം മുന്നാധാരത്തിൽ വസ്തുവിന്റെ തരം "നിലം" എന്ന് രേഖപ്പെടുത്തിയിരുന്നതും ഇപ്പോൾ "പുരയിടം" എന്ന് രേഖപ്പെടുത്തിയിട്ടുള്ളതുമായ ആധാരത്തിന് അധിക മുദ്രവില ആവശ്യമില്ല.',
-      timeLimitSeconds: 20,
-      linkedDocId: 'DOC-2022-0003',
+      quizId: 'QUIZ-AE-PART1',
+      slug: 'aadharam-ezhuthu-part-1-registration-act-1908',
+      topicEn: 'Part 1: Registration Act, 1908 (Q001–Q020)',
+      topicMl: 'ഭാഗം 1: രജിസ്ട്രേഷൻ നിയമം, 1908 (Q001–Q020)',
+      titleEn: 'Aadharam Ezhuthu Part 1 — Registration Act, 1908 (20 MCQs)',
+      titleMl: 'ആധാരമെഴുത്ത് ഭാഗം 1 — രജിസ്ട്രേഷൻ നിയമം, 1908 (20 ചോദ്യങ്ങൾ)',
+      descriptionEn:
+        'Questions Q001–Q020 on compulsory & optional registration, presentation time limits, language translation, refusal orders, Book 1–4 indexes, and Sections 17–77 of the Registration Act, 1908.',
+      descriptionMl:
+        'രജിസ്ട്രേഷൻ നിയമം, 1908 (Q001–Q020): നിർബന്ധിത രജിസ്ട്രേഷൻ, ഹാജരാക്കാനുള്ള സമയപരിധി, തിരുത്തലുകൾ, രജിസ്ട്രേഷൻ നിരസിക്കൽ, ബുക്ക് 1–4 രജിസ്റ്ററുകൾ എന്നിവയെ ആസ്പദമാക്കിയുള്ള 20 ചോദ്യങ്ങൾ.',
+      questions: all100Questions.slice(0, 20).map((q, idx) => ({ ...q, order: idx + 1 })),
     },
     {
-      questionId: 'Q-FAIR-VALUE-28A',
-      order: 3,
-      type: 'single_choice',
-      promptEn:
-        'Under which section of the Kerala Stamp Act 1959 is the Fair Value of land notified and revised by the Government?',
-      promptMl:
-        'കേരള മുദ്രപത്ര നിയമം 1959-ലെ ഏത് വകുപ്പ് പ്രകാരമാണ് ഭൂമിയുടെ ന്യായവില (Fair Value) നിശ്ചയിക്കുകയും പുതുക്കുകയും ചെയ്യുന്നത്?',
-      options: [
-        {
-          optionId: 'A',
-          textEn: 'Section 28A',
-          textMl: 'വകുപ്പ് 28A (Section 28A)',
-        },
-        {
-          optionId: 'B',
-          textEn: 'Section 45B',
-          textMl: 'വകുപ്പ് 45B (Section 45B)',
-        },
-        {
-          optionId: 'C',
-          textEn: 'Section 17',
-          textMl: 'വകുപ്പ് 17 (Section 17)',
-        },
-        {
-          optionId: 'D',
-          textEn: 'Section 78',
-          textMl: 'വകുപ്പ് 78 (Section 78)',
-        },
-      ],
-      correctOptionId: 'A',
-      explanationEn:
-        'Section 28A of the Kerala Stamp Act 1959 empowers the fixing and revision of Fair Value of land across Kerala (see Fair Value Revision Gazette Order GO(P)No.45/2023/TD).',
-      explanationMl:
-        'കേരള സ്റ്റാമ്പ് ആക്ട് വകുപ്പ് 28A പ്രകാരമാണ് ഭൂമിയുടെ ന്യായവില (Fair Value) നിശ്ചയിക്കുകയും പുതുക്കുകയും ചെയ്യുന്നത് (GO(P)No.45/2023/TD).',
-      timeLimitSeconds: 20,
-      linkedDocId: 'DOC-2023-0002',
+      quizId: 'QUIZ-AE-PART2',
+      slug: 'aadharam-ezhuthu-part-2-kerala-stamp-act-1959',
+      topicEn: 'Part 2: Kerala Stamp Act, 1959 (Q021–Q040)',
+      topicMl: 'ഭാഗം 2: കേരള മുദ്രപത്ര നിയമം, 1959 (Q021–Q040)',
+      titleEn: 'Aadharam Ezhuthu Part 2 — Kerala Stamp Act, 1959 (20 MCQs)',
+      titleMl: 'ആധാരമെഴുത്ത് ഭാഗം 2 — കേരള മുദ്രപത്ര നിയമം, 1959 (20 ചോദ്യങ്ങൾ)',
+      descriptionEn:
+        'Questions Q021–Q040 on chargeable instruments, several distinct matters, time of stamping, valuation, Section 28A Fair Value, Section 45B undervaluation, impounding, and stamp refunds.',
+      descriptionMl:
+        'കേരള മുദ്രപത്ര നിയമം, 1959 (Q021–Q040): മുദ്രവില നിർണ്ണയം, ന്യായവില (വകുപ്പ് 28A), വില കുറച്ചുകാണിക്കൽ (വകുപ്പ് 45B), മുദ്രപത്ര റീഫണ്ട് എന്നിവയെ ആസ്പദമാക്കിയുള്ള 20 ചോദ്യങ്ങൾ.',
+      questions: all100Questions.slice(20, 40).map((q, idx) => ({ ...q, order: idx + 1 })),
     },
     {
-      questionId: 'Q-SETTLEMENT-51A',
-      order: 4,
-      type: 'single_choice',
-      promptEn:
-        'Which Article of the Kerala Stamp Act Schedule governs concessional stamp duty for a Settlement Deed executed in favour of family members?',
-      promptMl:
-        'കുടുംബാംഗങ്ങൾക്ക് എഴുതിക്കൊടുക്കുന്ന ധനനിശ്ചയാധാരത്തിന് (Settlement Deed) ഇളവുള്ള മുദ്രവില നിശ്ചയിക്കുന്ന കേരള മുദ്രപത്ര നിയമത്തിലെ ആർട്ടിക്കിൾ ഏതാണ്?',
-      options: [
-        {
-          optionId: 'A',
-          textEn: 'Article 51(a)(i)',
-          textMl: 'ആർട്ടിക്കിൾ 51(എ)(1)',
-        },
-        {
-          optionId: 'B',
-          textEn: 'Article 21(1)',
-          textMl: 'ആർട്ടിക്കിൾ 21(1)',
-        },
-        {
-          optionId: 'C',
-          textEn: 'Article 42(i)',
-          textMl: 'ആർട്ടിക്കിൾ 42(1)',
-        },
-        {
-          optionId: 'D',
-          textEn: 'Article 15',
-          textMl: 'ആർട്ടിക്കിൾ 15',
-        },
-      ],
-      correctOptionId: 'A',
-      explanationEn:
-        'As confirmed in Order R.2-5635/2020, a settlement deed of co-owned property in favour of a person falling within the statutory definition of "family" is chargeable under Article 51(a)(i) of the Kerala Stamp Act.',
-      explanationMl:
-        'R.2-5635/2020 ഉത്തരവ് പ്രകാരം കുടുംബം എന്ന നിർവ്വചനത്തിൽ ഉൾപ്പെട്ടുവരുന്നയാൾക്ക് എഴുതിക്കൊടുക്കുന്ന ധനനിശ്ചയാധാരത്തിന് മുദ്രപത്രനിയമം ആർട്ടിക്കിൾ 51(എ)(1) പ്രകാരം മുദ്രവില മതിയാകുന്നതാണ്.',
-      timeLimitSeconds: 20,
-      linkedDocId: 'DOC-2020-0014',
+      quizId: 'QUIZ-AE-PART3',
+      slug: 'aadharam-ezhuthu-part-3-document-writers-licensing-duties',
+      topicEn: 'Part 3: Document Writers’ Licensing & Duties (Q041–Q060)',
+      topicMl: 'ഭാഗം 3: ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും (Q041–Q060)',
+      titleEn: 'Aadharam Ezhuthu Part 3 — Document Writers’ Licensing & Duties (20 MCQs)',
+      titleMl: 'ആധാരമെഴുത്ത് ഭാഗം 3 — ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും (20 ചോദ്യങ്ങൾ)',
+      descriptionEn:
+        'Questions Q041–Q060 on Kerala Document Writers’ Licence Rules 1960, scribe licenses, sub-district & district licenses, Form E register, Form F receipt, 2025 Fee Schedule, and 2026 Exam Notification.',
+      descriptionMl:
+        'ആധാരമെഴുത്തുകാരുടെ ലൈസൻസും ചുമതലകളും (Q041–Q060): ലൈസൻസ് ചട്ടങ്ങൾ 1960, സ്ക്രൈബ് ലൈസൻസ്, ഫോം E രജിസ്റ്റർ, ഫോം F രസീത്, ഫീസ് പട്ടിക, ലൈസൻസ് പരീക്ഷാ യോഗ്യത എന്നിവയെ ആസ്പദമാക്കിയുള്ള 20 ചോദ്യങ്ങൾ.',
+      questions: all100Questions.slice(40, 60).map((q, idx) => ({ ...q, order: idx + 1 })),
+    },
+    {
+      quizId: 'QUIZ-AE-PART4',
+      slug: 'aadharam-ezhuthu-part-4-property-transfers-deed-types',
+      topicEn: 'Part 4: Property Transfers & Deed Types (Q061–Q080)',
+      topicMl: 'ഭാഗം 4: സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും (Q061–Q080)',
+      titleEn: 'Aadharam Ezhuthu Part 4 — Property Transfers & Deed Types (20 MCQs)',
+      titleMl: 'ആധാരമെഴുത്ത് ഭാഗം 4 — സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും (20 ചോദ്യങ്ങൾ)',
+      descriptionEn:
+        'Questions Q061–Q080 on Sale, Simple/Usufructuary/Equitable Mortgages, Right of Redemption, Leases, Gifts, Exchange, Release, Partition, Settlement, Easements, and Wills.',
+      descriptionMl:
+        'സ്വത്ത് കൈമാറ്റവും ആധാരങ്ങളുടെ തരങ്ങളും (Q061–Q080): തീറാധാരം, പണയാധാരങ്ങൾ, പാട്ടം, ദാനാധാരം, പരസ്പരമാറ്റം, ഒഴിവാക്കൽ ആധാരം, ഭാഗപത്രം, വിൽപത്രം എന്നിവയെ ആസ്പദമാക്കിയുള്ള 20 ചോദ്യങ്ങൾ.',
+      questions: all100Questions.slice(60, 80).map((q, idx) => ({ ...q, order: idx + 1 })),
+    },
+    {
+      quizId: 'QUIZ-AE-PART5',
+      slug: 'aadharam-ezhuthu-part-5-drafting-property-records-pearl',
+      topicEn: 'Part 5: Drafting, Property Records & Online Services (Q081–Q100)',
+      topicMl: 'ഭാഗം 5: ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും (Q081–Q100)',
+      titleEn: 'Aadharam Ezhuthu Part 5 — Drafting, Property Records & PEARL Services (20 MCQs)',
+      titleMl: 'ആധാരമെഴുത്ത് ഭാഗം 5 — ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും (20 ചോദ്യങ്ങൾ)',
+      descriptionEn:
+        'Questions Q081–Q100 on Root of Title, Non-Testamentary Schedule (Rule 19), Rectification Deeds, PEARL Portal Token/EC/Certified Copy SOPs, Transfer of Registry (Pokkuvaravu), and Thandaper.',
+      descriptionMl:
+        'ആധാരരചനയും ഭൂരേഖകളും ഓൺലൈൻ സേവനങ്ങളും (Q081–Q100): മുന്നാധാര ക്രമം, പട്ടികയിലെ വിവരങ്ങൾ, തിരുത്തൽ ആധാരം, പേൾ (PEARL) പോർട്ടൽ സേവനങ്ങൾ, പോക്കുവരവ്, തണ്ടപ്പേർ എന്നിവയെ ആസ്പദമാക്കിയുള്ള 20 ചോദ്യങ്ങൾ.',
+      questions: all100Questions.slice(80, 100).map((q, idx) => ({ ...q, order: idx + 1 })),
     },
   ];
 
-  const hydrated = await hydrateQuestionLinkedDocs(initialQuestions);
-  const defaultQuiz: QuizDocument = {
-    quizId: 'QUIZ-2026-0001',
-    slug: slugify('Kerala Registration & Stamp Act Mastery Quiz'),
-    titleEn: 'Kerala Registration & Stamp Act Mastery Quiz',
-    titleMl: 'കേരള രജിസ്ട്രേഷൻ & മുദ്രപത്ര നിയമം ക്വിസ്',
-    descriptionEn:
-      'Test your mastery of Land Revenue Commissioner (LRC) orders, IGR rulings, Section 25 mortgage stamp duty, Nilam/Purayidam classification, and Fair Value rules.',
-    descriptionMl:
-      'എൽ.ആർ.സി ഉത്തരവുകൾ, രജിസ്ട്രേഷൻ ഐ.ജി സർക്കുലറുകൾ, മുദ്രവില നിർണ്ണയം, ന്യായവില ചട്ടങ്ങൾ എന്നിവയെ ആസ്പദമാക്കിയുള്ള ദ്വിഭാഷാ ക്വിസ്.',
-    status: 'published',
-    defaultTimeSeconds: 20,
-    defaultRevealSeconds: 6,
-    scoringRules: { ...DEFAULT_SCORING_RULES },
-    enabledModes: ['auto_live', 'host_live', 'self_paced'],
-    questions: hydrated,
-    currentVersion: 1,
-    createdBy: 'admin.mudra',
-    createdAt: now,
-    updatedAt: now,
-  };
-
-  try {
-    await quizzes.insertOne(defaultQuiz);
-    const qv = await ensureFixedQuizVersion(defaultQuiz);
-    const { quizRooms } = await getCollections();
-    const existingMUD = await quizRooms.findOne({ roomCode: 'MUD207' });
-    if (!existingMUD) {
-      await quizRooms.insertOne({
-        roomId: 'ROOM-MUD207-DEMO',
-        roomCode: 'MUD207',
-        quizId: defaultQuiz.quizId,
-        versionId: qv.versionId,
-        version: qv.version,
-        mode: 'auto_live',
-        status: 'lobby',
-        hostUserId: 'system-admin',
-        hostLoginId: 'admin.mudra',
-        capacity: 100,
-        joinLocked: false,
-        revealDurationSeconds: 6,
+  for (const item of aadharamQuizzesToSeed) {
+    const exists = await quizzes.findOne({ quizId: item.quizId });
+    if (!exists) {
+      const qDoc: QuizDocument = {
+        quizId: item.quizId,
+        slug: item.slug,
+        categorySlug: 'aadharam-ezhuthu-exam',
+        categoryNameEn: 'Aadharam Ezhuthu Exam (Deed Writing)',
+        categoryNameMl: 'ആധാരമെഴുത്ത് പരീക്ഷ',
+        topicEn: item.topicEn,
+        topicMl: item.topicMl,
+        titleEn: item.titleEn,
+        titleMl: item.titleMl,
+        descriptionEn: item.descriptionEn,
+        descriptionMl: item.descriptionMl,
+        status: 'published',
+        defaultTimeSeconds: 25,
+        defaultRevealSeconds: 6,
         scoringRules: { ...DEFAULT_SCORING_RULES },
-        currentQuestionIndex: -1,
-        questionOpenedAt: null,
-        questionDeadlineAt: null,
-        revealStartedAt: null,
-        revealEndsAt: null,
-        transitionVersion: 1,
+        enabledModes: ['auto_live', 'host_live', 'self_paced'],
+        questions: item.questions,
+        currentVersion: 1,
+        createdBy: 'admin.mudra',
         createdAt: now,
         updatedAt: now,
-        completedAt: null,
-      });
+      };
+      await quizzes.insertOne(qDoc).catch(() => {});
+      await ensureFixedQuizVersion(qDoc).catch(() => {});
     }
-  } catch {
-    // ignore duplicate seed
+  }
+
+  // 4. Ensure Demo Live Rooms exist:
+  // - MUD207 & LIVE01 -> LRC & IGR Orders Quiz
+  // - AAD100 -> Aadharam Ezhuthu 100 MCQs Live Exam Room
+  const fullAeQuiz = await quizzes.findOne({ quizId: 'QUIZ-AE-100' });
+  if (fullAeQuiz) {
+    const aeVersion = await ensureFixedQuizVersion(fullAeQuiz);
+    const existingAAD100 = await quizRooms.findOne({ roomCode: 'AAD100' });
+    if (!existingAAD100) {
+      await quizRooms
+        .insertOne({
+          roomId: 'ROOM-AAD100-DEMO',
+          roomCode: 'AAD100',
+          quizId: fullAeQuiz.quizId,
+          versionId: aeVersion.versionId,
+          version: aeVersion.version,
+          mode: 'auto_live',
+          status: 'lobby',
+          hostUserId: 'system-admin',
+          hostLoginId: 'admin.mudra',
+          capacity: 100,
+          joinLocked: false,
+          revealDurationSeconds: 6,
+          scoringRules: { ...DEFAULT_SCORING_RULES },
+          currentQuestionIndex: -1,
+          questionOpenedAt: null,
+          questionDeadlineAt: null,
+          revealStartedAt: null,
+          revealEndsAt: null,
+          transitionVersion: 1,
+          createdAt: now,
+          updatedAt: now,
+          completedAt: null,
+        })
+        .catch(() => {});
+    }
+  }
+
+  const existingMUD = await quizRooms.findOne({ roomCode: 'MUD207' });
+  if (!existingMUD) {
+    const q = (await quizzes.findOne({ quizId: 'QUIZ-2026-0001' })) || (await quizzes.findOne({ status: 'published' }));
+    if (q) {
+      const qv = await ensureFixedQuizVersion(q);
+      await quizRooms
+        .insertOne({
+          roomId: 'ROOM-MUD207-DEMO',
+          roomCode: 'MUD207',
+          quizId: q.quizId,
+          versionId: qv.versionId,
+          version: qv.version,
+          mode: 'auto_live',
+          status: 'lobby',
+          hostUserId: 'system-admin',
+          hostLoginId: 'admin.mudra',
+          capacity: 100,
+          joinLocked: false,
+          revealDurationSeconds: 6,
+          scoringRules: { ...DEFAULT_SCORING_RULES },
+          currentQuestionIndex: -1,
+          questionOpenedAt: null,
+          questionDeadlineAt: null,
+          revealStartedAt: null,
+          revealEndsAt: null,
+          transitionVersion: 1,
+          createdAt: now,
+          updatedAt: now,
+          completedAt: null,
+        })
+        .catch(() => {});
+    }
   }
 }
 

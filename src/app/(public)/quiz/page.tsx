@@ -31,6 +31,7 @@ function QuizLobbyInner() {
   const [errorCode, setErrorCode] = useState<string | null>(null);
   const [joiningRoom, setJoiningRoom] = useState(false);
   const [startingQuizId, setStartingQuizId] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   useEffect(() => {
     if (prefilledCode) {
@@ -342,101 +343,159 @@ function QuizLobbyInner() {
 
       {/* Published Quizzes Available for Self-Paced Play */}
       <div>
-        <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-5">
           <div>
             <h2 className="font-serif text-2xl font-bold text-mudra-950">
               Self-Paced Published Quizzes (സ്വയം പരിശീലന ക്വിസുകൾ)
             </h2>
             <p className="text-xs text-mudra-700">
-              Practice independently at your own pace with instant explanations and linked Mudra
-              reference PDFs.
+              Practice independently at your own pace with instant explanations, statutory references, and linked Mudra reference PDFs.
             </p>
+          </div>
+
+          {/* Category Filter Pills */}
+          <div className="flex flex-wrap items-center gap-2">
+            {[
+              {
+                slug: 'all',
+                labelEn: 'All Categories',
+                labelMl: 'എല്ലാ വിഭാഗങ്ങളും',
+              },
+              {
+                slug: 'aadharam-ezhuthu-exam',
+                labelEn: 'Aadharam Ezhuthu Exam (Deed Writing)',
+                labelMl: 'ആധാരമെഴുത്ത് പരീക്ഷ (100 MCQs)',
+              },
+              {
+                slug: 'lrc-igr-orders',
+                labelEn: 'LRC & IGR Orders',
+                labelMl: 'എൽ.ആർ.സി & ഐ.ജി.ആർ ഉത്തരവുകൾ',
+              },
+            ].map((cat) => {
+              const active = selectedCategory === cat.slug;
+              return (
+                <button
+                  key={cat.slug}
+                  type="button"
+                  onClick={() => setSelectedCategory(cat.slug)}
+                  className={`rounded-2xl px-4 py-2 text-xs font-black transition ${
+                    active
+                      ? 'bg-[#0b192c] text-amber-300 shadow-md border border-amber-400/50'
+                      : 'bg-white text-mudra-800 border border-mudra-200 hover:border-mudra-400'
+                  }`}
+                >
+                  {preferredLanguage === 'ml' ? cat.labelMl : cat.labelEn}
+                </button>
+              );
+            })}
           </div>
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-          {(catalog?.quizzes || []).map(
-            (q: {
-              quizId: string;
-              titleEn: string;
-              titleMl: string;
-              descriptionEn?: string;
-              descriptionMl?: string;
-              questionCount: number;
-              defaultTimeSeconds: number;
-              scoringRules: {
-                basePoints: number;
-                speedBonusEnabled: boolean;
-                speedBonusMax: number;
-                streakBonusEnabled: boolean;
-                streakBonusPoints: number;
-              };
-            }) => (
-              <div
-                key={q.quizId}
-                className="flex flex-col justify-between rounded-3xl border border-mudra-200 bg-white p-6 shadow-xs hover:border-mudra-400 transition"
-              >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="rounded-lg bg-[#0b192c] px-2.5 py-1 font-mono text-xs font-bold text-amber-300">
-                      {q.questionCount} Questions • {q.defaultTimeSeconds}s / Q
-                    </span>
-                    <span className="rounded-lg bg-emerald-50 border border-emerald-200 px-2.5 py-1 text-xs font-bold text-emerald-900">
-                      Malayalam &amp; English
-                    </span>
-                  </div>
-
-                  <h3 className="font-serif text-xl font-bold text-mudra-950">
-                    {preferredLanguage === 'ml'
-                      ? q.titleMl || q.titleEn
-                      : q.titleEn || q.titleMl}
-                  </h3>
-                  {q.titleMl && q.titleEn && (
-                    <p className="text-sm font-medium text-mudra-700 mt-0.5">
-                      {preferredLanguage === 'ml' ? q.titleEn : q.titleMl}
-                    </p>
-                  )}
-
-                  <p className="mt-2.5 text-xs text-mudra-700 leading-relaxed">
-                    {preferredLanguage === 'ml'
-                      ? q.descriptionMl || q.descriptionEn
-                      : q.descriptionEn || q.descriptionMl}
-                  </p>
-                </div>
-
-                <div className="mt-5 pt-4 border-t border-mudra-100 flex items-center justify-between gap-3">
-                  <div className="text-[11px] text-mudra-600">
-                    Scoring: <strong>{q.scoringRules.basePoints}</strong> pts
-                    {q.scoringRules.speedBonusEnabled
-                      ? ` + ${q.scoringRules.speedBonusMax} speed`
-                      : ''}
-                    {q.scoringRules.streakBonusEnabled
-                      ? ` + ${q.scoringRules.streakBonusPoints} streak`
-                      : ''}
-                  </div>
-
-                  <button
-                    type="button"
-                    disabled={startingQuizId === q.quizId}
-                    onClick={() => handleStartSelfPaced(q.quizId)}
-                    className="inline-flex items-center gap-2 rounded-2xl bg-amber-400 px-5 py-2.5 text-xs font-black text-[#0b192c] hover:bg-amber-300 shadow transition active:scale-95"
-                  >
-                    {startingQuizId === q.quizId ? (
-                      <>
-                        <Loader2 className="h-4 w-4 animate-spin" />
-                        <span>Starting…</span>
-                      </>
-                    ) : (
-                      <>
-                        <Play className="h-4 w-4 fill-current" />
-                        <span>Start Self-Paced Quiz</span>
-                      </>
-                    )}
-                  </button>
-                </div>
-              </div>
+          {(catalog?.quizzes || [])
+            .filter(
+              (q: { categorySlug?: string }) =>
+                selectedCategory === 'all' ||
+                (q.categorySlug || 'aadharam-ezhuthu-exam') === selectedCategory
             )
-          )}
+            .map(
+              (q: {
+                quizId: string;
+                categorySlug?: string;
+                categoryNameEn?: string;
+                categoryNameMl?: string;
+                topicEn?: string;
+                topicMl?: string;
+                titleEn: string;
+                titleMl: string;
+                descriptionEn?: string;
+                descriptionMl?: string;
+                questionCount: number;
+                defaultTimeSeconds: number;
+                scoringRules: {
+                  basePoints: number;
+                  speedBonusEnabled: boolean;
+                  speedBonusMax: number;
+                  streakBonusEnabled: boolean;
+                  streakBonusPoints: number;
+                };
+              }) => (
+                <div
+                  key={q.quizId}
+                  className="flex flex-col justify-between rounded-3xl border border-mudra-200 bg-white p-6 shadow-xs hover:border-mudra-400 transition"
+                >
+                  <div>
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+                      <div className="flex flex-wrap items-center gap-1.5">
+                        <span className="rounded-lg bg-amber-100 border border-amber-300 px-2.5 py-1 text-[11px] font-black text-mudra-950">
+                          {preferredLanguage === 'ml'
+                            ? q.categoryNameMl || 'ആധാരമെഴുത്ത് പരീക്ഷ'
+                            : q.categoryNameEn || 'Aadharam Ezhuthu Exam (Deed Writing)'}
+                        </span>
+                        {(q.topicEn || q.topicMl) && (
+                          <span className="rounded-lg bg-parchment-100 border border-mudra-200 px-2.5 py-1 text-[11px] font-bold text-mudra-800">
+                            {preferredLanguage === 'ml'
+                              ? q.topicMl || q.topicEn
+                              : q.topicEn || q.topicMl}
+                          </span>
+                        )}
+                      </div>
+                      <span className="rounded-lg bg-[#0b192c] px-2.5 py-1 font-mono text-xs font-bold text-amber-300">
+                        {q.questionCount} Questions • {q.defaultTimeSeconds}s / Q
+                      </span>
+                    </div>
+
+                    <h3 className="font-serif text-xl font-bold text-mudra-950">
+                      {preferredLanguage === 'ml'
+                        ? q.titleMl || q.titleEn
+                        : q.titleEn || q.titleMl}
+                    </h3>
+                    {q.titleMl && q.titleEn && (
+                      <p className="text-sm font-medium text-mudra-700 mt-0.5">
+                        {preferredLanguage === 'ml' ? q.titleEn : q.titleMl}
+                      </p>
+                    )}
+
+                    <p className="mt-2.5 text-xs text-mudra-700 leading-relaxed">
+                      {preferredLanguage === 'ml'
+                        ? q.descriptionMl || q.descriptionEn
+                        : q.descriptionEn || q.descriptionMl}
+                    </p>
+                  </div>
+
+                  <div className="mt-5 pt-4 border-t border-mudra-100 flex items-center justify-between gap-3">
+                    <div className="text-[11px] text-mudra-600">
+                      Scoring: <strong>{q.scoringRules.basePoints}</strong> pts
+                      {q.scoringRules.speedBonusEnabled
+                        ? ` + ${q.scoringRules.speedBonusMax} speed`
+                        : ''}
+                      {q.scoringRules.streakBonusEnabled
+                        ? ` + ${q.scoringRules.streakBonusPoints} streak`
+                        : ''}
+                    </div>
+
+                    <button
+                      type="button"
+                      disabled={startingQuizId === q.quizId}
+                      onClick={() => handleStartSelfPaced(q.quizId)}
+                      className="inline-flex items-center gap-2 rounded-2xl bg-amber-400 px-5 py-2.5 text-xs font-black text-[#0b192c] hover:bg-amber-300 shadow transition active:scale-95"
+                    >
+                      {startingQuizId === q.quizId ? (
+                        <>
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          <span>Starting…</span>
+                        </>
+                      ) : (
+                        <>
+                          <Play className="h-4 w-4 fill-current" />
+                          <span>Start Self-Paced Quiz</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              )
+            )}
         </div>
       </div>
     </div>

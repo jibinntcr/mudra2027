@@ -268,6 +268,15 @@ export default function SelfPacedPlayerClient({ attemptId }: { attemptId: string
       {/* IN-PROGRESS QUESTION */}
       {attempt.status === 'in_progress' && currentQuestion && (
         <div className="rounded-3xl border border-mudra-200 bg-white p-5 sm:p-7 shadow-sm space-y-5">
+          {(currentQuestion.sectionEn || currentQuestion.sectionMl) && (
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-lg bg-amber-100 border border-amber-300 px-3 py-1 text-xs font-black text-mudra-950">
+                {lang === 'ml'
+                  ? currentQuestion.sectionMl || currentQuestion.sectionEn
+                  : currentQuestion.sectionEn || currentQuestion.sectionMl}
+              </span>
+            </div>
+          )}
           <h2 className="font-serif text-lg sm:text-xl font-bold text-mudra-950 leading-snug">
             {lang === 'ml'
               ? currentQuestion.promptMl || currentQuestion.promptEn

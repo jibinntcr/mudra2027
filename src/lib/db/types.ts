@@ -154,6 +154,9 @@ export interface QuizQuestionItem {
   questionId: string;
   order: number;
   type: QuizQuestionType;
+  sectionEn?: string;
+  sectionMl?: string;
+  reference?: string;
   promptEn: string;
   promptMl: string;
   options: QuizOptionItem[];
@@ -178,6 +181,11 @@ export interface QuizDocument {
   _id?: ObjectId;
   quizId: string; // e.g., "QUIZ-2026-0001"
   slug: string; // e.g., "kerala-registration-stamp-act-mastery"
+  categorySlug?: string; // e.g., "aadharam-ezhuthu-exam"
+  categoryNameEn?: string; // e.g., "Aadharam Ezhuthu Exam (Deed Writing)"
+  categoryNameMl?: string; // e.g., "ആധാരമെഴുത്ത് പരീക്ഷ"
+  topicEn?: string; // e.g., "Registration Act, 1908"
+  topicMl?: string; // e.g., "രജിസ്ട്രേഷൻ നിയമം, 1908"
   titleEn: string;
   titleMl: string;
   descriptionEn?: string;
@@ -199,6 +207,11 @@ export interface QuizVersionDocument {
   versionId: string; // e.g., "QUIZ-2026-0001-v1"
   quizId: string;
   version: number;
+  categorySlug?: string;
+  categoryNameEn?: string;
+  categoryNameMl?: string;
+  topicEn?: string;
+  topicMl?: string;
   titleEn: string;
   titleMl: string;
   descriptionEn?: string;
