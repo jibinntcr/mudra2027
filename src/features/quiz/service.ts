@@ -1323,16 +1323,15 @@ export async function joinOrReconnectLiveRoom(params: {
 
   await quizParticipants.insertOne(newParticipant);
 
-  // Re-verify capacity after insert to prevent concurrent burst above capacity
-  const postInsertCount = await quizParticipants.countDocuments({
-    roomCode: normalizedCode,
-    removed: false,
-  });
-  if (postInsertCount > room.capacity) {
-    const allInRoom = await quizParticipants
-      .find({ roomCode: normalizedCode, removed: false })
-      .sort({ joinedAt: 1, _id: 1 })
-      .toArray();
+  // Post-insert check:
+  // 1) Prevent concurrent burst above capacity
+  // 2) Disambiguate any simultaneous joins that picked the exact same displayName at the same millisecond
+  const allInRoom = await quizParticipants
+    .find({ roomCode: normalizedCode, removed: false })
+    .sort({ joinedAt: 1, participantId: 1 })
+    .toArray();
+
+  if (allInRoom.length > room.capacity) {
     const allowedIds = new Set(
       allInRoom.slice(0, room.capacity).map((p) => p.participantId)
     );
@@ -1344,6 +1343,32 @@ export async function joinOrReconnectLiveRoom(params: {
       (err as Error & { statusCode?: number; code?: string }).statusCode = 409;
       (err as Error & { code?: string }).code = 'ROOM_FULL';
       throw err;
+    }
+  }
+
+  const sameNamePeers = allInRoom.filter(
+    (p) => p.displayName.trim().toLowerCase() === finalDisplayName.toLowerCase()
+  );
+  if (sameNamePeers.length > 1) {
+    const myOrderIndex = sameNamePeers.findIndex(
+      (p) => p.participantId === participantId
+    );
+    if (myOrderIndex > 0) {
+      const takenAllLower = new Set(
+        allInRoom.map((p) => p.displayName.trim().toLowerCase())
+      );
+      for (let suffix = myOrderIndex + 1; suffix <= 999; suffix++) {
+        const candidate = `${cleanName.slice(0, 34)} (${suffix})`;
+        if (!takenAllLower.has(candidate.toLowerCase())) {
+          finalDisplayName = candidate;
+          newParticipant.displayName = candidate;
+          await quizParticipants.updateOne(
+            { participantId },
+            { $set: { displayName: candidate } }
+          );
+          break;
+        }
+      }
     }
   }
 
